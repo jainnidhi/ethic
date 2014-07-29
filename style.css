@@ -552,6 +552,10 @@ object {
     margin-right: 4px;
 }
 
+.home-post-title-area{
+    text-align:center;
+}
+
 .home-featured-post .featured-post-content{
     background: rgb(243, 241, 241);
     position: relative;
@@ -586,4 +590,19 @@ object {
     min-height: 46px;
     position: absolute;
     top: 0;
+}
+
+.contact-area form input[type='submit'] {
+    font-size: 21px;
+    padding: 9px 18px 13px 18px;
+    border: none;
+    margin-bottom: 25px;
+    color: #fff;
+    background: #009cee;
+    float: left;
+}
+
+.home-contact-form h3,
+.home-contact-form > p{
+    text-align:center;
 }

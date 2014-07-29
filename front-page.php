@@ -33,12 +33,7 @@ get_header();
                     <div class="slider-text-container">
                      <h2 class="slider-title"><a href="#"><?php esc_html_e('Showcase Your Restaurant Services', 'ethic') ?></a></h2>
                           <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
-                          <a class="slider-button one" href="#">
-                            <?php esc_html_e('Live Demo', 'ethic') ?>
-                        </a>
-                          <a class="slider-button two" href="#">
-                            <?php esc_html_e('View Work', 'ethic') ?>
-                        </a>
+                        
                     </div>
                 </div>
                 </li>
@@ -49,12 +44,7 @@ get_header();
                     <div class="slider-text-container">
                      <h2 class="slider-title"><a href="#"><?php esc_html_e('Showcase Your Restaurant Services', 'ethic') ?></a></h2>
                           <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
-                           <a class="slider-button one" href="#">
-                            <?php esc_html_e('Live Demo', 'ethic') ?>
-                        </a>
-                          <a class="slider-button two" href="#">
-                            <?php esc_html_e('View Work', 'ethic') ?>
-                        </a>
+                         
                     </div>
                  </div>
                 </li>
@@ -65,12 +55,7 @@ get_header();
                     <div class="slider-text-container">
                      <h2 class="slider-title"><a href="#"><?php esc_html_e('Showcase Your Restaurant Services', 'ethic') ?></a></h2>
                           <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
-                           <a class="slider-button one" href="#">
-                            <?php esc_html_e('Live Demo', 'ethic') ?>
-                        </a>
-                          <a class="slider-button two" href="#">
-                            <?php esc_html_e('View Work', 'ethic') ?>
-                        </a>
+                          
                     </div>
                  </div>
                 </li>
@@ -87,17 +72,7 @@ get_header();
                             <div class="slider-text-container">
                                 <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_one_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_one')); ?></a></h2>
                                     <p><?php echo esc_html(get_theme_mod('slider_one_description')); ?></p>
-                                
-                            <?php if ( get_theme_mod('slider_one_button_one_url') !='' && get_theme_mod('slider_one_button_one_text') !=''  ) {  ?>
-                                <a class="slider-button one" href="<?php echo esc_url(get_theme_mod('slider_one_button_one_url')); ?>">
-                                    <?php  echo esc_html(get_theme_mod('slider_one_button_one_text')); ?>
-                                </a> 
-                                <?php } ?> 
-                             <?php if ( get_theme_mod('slider_one_button_two_url') !='' && get_theme_mod('slider_one_button_two_text') !=''  ) {  ?>
-                                <a class="slider-button two" href="<?php echo esc_url(get_theme_mod('slider_one_button_two_text')); ?>">
-                                    <?php  echo esc_html(get_theme_mod('slider_one_button_two_url')); ?>
-                                </a> 
-                                <?php } ?> 
+                            
                             </div>
                          </div>
                          <?php } ?>
@@ -114,17 +89,7 @@ get_header();
                             <div class="slider-text-container">
                             <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_two_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_two')); ?></a></h2>
                                 <p><?php echo esc_html(get_theme_mod('slider_two_description')); ?></p>
-                                
-                            <?php if ( get_theme_mod('slider_two_button_one_url') !='' && get_theme_mod('slider_two_button_one_text') !=''  ) {  ?>
-                          <a class="slider-button one" href="<?php echo esc_url(get_theme_mod('slider_two_button_one_url')); ?>">
-                              <?php  echo esc_html(get_theme_mod('slider_two_button_one_text')); ?>
-                          </a> 
-                          <?php } ?> 
-                       <?php if ( get_theme_mod('slider_two_button_two_url') !='' && get_theme_mod('slider_two_button_two_text') !=''  ) {  ?>
-                          <a class="slider-button two" href="<?php echo esc_url(get_theme_mod('slider_two_button_two_text')); ?>">
-                              <?php  echo esc_html(get_theme_mod('slider_two_button_two_url')); ?>
-                          </a> 
-                          <?php } ?> 
+                         
                             </div>
                          </div>
                          <?php } ?>
@@ -142,17 +107,7 @@ get_header();
                             <div class="slider-text-container">
                             <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_three_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_three')); ?></a></h2>
                               <p><?php echo esc_html(get_theme_mod('slider_three_description')); ?></p>
-                              
-                        <?php if ( get_theme_mod('slider_three_button_one_url') !='' && get_theme_mod('slider_three_button_one_text') !=''  ) {  ?>
-                        <a class="slider-button one" href="<?php echo esc_url(get_theme_mod('slider_three_button_one_url')); ?>">
-                            <?php  echo esc_html(get_theme_mod('slider_three_button_one_text')); ?>
-                        </a> 
-                        <?php } ?> 
-                     <?php if ( get_theme_mod('slider_three_button_two_url') !='' && get_theme_mod('slider_three_button_two_text') !=''  ) {  ?>
-                        <a class="slider-button two" href="<?php echo esc_url(get_theme_mod('slider_three_button_two_text')); ?>">
-                            <?php  echo esc_html(get_theme_mod('slider_three_button_two_url')); ?>
-                        </a> 
-                        <?php } ?> 
+                      
                             </div>
                          </div>
                    <?php } ?>
@@ -170,17 +125,7 @@ get_header();
                             <div class="slider-text-container">
                             <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_four_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_four')); ?></a></h2>
                                 <p><?php echo esc_html(get_theme_mod('slider_four_description')); ?></p>
-                                
-                            <?php if ( get_theme_mod('slider_four_button_one_url') !='' && get_theme_mod('slider_four_button_one_text') !=''  ) {  ?>
-                          <a class="slider-button one" href="<?php echo esc_url(get_theme_mod('slider_four_button_one_url')); ?>">
-                              <?php  echo esc_html(get_theme_mod('slider_four_button_one_text')); ?>
-                          </a> 
-                          <?php } ?> 
-                       <?php if ( get_theme_mod('slider_four_button_two_url') !='' && get_theme_mod('slider_four_button_two_text') !=''  ) {  ?>
-                          <a class="slider-button two" href="<?php echo esc_url(get_theme_mod('slider_four_button_two_text')); ?>">
-                              <?php  echo esc_html(get_theme_mod('slider_four_button_two_url')); ?>
-                          </a> 
-                          <?php } ?> 
+                          
                             </div>
                         </div>
                     <?php } ?>
@@ -198,17 +143,7 @@ get_header();
                             <div class="slider-text-container">
                             <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_five_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_five')); ?></a></h2>
                               <p><?php echo esc_html(get_theme_mod('slider_five_description')); ?></p>
-                              
-                        <?php if ( get_theme_mod('slider_five_button_one_url') !='' && get_theme_mod('slider_five_button_one_text') !=''  ) {  ?>
-                        <a class="slider-button one" href="<?php echo esc_url(get_theme_mod('slider_five_button_one_url')); ?>">
-                            <?php  echo esc_html(get_theme_mod('slider_five_button_one_text')); ?>
-                        </a> 
-                        <?php } ?> 
-                     <?php if ( get_theme_mod('slider_five_button_two_url') !='' && get_theme_mod('slider_five_button_two_text') !=''  ) {  ?>
-                        <a class="slider-button two" href="<?php echo esc_url(get_theme_mod('slider_five_button_two_text')); ?>">
-                            <?php  echo esc_html(get_theme_mod('slider_five_button_two_url')); ?>
-                        </a> 
-                        <?php } ?> 
+                    
                             </div>
                          </div>
                     <?php } ?>
@@ -249,7 +184,7 @@ get_header();
                 <div class="home-featured-one col-lg-4">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_one') !='' ) {  ?>
-                     <div class="featured-image"><img src="<?php echo get_theme_mod('home_featured_one'); ?>" /></div>
+                     <div class="featured-image"><?php echo get_theme_mod('home_featured_one'); ?></div>
                     <?php } else {  ?>
                      <div class="featured-image"><i class="fa-th-large fa"></i></div>
                      <?php } ?>
@@ -271,7 +206,7 @@ get_header();
                 <div class="home-featured-two col-lg-4">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_two') !='' ) {  ?>
-                     <div class="featured-image"><img src="<?php echo get_theme_mod('home_featured_two'); ?>" /></div>
+                     <div class="featured-image"><?php echo get_theme_mod('home_featured_two'); ?></div>
                     <?php } else {  ?>
                      <div class="featured-image"><i class="fa-gittip fa"></i></div>
                      <?php } ?>
@@ -294,7 +229,7 @@ get_header();
                 <div class="home-featured-three col-lg-4">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_three') !='' ) {  ?>
-                     <div class="featured-image"><img src="<?php echo get_theme_mod('home_featured_three'); ?>" /></div>
+                     <div class="featured-image"><?php echo get_theme_mod('home_featured_three'); ?></div>
                     <?php } else {  ?>
                      <div class="featured-image"><i class=" fa-twitter fa"></i></div>
                      <?php } ?>
@@ -510,91 +445,32 @@ get_header();
     
     get_template_part('content','frontposts'); ?>
       
-      
-       <!-- start home CTA area -->
-        <section class="home-cta-area">
-                <div class="home-cta">
-                     <?php if ( get_theme_mod('cta_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('cta_title')); ?></h3>
-                          <?php } else {  ?> <h3><?php esc_html_e('CTA Title', 'ethic') ?></h3>
-                               <?php } ?>
-                    <div class="home-cta-one">
-                        <?php if ( get_theme_mod('cta_text') !='' ) {  ?>
-                        <p><?php echo esc_html(get_theme_mod('cta_text')); ?></p>
-                           <?php } else { ?>
-                          <p><?php esc_html_e('We have really amazing products that you would be amazed to see.', 'ethic') ?> </p>
-                                           <?php } ?>
-                    </div>
-                    <div class="home-cta-two">
-                        <a class="cta-button" href="<?php if ( get_theme_mod('home_cta_link_url') !='' ) { echo esc_url(get_theme_mod('home_cta_link_url')); } ?>">
-                           <?php if ( get_theme_mod('home_cta_link_text') !='' ) {  ?><?php echo esc_html(get_theme_mod('home_cta_link_text')); ?>
+    <div class="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="home-contact-form col-lg-12">
+                     <?php if ( get_theme_mod('contact_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('contact_title')); ?></h3>
 
-                    <?php } else {  ?> <?php esc_html_e('Read More', 'ethic') ?>
-                           <?php } ?></a>
-                    </div>
+                          <?php } else {  ?> <h3><?php esc_html_e('Contact Us', 'ethic') ?></h3>
+                                   <?php } ?>
                           
-                          <div class="social-links">
-                                <ul>
-                                    <?php if (get_theme_mod('facebook_link_url')) { ?>
-                                        <li class="ethic-fb"><a href="<?php echo get_theme_mod('facebook_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                    <?php if(get_theme_mod('twitter_link_url')) { ?>
-                                        <li class="ethic-twitter"><a href="<?php echo  get_theme_mod('twitter_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                    <?php if(get_theme_mod('googleplus_link_url')) { ?>
-                                        <li class="ethic-gplus"><a href="<?php echo get_theme_mod('googleplus_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                    <?php if( get_theme_mod('pinterest_link_url')) { ?>
-                                        <li class="ethic-pinterest"><a href="<?php echo get_theme_mod('pinterest_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                    <?php if (get_theme_mod('github_link_url')) { ?>
-                                        <li class="ethic-github"><a href="<?php echo get_theme_mod('github_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                    <?php if(get_theme_mod('youtube_link_url')) { ?>
-                                        <li class="ethic-youtube"><a href="<?php echo get_theme_mod('youtube_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                    <?php if(get_theme_mod('dribbble_link_url')) { ?>
-                                        <li class="ethic-dribbble"><a href="<?php echo get_theme_mod('dribbble_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                    <?php if(get_theme_mod('tumblr_link_url')) { ?>
-                                        <li class="ethic-tumblr"><a href="<?php echo get_theme_mod('tumblr_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                    <?php if(get_theme_mod('flickr_link_url')) { ?>
-                                        <li class="ethic-flickr"><a href="<?php echo get_theme_mod('flickr_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                    <?php if(get_theme_mod('vimeo_link_url')) { ?>
-                                        <li class="ethic-vimeo"><a href="<?php echo get_theme_mod('vimeo_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                    <?php if(get_theme_mod('linkedin_link_url')) { ?>
-                                        <li class="ethic-linkedin"><a href="<?php echo get_theme_mod('linkedin_link_url'); ?>"></a></li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-                          <div class="contact-details">
-                             
-                                   <?php if ( get_theme_mod('address_detail') !='' ) {  ?>
-                                   <p id="address"><?php echo esc_html(get_theme_mod('address_detail')); ?></p>
-                                            <?php } else { ?>
-                                           <p id="address"><?php esc_html_e('205, Gitanjali Mansion,
-                                                                 Above ICICI Bank, Sector 11
-                                                                 Udaipur, Rajasthan, India.', 'ethic') ?> </p>
-                                                   <?php } ?>
+                           <?php if ( get_theme_mod('contact_description') !='' ) {  ?><p><?php echo esc_html(get_theme_mod('contact_description')); ?></p>
 
-                                      <?php if ( get_theme_mod('contact_email') !='' ) {  ?><p id="email"><?php echo esc_html(get_theme_mod('contact_email')); ?>
-
-                                   <?php } else {  ?> <p id="email"><?php esc_html_e('hello@ideaboxcreations.com', 'ethic') ?></p>
-                                            <?php } ?>
-
-                                   <?php if ( get_theme_mod('contact_phone') !='' ) {  ?><p id="phone"><?php echo esc_html(get_theme_mod('contact_phone')); ?>
-
-                                   <?php } else {  ?> <p id="phone"><?php esc_html_e('0294-678456', 'ethic') ?></p>
-                                            <?php } ?>
+                          <?php } else {  ?> <p><?php esc_html_e('Send in your queries and we will get back to you!!', 'ethic') ?></p>
+                                   <?php } ?>
                           
+                        <div class="contact-form-wrapper">
+                        <?php if ( get_theme_mod('ethic_contact_form') !='' ) {  ?> 
+                         <?php echo do_shortcode(get_theme_mod('ethic_contact_form')); ?>
+                        <?php } else { ?>
+                        <?php esc_html_e('You can add contact form here with a contact form shortcode'
+                                . 'from Gravity Forms or Contact Form7 or any other plugin of your choice.', 'ethic'); ?> 
+                          <?php } ?>
                         </div>
-                          
-                          
-                
                 </div>
-         </section>
+            </div>
+        </div>
+    </div>
        
          <span class="top"><a class="back-to-top"><i class="fa fa-arrow-up"></i></a></span>
             
