@@ -21,7 +21,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
     $featuredportfolio = new WP_Query($featured_portfolio_args);
     ?>
 <section class="portfolio-area">
-    <div class="container">
+    <div class="container portfolio-wrap">
         <div class="row">
     <div class="home-portfolio-title-area" id="portfolio-title">
             <div class="home-portfolio-title section-title">
@@ -84,7 +84,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
     { // end Featured portfolio query  ?>
     
 <section class="portfolio-area">
-    <div class="container">
+    <div class="container portfolio-wrap">
         <div class="row">
     <div class="home-portfolio-title-area" id="portfolio-title">
             <div class="home-portfolio-title section-title">
