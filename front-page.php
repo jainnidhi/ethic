@@ -506,7 +506,9 @@ get_header();
     </section>
     
     <?php
-    get_template_part('content','frontportfolio'); ?>
+    get_template_part('content','frontportfolio'); 
+    
+    get_template_part('content','frontposts'); ?>
       
       
        <!-- start home CTA area -->

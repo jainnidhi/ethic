@@ -68,3 +68,33 @@ function ethic_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'ethic_wp_title', 10, 2 );
+
+/* Display icon for blog post using 
+ * Post Format - get_post_format() function 
+ * 
+ * @since Ethic 1.0
+ */
+
+function ethic_post_format_icon() { 
+    if(!is_single()) {
+    ?>
+     <?php $format = get_post_format();
+      ?>
+    <span class="post_format">
+     <?php if ($format == 'video')  { ?>
+     <i class="fa fa-film"></i>
+     <?php } elseif ($format == 'gallery')  { ?>
+     <i class="fa fa-picture-o"></i>
+     <?php } elseif ($format == 'image')  { ?>
+     <i class="fa fa-user"></i>
+     <?php } elseif ($format == 'quote')  { ?>
+     <i class="fa fa-quote-left"></i>
+     <?php } elseif ($format == 'link')  { ?>
+     <i class="fa fa-link"></i>
+     <?php } else { ?>
+     <i class="fa fa-file-text"></i>
+
+     <?php } ?>
+     </span>
+<?php }
+}
