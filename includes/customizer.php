@@ -706,7 +706,18 @@ function ethic_customize_register($wp_customize) {
         'settings' => 'ethic_post_title',
         'priority' => 3,
     ));
+    
+    $wp_customize->add_setting('ethic_post_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
 
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'ethic_post_description', array(
+        'label' => __('Description', 'ethic'),
+        'section' => 'ethic_front_page_post_options',
+        'settings' => 'ethic_post_description',
+        'priority' => 5,
+    )));
 
     // select number of posts for featured posts on front page
     $wp_customize->add_setting('ethic_front_featured_posts_count', array(
@@ -1258,10 +1269,22 @@ function ethic_customize_register($wp_customize) {
 
     $wp_customize->add_control('contact_title', array(
         'label' => __('Section Title', 'ethic'),
-        'section' => 'contact_setting',
+        'section' => 'ethic_contact_form_setting',
         'settings' => 'contact_title',
         'priority' => 1,
     ));
+    
+    $wp_customize->add_setting('contact_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'contact_description', array(
+        'label' => __('Description', 'ethic'),
+        'section' => 'ethic_contact_form_setting',
+        'settings' => 'contact_description',
+        'priority' => 2,
+    )));
     
     $wp_customize->add_setting('ethic_contact_form', array(
         'sanitize_callback' => 'sanitize_text_field',
@@ -1272,7 +1295,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Contact Form Short Code', 'ethic'),
         'section' => 'ethic_contact_form_setting',
         'settings' => 'ethic_contact_form',
-        'priority' => 2,
+        'priority' => 3,
     ));
     
     // Add footer text section
