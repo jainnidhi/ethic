@@ -507,7 +507,7 @@ get_header();
                         <?php if ( get_theme_mod('home_map') !='' ) {  ?> 
                          <?php echo get_theme_mod('home_map'); ?>
                           <?php } else { ?>
-                       <iframe width="100%" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Arera+Colony,+Bhopal,+Madhya+Pradesh,+India&amp;aq=1&amp;oq=arera+&amp;sll=23.199431,77.414254&amp;sspn=0.029189,0.052314&amp;ie=UTF8&amp;hq=&amp;hnear=Arera+Colony,+Bhopal,+Madhya+Pradesh,+India&amp;ll=23.199422,77.41426&amp;spn=0.029187,0.052314&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.3373274884793!2d73.68860100000003!3d24.57755199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e564ac2e9c8d%3A0x87292b7f148a532d!2sIdeaBox+Creations!5e0!3m2!1sen!2sin!4v1406726113881" width="600" height="450" frameborder="0" style="border:0"></iframe>
                            <?php } ?>
                       </div>
         
