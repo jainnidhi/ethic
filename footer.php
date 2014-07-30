@@ -18,7 +18,44 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="container">
 		<div class="row">
-			<div class="site-footer-inner col-sm-12">
+                    <div class="social-links col-lg-12">
+                                <ul>
+                                    <?php if (get_theme_mod('facebook_link_url')) { ?>
+                                        <li class="passion-fb"><a href="<?php echo get_theme_mod('facebook_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                    <?php if(get_theme_mod('twitter_link_url')) { ?>
+                                        <li class="passion-twitter"><a href="<?php echo  get_theme_mod('twitter_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                    <?php if(get_theme_mod('googleplus_link_url')) { ?>
+                                        <li class="passion-gplus"><a href="<?php echo get_theme_mod('googleplus_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                    <?php if( get_theme_mod('pinterest_link_url')) { ?>
+                                        <li class="passion-pinterest"><a href="<?php echo get_theme_mod('pinterest_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                    <?php if (get_theme_mod('github_link_url')) { ?>
+                                        <li class="passion-github"><a href="<?php echo get_theme_mod('github_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                    <?php if(get_theme_mod('youtube_link_url')) { ?>
+                                        <li class="passion-youtube"><a href="<?php echo get_theme_mod('youtube_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                    <?php if(get_theme_mod('dribbble_link_url')) { ?>
+                                        <li class="passion-dribbble"><a href="<?php echo get_theme_mod('dribbble_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                    <?php if(get_theme_mod('tumblr_link_url')) { ?>
+                                        <li class="passion-tumblr"><a href="<?php echo get_theme_mod('tumblr_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                    <?php if(get_theme_mod('flickr_link_url')) { ?>
+                                        <li class="passion-flickr"><a href="<?php echo get_theme_mod('flickr_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                    <?php if(get_theme_mod('vimeo_link_url')) { ?>
+                                        <li class="passion-vimeo"><a href="<?php echo get_theme_mod('vimeo_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                    <?php if(get_theme_mod('linkedin_link_url')) { ?>
+                                        <li class="passion-linkedin"><a href="<?php echo get_theme_mod('linkedin_link_url'); ?>"></a></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+			<div class="site-footer-inner col-lg-12">
 
 				<div class="site-info">
 					<?php do_action( 'ethic_credits' ); ?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying featured portfolio on Front Page 
+ * The template for displaying featured project on Front Page 
  *
  * @package Ethic
  * @since Ethic 1.0
@@ -10,47 +10,47 @@
 <?php
 // Start a new query for displaying featured posts on Front Page
 
-if (get_theme_mod('ethic_front_featured_portfolio_check')) {
-    $featured_count = intval(get_theme_mod('ethic_front_featured_portfolio_count'));
+if (get_theme_mod('ethic_front_featured_project_check')) {
+    $featured_count = intval(get_theme_mod('ethic_front_featured_project_count'));
 
-    $featured_portfolio_args = array(
+    $featured_project_args = array(
         'post_type' => 'project',
         'posts_per_page' => $featured_count,
         'post__not_in' => get_option('sticky_posts'),
     );
-    $featuredportfolio = new WP_Query($featured_portfolio_args);
+    $featuredproject = new WP_Query($featured_project_args);
     ?>
-<section class="portfolio-area">
-    <div class="container portfolio-wrap">
+<section class="project-area">
+    <div class="container project-wrap">
         <div class="row">
-    <div class="home-portfolio-title-area" id="portfolio-title">
-            <div class="home-portfolio-title section-title">
-                 <?php if ( get_theme_mod('ethic_portfolio_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('ethic_portfolio_title')); ?></h3>
-                  <?php } else {  ?> <h3 class="title"><?php esc_html_e('Recent Portfolio', 'ethic') ?></h3>
+    <div class="home-project-title-area" id="project-title">
+            <div class="home-project-title section-title">
+                 <?php if ( get_theme_mod('ethic_project_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('ethic_project_title')); ?></h3>
+                  <?php } else {  ?> <h3 class="title"><?php esc_html_e('Recent Project', 'ethic') ?></h3>
                            <?php } ?>
                   
-                   <?php if ( get_theme_mod('portfolio_description') !='' ) {  ?>
-                            <p><?php echo esc_html(get_theme_mod('portfolio_description')); ?></p>
+                   <?php if ( get_theme_mod('project_description') !='' ) {  ?>
+                            <p><?php echo esc_html(get_theme_mod('project_description')); ?></p>
                                      <?php } else { ?>
-                                    <p><?php esc_html_e('This is the Portfolio Description block.', 'ethic') ?> </p>
+                                    <p><?php esc_html_e('This is the Project Description block.', 'ethic') ?> </p>
                                             <?php } ?>
             </div>
     </div>
      
 
-            <div id="featured-portfolio" class="clearfix">
-                <div class="portfolio-wrap">
+            <div id="featured-project" class="clearfix">
+                <div class="project-wrap">
                 
-                <?php if ($featuredportfolio->have_posts()) : $i = 1; ?>
+                <?php if ($featuredproject->have_posts()) : $i = 1; ?>
 
-                    <?php while ($featuredportfolio->have_posts()) : $featuredportfolio->the_post(); ?>
+                    <?php while ($featuredproject->have_posts()) : $featuredproject->the_post(); ?>
                                      
-                        <div class="home-featured-portfolio col-lg-3">
+                        <div class="home-featured-project col-lg-3">
 
-                            <div class="featured-portfolio-content">
+                            <div class="featured-project-content">
 
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="portfolio-featured-image">
+                                    <div class="project-featured-image">
                                     <?php the_post_thumbnail('post_project_thumb'); ?>
                                     </div>
                                    
@@ -59,7 +59,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                             </div> <!--end .featured-post-content -->
 
                            
-                        </div><!--end .home-featured-portfolio-->
+                        </div><!--end .home-featured-project-->
                   
                         <?php $i+=1; ?>
 
@@ -72,7 +72,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                     <?php get_search_form(); ?>
                 <?php endif; ?>
            </div>         
-        </div> <!-- /#featured-portfolio -->
+        </div> <!-- /#featured-project -->
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section>
@@ -80,62 +80,62 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
 <?php
 } 
 
- if (!get_theme_mod('ethic_front_featured_portfolio_check') && !get_theme_mod('ethic_hide_sample_portfolio')) 
-    { // end Featured portfolio query  ?>
+ if (!get_theme_mod('ethic_front_featured_project_check') && !get_theme_mod('ethic_hide_sample_project')) 
+    { // end Featured project query  ?>
     
-<section class="portfolio-area">
-    <div class="container portfolio-wrap">
+<section class="project-area">
+    <div class="container project-wrap">
         <div class="row">
-    <div class="home-portfolio-title-area" id="portfolio-title">
-            <div class="home-portfolio-title section-title">
-                <h3 class="title"><?php esc_html_e('Recent Portfolio', 'ethic') ?></h3>
-                    <p><?php esc_html_e('This is the Portfolio Description block.', 'ethic') ?> </p>
+    <div class="home-project-title-area" id="project-title">
+            <div class="home-project-title section-title">
+                <h3 class="title"><?php esc_html_e('Recent Project', 'ethic') ?></h3>
+                    <p><?php esc_html_e('This is the Project Description block.', 'ethic') ?> </p>
             </div>
     </div>
    
 
-            <div id="featured-portfolio" class="clearfix">
-                <div class="portfolio-wrap">
+            <div id="featured-project" class="clearfix">
+                <div class="project-wrap">
                   
-                        <div class="home-featured-portfolio col-lg-3" id="portfolio-one" data-scroll-reveal="enter from the left after 0.3s">
-                             <div class="featured-portfolio-content">
+                        <div class="home-featured-project col-lg-3" id="project-one" data-scroll-reveal="enter from the left after 0.3s">
+                             <div class="featured-project-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-1.jpg" alt=""/>
                                    
                                 </a>
                             </div> <!--end .featured-post-content -->
-                        </div><!--end .home-featured-portfolio-->
+                        </div><!--end .home-featured-project-->
                         
                         
-                        <div class="home-featured-portfolio col-lg-3" id="portfolio-two" data-scroll-reveal="enter from the left after 0.3s">
-                            <div class="featured-portfolio-content">
+                        <div class="home-featured-project col-lg-3" id="project-two" data-scroll-reveal="enter from the left after 0.3s">
+                            <div class="featured-project-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-2.jpg" alt=""/>
                                    
                                 </a>
                             </div> <!--end .featured-post-content -->
-                        </div><!--end .home-featured-portfolio-->
+                        </div><!--end .home-featured-project-->
                         
-                        <div class="home-featured-portfolio col-lg-3" id="portfolio-three" data-scroll-reveal="enter from the right after 0.3s">
-                            <div class="featured-portfolio-content">
+                        <div class="home-featured-project col-lg-3" id="project-three" data-scroll-reveal="enter from the right after 0.3s">
+                            <div class="featured-project-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-3.jpg" alt=""/>
                                    
                                 </a>
                             </div> <!--end .featured-post-content -->
-                        </div><!--end .home-featured-portfolio-->
+                        </div><!--end .home-featured-project-->
                         
-                         <div class="home-featured-portfolio col-lg-3" id="portfolio-four" data-scroll-reveal="enter from the right after 0.3s">
-                            <div class="featured-portfolio-content">
+                         <div class="home-featured-project col-lg-3" id="project-four" data-scroll-reveal="enter from the right after 0.3s">
+                            <div class="featured-project-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-4.jpg" alt=""/>
                                     
                                 </a>
                             </div> <!--end .featured-post-content -->
-                        </div><!--end .home-featured-portfolio-->
+                        </div><!--end .home-featured-project-->
                   
            </div>         
-        </div> <!-- /#featured-portfolio -->
+        </div> <!-- /#featured-project -->
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section>

@@ -441,9 +441,31 @@ get_header();
     </section>
     
     <?php
-    get_template_part('content','frontprojects'); 
+    get_template_part('content','frontprojects'); ?>
+    <div class="product-area">
+        <div class="container product-wrap">
+            <div class="row">
+                <?php if ( get_theme_mod('product_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('product_title')); ?></h3>
+
+                          <?php } else {  ?> <h3><?php esc_html_e('Our recent products', 'ethic') ?></h3>
+                                   <?php } ?>
+                          
+                <?php if ( get_theme_mod('product_description') !='' ) {  ?><p><?php echo esc_html(get_theme_mod('product_description')); ?></p>
+
+               <?php } else {  ?> <p><?php esc_html_e('This is the product description block.', 'ethic') ?></p>
+                        <?php } ?>
+               <div class="product-wrapper">
+                        <?php if ( get_theme_mod('ethic_products') !='' ) {  ?> 
+                         <?php echo do_shortcode(get_theme_mod('ethic_products')); ?>
+                        <?php } else { ?>
+                        <?php esc_html_e('You can add your products here.', 'ethic'); ?> 
+                          <?php } ?>
+                        </div>
+            </div>
+        </div>
+    </div>
     
-    get_template_part('content','frontposts'); ?>
+  <?php  get_template_part('content','frontposts'); ?>
       
     <div class="contact-area">
         <div class="container contact-wrap">
