@@ -999,7 +999,7 @@ time, address, .post-categories {
     display:block;
     position: absolute;
     width: 66px;
-    top: 40px;
+    bottom: -1px;
     right: 0;
     border-bottom: 1px solid #009cee;
     padding-bottom: 0px;
