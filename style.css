@@ -32,6 +32,7 @@ Twitter Bootstrap
 /* This is a small security for too long strings titles */
 body {
     word-wrap: break-word;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* Alignment */
@@ -225,7 +226,15 @@ object {
 
 /* Hey, if you don't need my comments anymore, just delete me! :)  */
 
+.container{
+    padding:15px 0;
+}
+
 /* Header */
+
+.admin-bar .site-header{
+    margin-top:32px;
+}
 
 .site-header{
     position:absolute;
@@ -233,6 +242,7 @@ object {
     z-index:9999;
     color: white;
     background: rgba(19, 17, 17, 0.3);
+    top:0;
 }
 
 .site-title a{
@@ -457,10 +467,6 @@ object {
     background:#fff;
 }
 
-.team-meta li:hover a:before{
-    background:#111;
-    color:#fff;
-}
 .team-meta li a[href*="facebook.com"]::before {
     content: '\f09a';
 }
@@ -555,7 +561,7 @@ object {
     text-align:center;
 }
 
-.home-featured-post .post-meta span.posted_by:after {
+.post-meta span.posted_by:after {
     content: "|";
     margin-left: 8px;
     margin-right: 4px;
@@ -649,4 +655,62 @@ object {
     position: absolute;
     text-align: center;
     width: 100%;
+}
+
+/* Main-content */
+
+.main-content{
+    margin-top:183px;
+}
+
+.main-content-inner{
+    padding:50px 0;
+}
+
+.hentry{
+    margin-bottom:60px;
+    padding-bottom:20px;
+    border-bottom:1px solid #eee;
+}
+
+.page-header{
+    margin:0px 0 20px;
+    border-bottom:0px;
+    padding-bottom:0;
+}
+
+.post-image{
+    margin-bottom:20px;
+}
+
+.more-link{
+    display: inline-block;
+    background: #009cee;
+    padding: 10px 20px;
+    color: #fff;
+    border: 1px solid #ddd;
+}
+
+.more-link:hover{
+    background:#fff;
+    color:#111;
+}
+
+/* Pagination */
+
+.pager li > a, .pager li > span{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius:0;
+}
+
+.pager li > a:hover, .pager li > a:focus {
+    background-color: #009cee;
+    color:#fff;
+}
+
+/* Sidebar */
+.sidebar{
+    padding:50px 0 50px 40px;
 }

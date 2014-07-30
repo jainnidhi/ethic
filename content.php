@@ -14,17 +14,24 @@
 // for example content-single.php for the post single view. ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <div class="post-image">
+                <?php if ('' != get_the_post_thumbnail() && !is_search() ) { ?>
+                        <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( the_title_attribute( 'echo=0' ) ) ); ?>">
+                                <?php the_post_thumbnail( 'post_feature_full_width' ); ?>
+                        </a>
+                <?php } ?>
+        </div>
 	<header class="page-header">
 		<h1 class="page-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php ethic_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+		 <p class="post-meta">
+                        <span class="posted_by">by <a href="#"><?php the_author_posts_link(); ?></a></span>
+                        <span class="posted_on"><?php the_time(esc_html('j M Y','ethic')); ?></span>						
+                </p>
+		
 	</header><!-- .entry-header -->
 
-	<?php if ( is_search() || is_archive() ) : // Only display Excerpts for Search and Archive Pages ?>
+	<?php if ( is_home() || is_search() || is_archive() ) : // Only display Excerpts for Search and Archive Pages ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
@@ -39,7 +46,8 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-
+        
+        <?php if(!is_home()) { ?>
 	<footer class="entry-meta">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
@@ -69,4 +77,5 @@
 
 		<?php edit_post_link( __( 'Edit', 'ethic' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
+        <?php } ?>
 </article><!-- #post-## -->

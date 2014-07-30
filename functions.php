@@ -39,7 +39,7 @@ function ethic_setup() {
 		*/
 		add_theme_support( 'post-thumbnails' );
                 
-                add_image_size('post_project_thumb', 300, 300);
+                add_image_size('post_project_thumb', 400, 400);
                 
                 add_image_size('post_feature_main_thumb', 770, 516);
                 
@@ -124,6 +124,12 @@ function ethic_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+        
+        
+	$fonts_url = 'http://fonts.googleapis.com/css?family=Raleway:400,300,700';
+	if ( !empty( $fonts_url ) ) {
+		wp_enqueue_style( 'ethic-fonts', esc_url_raw( $fonts_url ), array(), null );
+	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'ethic-keyboard-image-navigation', get_template_directory_uri() . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
@@ -161,3 +167,30 @@ require get_template_directory() . '/includes/jetpack.php';
  * Load custom WordPress nav walker.
  */
 require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
+
+
+/**
+ * Returns a "Continue Reading" link for excerpts
+ *
+ * @since Ethic 1.0
+ *
+ * @return string The 'Continue reading' link
+ */
+function ethic_continue_reading_link() {
+	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read More', 'ethic' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Read More', 'ethic' ), array( 'span' => array( 
+			'class' => array() ) ) ) . '</a></p>';
+}
+
+
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with the ethic_continue_reading_link().
+ *
+ * @since Ethic 1.0
+ *
+ * @param string Auto generated excerpt
+ * @return string The filtered excerpt
+ */
+function ethic_auto_excerpt_more( $more ) {
+	return ethic_continue_reading_link();
+}
+add_filter( 'excerpt_more', 'ethic_auto_excerpt_more' );

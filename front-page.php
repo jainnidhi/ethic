@@ -441,7 +441,7 @@ get_header();
     </section>
     
     <?php
-    get_template_part('content','frontportfolio'); 
+    get_template_part('content','frontprojects'); 
     
     get_template_part('content','frontposts'); ?>
       
