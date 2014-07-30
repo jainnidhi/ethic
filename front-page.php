@@ -20,7 +20,7 @@ get_header();
 
 
 <section class="slider-wrapper clearfix">
-      <div class="flexslider col-sm-12"  id="main-slider">
+      <div class="flexslider loading col-sm-12"  id="main-slider">
         <ul class="slides">
             <?php 
             // check if the slider is blank.
@@ -158,7 +158,7 @@ get_header();
         <section class="business-tagline-area">
             <div class="container">
                 <div class="row">
-                    <div class="business-tagline col-sm-12">
+                    <div class="business-tagline col-sm-12" data-scroll-reveal="enter from the top after 0.3s">
                         <?php if ( get_theme_mod('tagline_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('tagline_title')); ?></h3>
 
                           <?php } else {  ?> <h3><?php esc_html_e('Welcome to Ethic', 'ethic') ?></h3>
@@ -181,7 +181,7 @@ get_header();
          <div class="row">
         
             <div class="home-featured clearfix">
-                <div class="home-featured-one col-lg-4">
+                <div class="home-featured-one col-lg-4" data-scroll-reveal="enter from the bottom after 0.3s">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_one') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_one'); ?></div>
@@ -203,7 +203,7 @@ get_header();
                     </div>
                 </div>
 
-                <div class="home-featured-two col-lg-4">
+                <div class="home-featured-two col-lg-4" data-scroll-reveal="enter from the bottom after 0.3s">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_two') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_two'); ?></div>
@@ -226,7 +226,7 @@ get_header();
                 </div>
 
 
-                <div class="home-featured-three col-lg-4">
+                <div class="home-featured-three col-lg-4" data-scroll-reveal="enter from the bottom after 0.3s">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_three') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_three'); ?></div>
@@ -256,7 +256,7 @@ get_header();
     <div class="home-video-area">
         <div class="container video-wrap">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" data-scroll-reveal="enter from the top after 0.3s">
                       <?php if ( get_theme_mod('video_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('video_title')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Take A Quick Look To Ethic Demo', 'ethic') ?></h3>
                            <?php } ?>

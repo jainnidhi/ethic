@@ -11,7 +11,10 @@
 jQuery(window).load(function() {
     jQuery('#main-slider').flexslider( { 
         prevText: "<i class='fa fa-angle-left'></i>",
-	nextText: "<i class='fa fa-angle-right'></i>"
+	nextText: "<i class='fa fa-angle-right'></i>",
+        start: function(slider) {
+                        slider.removeClass('loading');
+                }
     });
     
     jQuery('.gallery').flexslider( { 
@@ -26,6 +29,10 @@ jQuery(window).load(function() {
     });
 });
 
+jQuery(function() {
+
+        window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+      });
 
 /* Add a custom back to top button */
 jQuery(document).ready(function() {

@@ -22,12 +22,8 @@
                 <?php } ?>
         </div>
 	<header class="page-header">
-		<h1 class="page-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
-		 <p class="post-meta">
-                        <span class="posted_by">by <a href="#"><?php the_author_posts_link(); ?></a></span>
-                        <span class="posted_on"><?php the_time(esc_html('j M Y','ethic')); ?></span>						
-                </p>
+		<h2 class="page-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                <?php ethic_posted_on(); ?>
 		
 	</header><!-- .entry-header -->
 

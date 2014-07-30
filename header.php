@@ -23,7 +23,7 @@
 <header id="masthead" class="site-header" role="banner">
 	<div class="container">
 		<div class="row">
-			<div class="site-header-inner col-lg-12">
+			<div class="site-header-inner col-lg-5">
 
 				<?php $header_image = get_header_image();
 				if ( ! empty( $header_image ) ) { ?>
@@ -39,9 +39,9 @@
 				</div>
 
 			</div>
-		</div>
-            <nav class="site-navigation">
-			<div class="site-navigation-inner col-lg-12">
+                    
+                     <nav class="site-navigation col-lg-7">
+			<div class="site-navigation-inner">
 				<div class="navbar navbar-default">
 					<div class="navbar-header">
 					<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
@@ -69,6 +69,8 @@
 				</div><!-- .navbar -->
 			</div>
         </nav><!-- .site-navigation -->
+		</div>
+           
     </div><!-- .container -->
         
         

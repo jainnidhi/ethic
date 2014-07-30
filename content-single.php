@@ -15,10 +15,7 @@
 	<header class="page-header">
 		<h1 class="page-title"><?php the_title(); ?></h1>
 
-		<p class="post-meta">
-                        <span class="posted_by">by <a href="#"><?php the_author_posts_link(); ?></a></span>
-                        <span class="posted_on"><?php the_time(esc_html('j M Y','ethic')); ?></span>						
-                </p>
+		<?php ethic_posted_on(); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

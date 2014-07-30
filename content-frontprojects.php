@@ -97,7 +97,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
             <div id="featured-portfolio" class="clearfix">
                 <div class="portfolio-wrap">
                   
-                        <div class="home-featured-portfolio col-lg-3" id="portfolio-one">
+                        <div class="home-featured-portfolio col-lg-3" id="portfolio-one" data-scroll-reveal="enter from the left after 0.3s">
                              <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-1.jpg" alt=""/>
@@ -107,7 +107,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                         </div><!--end .home-featured-portfolio-->
                         
                         
-                        <div class="home-featured-portfolio col-lg-3" id="portfolio-two">
+                        <div class="home-featured-portfolio col-lg-3" id="portfolio-two" data-scroll-reveal="enter from the left after 0.3s">
                             <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-2.jpg" alt=""/>
@@ -116,7 +116,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                             </div> <!--end .featured-post-content -->
                         </div><!--end .home-featured-portfolio-->
                         
-                        <div class="home-featured-portfolio col-lg-3" id="portfolio-three">
+                        <div class="home-featured-portfolio col-lg-3" id="portfolio-three" data-scroll-reveal="enter from the right after 0.3s">
                             <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-3.jpg" alt=""/>
@@ -125,7 +125,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                             </div> <!--end .featured-post-content -->
                         </div><!--end .home-featured-portfolio-->
                         
-                         <div class="home-featured-portfolio col-lg-3" id="portfolio-four">
+                         <div class="home-featured-portfolio col-lg-3" id="portfolio-four" data-scroll-reveal="enter from the right after 0.3s">
                             <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-4.jpg" alt=""/>
