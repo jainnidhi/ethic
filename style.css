@@ -1,10 +1,10 @@
 /*
 Theme Name: Ethic
-Theme URI: http://themekraft.com/tk/
-Author: ThemeKraft
-Author URI: http://themekraft.com/
+Theme URI: http://ideaboxthemes.com/themes/ethic-wordpress-theme/
+Author: IdeaBox Themes
+Author URI: http://ideaboxthemes.com/
 Description: Hi, I am the ultra minimal starter theme Ethic, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress.
-Version: 1.1.2
+Version: 1.0
 License: GNU General Public License
 License URI: see license.txt
 Tags: coffee, nightshift
@@ -67,6 +67,21 @@ ul{
 
 p, ul, ol{
     line-height:24px;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button {
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	-o-transition:      all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
 }
 
 
@@ -231,9 +246,8 @@ object {
 }
 
 /* Header */
-
-.admin-bar .site-header{
-    margin-top:32px;
+.site-header {
+    box-shadow: 0 3px 3px #ccc; 
 }
 
 .site-title{
@@ -683,10 +697,6 @@ object {
 }
 
 /* Main-content */
-
-.main-content{
-    margin-top:128px;
-}
 
 .main-content-inner{
     padding:50px 0;
