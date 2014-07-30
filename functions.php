@@ -182,7 +182,7 @@ require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
  * @return string The 'Continue reading' link
  */
 function ethic_continue_reading_link() {
-	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read More', 'ethic' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Read More', 'ethic' ), array( 'span' => array( 
+	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read More', 'ethic' ) . ' &lsquo;' . esc_html(get_the_title()) . '&rsquo;">' . wp_kses( __( 'Read More', 'ethic' ), array( 'span' => array( 
 			'class' => array() ) ) ) . '</a></p>';
 }
 
