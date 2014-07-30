@@ -1298,10 +1298,41 @@ function ethic_customize_register($wp_customize) {
         'priority' => 3,
     ));
     
+    // Add new section for Home Contact settings
+    $wp_customize->add_section('ethic_contact_map_setting', array(
+        'title' => __('Contact Map', 'ethic'),
+        'priority' => 60,
+    ));
+    
+    $wp_customize->add_setting('map_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('map_title', array(
+        'label' => __('Section Title', 'ethic'),
+        'section' => 'ethic_contact_map_setting',
+        'settings' => 'map_title',
+        'priority' => 1,
+    ));
+    
+    $wp_customize->add_setting('home_map', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'home_map', array(
+        'label' => __('Map Code', 'ethic'),
+        'section' => 'ethic_contact_map_setting',
+        'settings' => 'home_map',
+        'priority' => 2,
+    )));
+    
+    
     // Add footer text section
     $wp_customize->add_section('ethic_footer', array(
         'title' => 'Footer Text', // The title of section
-        'priority' => 60,
+        'priority' => 65,
     ));
 
     $wp_customize->add_setting('ethic_footer_footer_text', array(

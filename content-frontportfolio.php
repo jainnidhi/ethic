@@ -14,7 +14,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
     $featured_count = intval(get_theme_mod('ethic_front_featured_portfolio_count'));
 
     $featured_portfolio_args = array(
-        'post_type' => 'portfolio',
+        'post_type' => 'project',
         'posts_per_page' => $featured_count,
         'post__not_in' => get_option('sticky_posts'),
     );
@@ -51,7 +51,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
 
                                 <a href="<?php the_permalink(); ?>">
                                     <div class="portfolio-featured-image">
-                                    <?php the_post_thumbnail('post_feature_thumb'); ?>
+                                    <?php the_post_thumbnail('post_project_thumb'); ?>
                                     </div>
                                    
                                 </a>

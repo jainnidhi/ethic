@@ -11,7 +11,6 @@
 // Start a new query for displaying featured posts on Front Page
 
 if (get_theme_mod('ethic_front_featured_posts_check')) {
-    $featured_count = intval(get_theme_mod('ethic_front_featured_posts_count'));
     $var = get_theme_mod('ethic_front_featured_posts_cat');
 
     // if no category is selected then return 0 
@@ -19,7 +18,7 @@ if (get_theme_mod('ethic_front_featured_posts_check')) {
 
     $featured_post_args = array(
         'post_type' => 'post',
-        'posts_per_page' => $featured_count,
+        'posts_per_page' => 3,
         'cat' => $featured_cat_id,
         'post__not_in' => get_option('sticky_posts'),
     );
@@ -49,13 +48,14 @@ if (get_theme_mod('ethic_front_featured_posts_check')) {
 
                     <?php while ($featuredposts->have_posts()) : $featuredposts->the_post(); ?>
 
-                        <div class="col-lg-4 home-featured-post">
+                    <?php if(1 == $i) { ?>
+                        <div class="col-lg-8 home-featured-post">
 
                             <div class="featured-post-image">
                              
                                 <a href="<?php the_permalink(); ?>">
 
-                                    <?php the_post_thumbnail('post_feature_thumb'); ?>
+                                    <?php the_post_thumbnail('post_feature_main_thumb'); ?>
                                     <?php ethic_post_format_icon(); ?>
 
                                 </a>
@@ -78,7 +78,37 @@ if (get_theme_mod('ethic_front_featured_posts_check')) {
                             </div>
 
                         </div><!--end .home-featured-post-->
+                   <?php  }  else { ?>
+                        <div class="col-lg-4 home-featured-post">
 
+                            <div class="featured-post-image">
+                             
+                                <a href="<?php the_permalink(); ?>">
+
+                                    <?php the_post_thumbnail('post_feature_other_thumb'); ?>
+                                    <?php ethic_post_format_icon(); ?>
+
+                                </a>
+                            
+                            </div> <!--end .featured-post-content -->
+                            
+                            <div class="featured-post-content">
+                                <a href="<?php the_permalink(); ?>">
+
+                                    <h3 class="home-featured-post-title"><?php the_title(); ?></h3>
+
+                                </a>
+
+                                <p class="post-meta">
+                                    <span class="posted_by">by <a href="#"><?php the_author_posts_link(); ?></a></span>
+                                    <span class="posted_on"><?php the_time(esc_html('j M Y','ethic')); ?></span>						
+                                </p>
+
+                              
+                            </div>
+
+                        </div><!--end .home-featured-post-->
+                        <?php } ?>
                         <?php $i+=1; ?>
 
                     <?php endwhile; ?>

@@ -291,15 +291,15 @@ get_header();
                 <ul class="slides">
                     <?php if ( get_theme_mod('tslider_one') =='' ) {  ?>
                         <li id="tslider1">
-                            <div class="tes-image">
+                            <div class="testimonial-image col-lg-2">
                             <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/tes-1.jpg" alt=""/>
                              <div class="client-name">
                                  <a class="client" href="#">
-                                    <?php esc_html_e('-John', 'ethic') ?>
+                                    <?php esc_html_e('John', 'ethic') ?>
                                 </a>
                             </div>
                             </div>
-                        <div class="flex-caption">
+                        <div class="flex-caption col-lg-10">
                             <div class="client-testimonial">
                                 <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
                             </div>
@@ -308,15 +308,15 @@ get_header();
                     </li>
                     
                     <li id="tslider2">
-                        <div class="tes-image">
+                        <div class="testimonial-image col-lg-2">
                         <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/tes-2.jpg" alt=""/>
                         <div class="client-name">
                                  <a class="client" href="#">
-                                    <?php esc_html_e('-John', 'ethic') ?>
+                                    <?php esc_html_e('Era', 'ethic') ?>
                                 </a>
                             </div>
                         </div>
-                        <div class="flex-caption">
+                        <div class="flex-caption col-lg-10">
                             <div class="client-testimonial">
                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>                  
                             </div>
@@ -325,15 +325,15 @@ get_header();
                     </li>
                     
                      <li id="tslider3">
-                         <div class="tes-image">
+                         <div class="testimonial-image col-lg-2">
                         <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/tes-3.jpg" alt=""/>
                         <div class="client-name">
                                  <a class="client" href="#">
-                                    <?php esc_html_e('-John', 'ethic') ?>
+                                    <?php esc_html_e('Johny', 'ethic') ?>
                                 </a>
                             </div>
                          </div>
-                        <div class="flex-caption">
+                        <div class="flex-caption col-lg-10">
                             <div class="client-testimonial">
                                 <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
                             </div>
@@ -470,6 +470,25 @@ get_header();
                 </div>
             </div>
         </div>
+    </div>
+    <div class="contact-map">
+        <div class="container">
+            <div class="row">
+         <?php if ( get_theme_mod('map_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('map_title')); ?></h3>
+
+                          <?php } else {  ?> <h3><?php esc_html_e('Location Map', 'ethic') ?></h3>
+                                   <?php } ?>
+            </div>
+        </div>
+                          
+        <div class="map-code">
+                        <?php if ( get_theme_mod('home_map') !='' ) {  ?> 
+                         <?php echo get_theme_mod('home_map'); ?>
+                          <?php } else { ?>
+                       <iframe width="100%" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Arera+Colony,+Bhopal,+Madhya+Pradesh,+India&amp;aq=1&amp;oq=arera+&amp;sll=23.199431,77.414254&amp;sspn=0.029189,0.052314&amp;ie=UTF8&amp;hq=&amp;hnear=Arera+Colony,+Bhopal,+Madhya+Pradesh,+India&amp;ll=23.199422,77.41426&amp;spn=0.029187,0.052314&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                           <?php } ?>
+                      </div>
+        
     </div>
        
          <span class="top"><a class="back-to-top"><i class="fa fa-arrow-up"></i></a></span>

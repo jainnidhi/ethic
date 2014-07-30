@@ -13,6 +13,11 @@ jQuery(window).load(function() {
         prevText: "<i class='fa fa-angle-left'></i>",
 	nextText: "<i class='fa fa-angle-right'></i>"
     });
+    
+    jQuery('.gallery').flexslider( { 
+        prevText: "<i class='fa fa-angle-left'></i>",
+	nextText: "<i class='fa fa-angle-right'></i>"
+    });
 
     jQuery('#reviewslider').flexslider({
         animation: "slide",

@@ -64,6 +64,10 @@ ul{
     list-style:none;
 }
 
+p{
+    line-height:25px;
+}
+
 
 /* Images and wp-captions should always fit and be responsive */
 img {
@@ -488,17 +492,17 @@ object {
     border-radius:0;
 }
 
-#reviewslider .slides .tes-image{
-    width:100px;
-    height:100px;
-    float:left;
+#reviewslider .slides img{
+    width:auto;
+}
+
+#reviewslider flex-direction-nav{
+    display:none;
 }
 
 #reviewslider .flex-caption{
-    width:80%;
-    float:right;
     background:#009cee;
-    padding:20px 30px;
+    padding:40px;
     position:relative;
     text-align:center;
 }
@@ -514,6 +518,11 @@ object {
     border-top: 16px solid transparent;
     border-right: 16px solid #009cee;
     border-bottom: 16px solid transparent;
+}
+
+.client-name{
+    margin:5px 0;
+    text-align:center;
 }
 
 #reviewslider .flex-caption p,
@@ -620,4 +629,24 @@ object {
 .home-contact-form > p{
     text-align:center;
     color:#fff;
+}
+
+.contact-map{
+    position:relative;
+}
+
+.contact-map h3{
+    background: #009cee;
+    padding: 12px 50px;
+    color: #fff;
+    margin-top:0;
+    margin-bottom:0;
+    display:inline-block;
+}
+
+.contact-map .container{
+    padding:0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
