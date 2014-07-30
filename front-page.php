@@ -446,7 +446,7 @@ get_header();
     get_template_part('content','frontposts'); ?>
       
     <div class="contact-area">
-        <div class="container">
+        <div class="container contact-wrap">
             <div class="row">
                 <div class="home-contact-form col-lg-12">
                      <?php if ( get_theme_mod('contact_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('contact_title')); ?></h3>

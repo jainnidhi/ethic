@@ -592,17 +592,32 @@ object {
     top: 0;
 }
 
+/* Contact Area */
+
+.contact-area{
+    background:#009cee;
+}
+
+.contact-wrap{
+    padding:45px 0;
+}
+
 .contact-area form input[type='submit'] {
     font-size: 21px;
-    padding: 9px 18px 13px 18px;
+    padding: 6px 18px;
     border: none;
     margin-bottom: 25px;
     color: #fff;
-    background: #009cee;
+    background: #dda41d;
     float: left;
+}
+
+.home-contact-form h3{
+    font-weight:700;
 }
 
 .home-contact-form h3,
 .home-contact-form > p{
     text-align:center;
+    color:#fff;
 }
