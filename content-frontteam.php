@@ -56,7 +56,7 @@ if (get_theme_mod('ethic_front_team_members_check')) {
         ?>
                     
                   
-                        <div class="home-featured-team col-sm-4">
+                        <div class="home-featured-team col-lg-3 col-md-3 col-sm-6 col-xs-12">
 
                             <div class="featured-team-content clearfix">
 
@@ -147,7 +147,7 @@ if (get_theme_mod('ethic_front_team_members_check')) {
             <div id="featured-team-members" class="clearfix">
                 <div class="members-wrap clearfix">
                
-                        <div class="home-featured-team col-lg-3" id="member-one" data-scroll-reveal="enter from the bottom after 0.3s">
+                        <div class="home-featured-team col-lg-3 col-md-3 col-sm-6 col-xs-12" id="member-one" data-scroll-reveal="enter from the bottom after 0.3s">
 
                             <div class="featured-team-content">
                                 <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/team-1.jpg" alt=""/>
@@ -177,7 +177,7 @@ if (get_theme_mod('ethic_front_team_members_check')) {
                             
                         </div><!--end .home-featured-team-->
                         
-                        <div class="home-featured-team col-lg-3" id="member-two" data-scroll-reveal="enter from the bottom after 0.3s">
+                        <div class="home-featured-team col-lg-3 col-md-3 col-sm-6 col-xs-12" id="member-two" data-scroll-reveal="enter from the bottom after 0.3s">
 
                             <div class="featured-team-content">
                                 <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/team-2.jpg" alt=""/>
@@ -205,7 +205,7 @@ if (get_theme_mod('ethic_front_team_members_check')) {
                             
                         </div><!--end .home-featured-team-->
                         
-                        <div class="home-featured-team col-lg-3" id="member-three" data-scroll-reveal="enter from the bottom after 0.3s">
+                        <div class="home-featured-team col-lg-3 col-md-3 col-sm-6 col-xs-12" id="member-three" data-scroll-reveal="enter from the bottom after 0.3s">
 
                             <div class="featured-team-content">
                                 <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/team-3.jpg" alt=""/>
@@ -235,7 +235,7 @@ if (get_theme_mod('ethic_front_team_members_check')) {
                             
                         </div><!--end .home-featured-team-->
                         
-                         <div class="home-featured-team col-lg-3" id="member-four" data-scroll-reveal="enter from the bottom after 0.3s">
+                         <div class="home-featured-team col-lg-3 col-md-3 col-sm-6 col-xs-12" id="member-four" data-scroll-reveal="enter from the bottom after 0.3s">
 
                             <div class="featured-team-content">
                                 <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/team-4.jpg" alt=""/>

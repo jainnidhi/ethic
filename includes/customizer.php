@@ -151,7 +151,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_home_slider_color', array(
-        'label' => 'Home Slider Background color',
+        'label' => 'Section Background color',
         'section' => 'home_slider_setting',
         'settings' => 'ethic_home_slider_color',
         'priority' => 1,
@@ -498,21 +498,7 @@ function ethic_customize_register($wp_customize) {
         'title' => __('Home Tagline', 'ethic'),
         'priority' => 38,
     ));
-    
-    $wp_customize->add_setting('ethic_tagline_color', array(
-        'default' => '#ffffff',
-        'sanitize_callback' => 'ethic_sanitize_hex_color',
-        'sanitize_js_callback' => 'ethic_sanitize_escaping',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_tagline_color', array(
-        'label' => 'Tagline Background color',
-        'section' => 'tagline_setting',
-        'settings' => 'ethic_tagline_color',
-        'priority' => 1,
-            )
-    ));
-
+   
     // Tagline Title
     $wp_customize->add_setting('tagline_title', array(
         'sanitize_callback' => 'ethic_sanitize_text',
@@ -697,7 +683,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_video_color', array(
-        'label' => 'Video Background color',
+        'label' => 'Section Background color',
         'section' => 'video_setting',
         'settings' => 'ethic_video_color',
         'priority' => 2,
@@ -747,7 +733,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'home_video', array(
-        'label' => __('Video Code', 'ethic'),
+        'label' => __('Video Short Code', 'ethic'),
         'section' => 'video_setting',
         'settings' => 'home_video',
         'priority' => 6,
@@ -779,7 +765,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_team_background_color', array(
-        'label' => 'Team Background color',
+        'label' => 'Section Background color',
         'section' => 'ethic_team_settings',
         'settings' => 'ethic_team_background_color',
         'priority' => 2,
@@ -869,7 +855,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_gallery_color', array(
-        'label' => 'Gallery Background color',
+        'label' => 'Section Background color',
         'section' => 'ethic_gallery_setting',
         'settings' => 'ethic_gallery_color',
         'priority' => 2,
@@ -894,7 +880,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('ethic_gallery', array(
-        'label' => __('Gallery Code', 'ethic'),
+        'label' => __('Gallery Short Code', 'ethic'),
         'section' => 'ethic_gallery_setting',
         'settings' => 'ethic_gallery',
         'priority' => 4,
@@ -926,7 +912,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_testimonial_color', array(
-        'label' => 'Testimonial Background color',
+        'label' => 'Section Background color',
         'section' => 'testimonial_slider_setting',
         'settings' => 'ethic_testimonial_color',
         'priority' => 2,
@@ -940,7 +926,7 @@ function ethic_customize_register($wp_customize) {
     $wp_customize->add_control(
             new WP_Customize_Image_Control(
             $wp_customize, 'testimonial_background_image', array(
-        'label' => 'Testimonial Background',
+        'label' => 'Testimonial Background Image',
         'section' => 'testimonial_slider_setting',
         'settings' => 'testimonial_background_image',
         'priority' => 3,
@@ -955,7 +941,7 @@ function ethic_customize_register($wp_customize) {
     $wp_customize->add_control(
             new WP_Customize_Image_Control(
             $wp_customize, 'tslider_one', array(
-        'label' => 'Slider 1',
+        'label' => 'Image 1',
         'section' => 'testimonial_slider_setting',
         'settings' => 'tslider_one',
         'priority' => 5,
@@ -1006,7 +992,7 @@ function ethic_customize_register($wp_customize) {
     $wp_customize->add_control(
             new WP_Customize_Image_Control(
             $wp_customize, 'tslider_two', array(
-        'label' => 'Slider 2',
+        'label' => 'Image 2',
         'section' => 'testimonial_slider_setting',
         'settings' => 'tslider_two',
         'priority' => 9,
@@ -1056,7 +1042,7 @@ function ethic_customize_register($wp_customize) {
     $wp_customize->add_control(
             new WP_Customize_Image_Control(
             $wp_customize, 'tslider_three', array(
-        'label' => 'Slider 3',
+        'label' => 'Image 3',
         'section' => 'testimonial_slider_setting',
         'settings' => 'tslider_three',
         'priority' => 13,
@@ -1106,7 +1092,7 @@ function ethic_customize_register($wp_customize) {
     $wp_customize->add_control(
             new WP_Customize_Image_Control(
             $wp_customize, 'tslider_four', array(
-        'label' => 'Slider 4',
+        'label' => 'Image 4',
         'section' => 'testimonial_slider_setting',
         'settings' => 'tslider_four',
         'priority' => 17,
@@ -1187,7 +1173,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_project_background_color', array(
-        'label' => 'Project Background color',
+        'label' => 'Section Background color',
         'section' => 'ethic_front_page_project_options',
         'settings' => 'ethic_project_background_color',
         'priority' => 3,
@@ -1272,7 +1258,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_product_color', array(
-        'label' => 'Product Background color',
+        'label' => 'Section Background color',
         'section' => 'ethic_front_product_options',
         'settings' => 'ethic_product_color',
         'priority' => 2,
@@ -1330,7 +1316,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_blog_background_color', array(
-        'label' => 'Blog Background color',
+        'label' => 'Section Background color',
         'section' => 'ethic_front_page_post_options',
         'settings' => 'ethic_blog_background_color',
         'priority' => 2,
@@ -1398,7 +1384,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_contact_color', array(
-        'label' => 'Contact Background color',
+        'label' => 'Section Background color',
         'section' => 'ethic_contact_form_setting',
         'settings' => 'ethic_contact_color',
         'priority' => 1,
@@ -1835,7 +1821,6 @@ function ethic_background_color() {
     $background_project = get_theme_mod('ethic_project_background_color');
     $background_blog = get_theme_mod('ethic_blog_background_color');
     $background_team = get_theme_mod('ethic_team_background_color');
-    $background_tagline = get_theme_mod('ethic_tagline_color');
     $background_video = get_theme_mod('ethic_video_color');
     $background_gallery = get_theme_mod('ethic_gallery_color');
     $background_testimonial = get_theme_mod('ethic_testimonial_color');
@@ -1870,13 +1855,7 @@ function ethic_background_color() {
             }
     <?php } ?>
                 
-    <?php if (get_theme_mod('ethic_tagline_color')) { ?>
-            .business-tagline-area{
-                background:<?php echo $background_tagline ?>;
-            }
-    <?php } ?>
-    
-        <?php if (get_theme_mod('ethic_video_color')) { ?>
+    <?php if (get_theme_mod('ethic_video_color')) { ?>
         .home-video-area{
             background:<?php echo $background_video ?>;
         }

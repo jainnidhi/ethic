@@ -49,7 +49,7 @@ if (get_theme_mod('ethic_front_featured_posts_check')) {
                     <?php while ($featuredposts->have_posts()) : $featuredposts->the_post(); ?>
 
                     <?php if(1 == $i) { ?>
-                        <div class="col-lg-8 home-featured-post" data-scroll-reveal="enter from the left after 0.3s">
+                        <div class="col-lg-8 col-md-8 col-sm-12 home-featured-post" data-scroll-reveal="enter from the left after 0.3s">
 
                             <div class="featured-post-image">
                              
@@ -79,7 +79,7 @@ if (get_theme_mod('ethic_front_featured_posts_check')) {
 
                         </div><!--end .home-featured-post-->
                    <?php  }  else { ?>
-                        <div class="col-lg-4 home-featured-post" data-scroll-reveal="enter from the right after 0.3s">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 home-featured-post" data-scroll-reveal="enter from the right after 0.3s">
 
                             <div class="featured-post-image">
                              

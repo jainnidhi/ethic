@@ -45,7 +45,7 @@ if (get_theme_mod('ethic_front_featured_project_check')) {
 
                     <?php while ($featuredproject->have_posts()) : $featuredproject->the_post(); ?>
                                      
-                        <div class="home-featured-project col-lg-3">
+                        <div class="home-featured-project col-lg-3 col-md-3 col-sm-6 col-xs-12">
 
                             <div class="featured-project-content">
 
@@ -97,7 +97,7 @@ if (get_theme_mod('ethic_front_featured_project_check')) {
             <div id="featured-project" class="clearfix">
                 <div class="project-wrap">
                   
-                        <div class="home-featured-project col-lg-3" id="project-one" data-scroll-reveal="enter from the left after 0.3s">
+                        <div class="home-featured-project col-lg-3 col-md-3 col-sm-6 col-xs-12" id="project-one" data-scroll-reveal="enter from the left after 0.3s">
                              <div class="featured-project-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-1.jpg" alt=""/>
@@ -107,7 +107,7 @@ if (get_theme_mod('ethic_front_featured_project_check')) {
                         </div><!--end .home-featured-project-->
                         
                         
-                        <div class="home-featured-project col-lg-3" id="project-two" data-scroll-reveal="enter from the left after 0.3s">
+                        <div class="home-featured-project col-lg-3 col-md-3 col-sm-6 col-xs-12" id="project-two" data-scroll-reveal="enter from the left after 0.3s">
                             <div class="featured-project-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-2.jpg" alt=""/>
@@ -116,7 +116,7 @@ if (get_theme_mod('ethic_front_featured_project_check')) {
                             </div> <!--end .featured-post-content -->
                         </div><!--end .home-featured-project-->
                         
-                        <div class="home-featured-project col-lg-3" id="project-three" data-scroll-reveal="enter from the right after 0.3s">
+                        <div class="home-featured-project col-lg-3 col-md-3 col-sm-6 col-xs-12" id="project-three" data-scroll-reveal="enter from the right after 0.3s">
                             <div class="featured-project-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-3.jpg" alt=""/>
@@ -125,7 +125,7 @@ if (get_theme_mod('ethic_front_featured_project_check')) {
                             </div> <!--end .featured-post-content -->
                         </div><!--end .home-featured-project-->
                         
-                         <div class="home-featured-project col-lg-3" id="project-four" data-scroll-reveal="enter from the right after 0.3s">
+                         <div class="home-featured-project col-lg-3 col-md-3 col-sm-6 col-xs-12" id="project-four" data-scroll-reveal="enter from the right after 0.3s">
                             <div class="featured-project-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-4.jpg" alt=""/>
