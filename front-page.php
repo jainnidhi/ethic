@@ -158,7 +158,7 @@ get_header();
         <section class="business-tagline-area">
             <div class="container">
                 <div class="row">
-                    <div class="business-tagline col-sm-12" data-scroll-reveal="enter from the top after 0.3s">
+                    <div class="business-tagline col-sm-12" data-scroll-reveal="enter from the top after 0.2s">
                         <?php if ( get_theme_mod('tagline_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('tagline_title')); ?></h3>
 
                           <?php } else {  ?> <h3><?php esc_html_e('Welcome to Ethic', 'ethic') ?></h3>
@@ -181,7 +181,7 @@ get_header();
          <div class="row">
         
             <div class="home-featured clearfix">
-                <div class="home-featured-one col-lg-4" data-scroll-reveal="enter from the bottom after 0.3s">
+                <div class="home-featured-one col-lg-4" data-scroll-reveal="enter from the bottom after 0.2s">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_one') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_one'); ?></div>
@@ -203,7 +203,7 @@ get_header();
                     </div>
                 </div>
 
-                <div class="home-featured-two col-lg-4" data-scroll-reveal="enter from the bottom after 0.3s">
+                <div class="home-featured-two col-lg-4" data-scroll-reveal="enter from the bottom after 0.2s">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_two') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_two'); ?></div>
@@ -226,7 +226,7 @@ get_header();
                 </div>
 
 
-                <div class="home-featured-three col-lg-4" data-scroll-reveal="enter from the bottom after 0.3s">
+                <div class="home-featured-three col-lg-4" data-scroll-reveal="enter from the bottom after 0.2s">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_three') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_three'); ?></div>
@@ -256,7 +256,7 @@ get_header();
     <div class="home-video-area">
         <div class="container video-wrap">
             <div class="row">
-                <div class="col-lg-12" data-scroll-reveal="enter from the top after 0.3s">
+                <div class="col-lg-12" data-scroll-reveal="enter from the top after 0.2s">
                       <?php if ( get_theme_mod('video_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('video_title')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Take A Quick Look To Ethic Demo', 'ethic') ?></h3>
                            <?php } ?>
@@ -507,7 +507,7 @@ get_header();
                         <?php if ( get_theme_mod('home_map') !='' ) {  ?> 
                          <?php echo get_theme_mod('home_map'); ?>
                           <?php } else { ?>
-                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.3373274884793!2d73.68860100000003!3d24.57755199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e564ac2e9c8d%3A0x87292b7f148a532d!2sIdeaBox+Creations!5e0!3m2!1sen!2sin!4v1406726113881" width="600" height="450" frameborder="0" style="border:0"></iframe>
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.3373274884793!2d73.68860100000003!3d24.57755199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e564ac2e9c8d%3A0x87292b7f148a532d!2sIdeaBox+Creations!5e0!3m2!1sen!2sin!4v1406726113881" width="100%" height="450px" frameborder="0" style="border:0"></iframe>
                            <?php } ?>
                       </div>
         
