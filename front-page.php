@@ -304,7 +304,7 @@ get_header();
     </section><!-- end home featured area -->
     
     <?php if(get_theme_mod('ethic_video_section_check')) { ?>
-    <div class="home-video-area">
+    <section class="home-video-area">
         <div class="container video-wrap">
             <div class="row">
                 <div class="col-lg-6 video-content" data-scroll-reveal="enter from the left after 0.2s">
@@ -331,29 +331,33 @@ get_header();
             </div><!-- /.row -->
         </div><!-- /.container -->
                     
-    </div><!-- /. home-video-area -->
+    </section><!-- /. home-video-area -->
     <?php } ?>
         
                
       <?php  // Display featured posts on front page
             get_template_part('content', 'frontteam'); ?>
     
-    <div class="gallery-area">
+    <?php if(get_theme_mod('ethic_gallery_check')) { ?>
+    <section class="gallery-area">
         <div class="container gallery-block">
             <div class="row">
+                <div class="col-lg-12">
                 <?php if ( get_theme_mod('gallery_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('gallery_title')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Gallery', 'ethic') ?></h3>
                            <?php } ?>
-                  <div class="gallery-wrap">
-                      <?php if ( get_theme_mod('ethic_gallery') !='' ) {  ?> 
-                         <?php echo do_shortcode(get_theme_mod('ethic_gallery')); ?>
-                        <?php } else { ?>
-                        <?php esc_html_e('You can add your gallery here.', 'ethic'); ?> 
-                          <?php } ?>
-                  </div>
+                    <div class="gallery-wrap">
+                        <?php if ( get_theme_mod('ethic_gallery') !='' ) {  ?> 
+                           <?php echo do_shortcode(get_theme_mod('ethic_gallery')); ?>
+                          <?php } else { ?>
+                          <?php esc_html_e('You can add your gallery here.', 'ethic'); ?> 
+                            <?php } ?>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <?php } ?>
         
         
     <!-- Home testimonial slider starts here --> 

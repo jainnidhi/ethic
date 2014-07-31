@@ -101,7 +101,7 @@ function ethic_customize_register($wp_customize) {
     // Add new section for custom favicon settings
     $wp_customize->add_section('ethic_custom_favicon_setting', array(
         'title' => __('Custom Favicon', 'ethic'),
-        'priority' => 62,
+        'priority' => 63,
     ));
 
 
@@ -121,7 +121,7 @@ function ethic_customize_register($wp_customize) {
     // Add new section for custom favicon settings
     $wp_customize->add_section('ethic_tracking_code_setting', array(
         'title' => __('Tracking Code', 'ethic'),
-        'priority' => 61,
+        'priority' => 64,
     ));
 
     $wp_customize->add_setting('tracking_code', array('default' => '',
@@ -145,13 +145,13 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('ethic_home_slider_color', array(
-        'default' => '#ffffff',
+        'default' => '#009cee',
         'sanitize_callback' => 'ethic_sanitize_hex_color',
         'sanitize_js_callback' => 'ethic_sanitize_escaping',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_home_slider_color', array(
-        'label' => 'Home Sliders Background color',
+        'label' => 'Home Slider Background color',
         'section' => 'home_slider_setting',
         'settings' => 'ethic_home_slider_color',
         'priority' => 1,
@@ -498,7 +498,20 @@ function ethic_customize_register($wp_customize) {
         'title' => __('Home Tagline', 'ethic'),
         'priority' => 38,
     ));
+    
+    $wp_customize->add_setting('ethic_tagline_color', array(
+        'default' => '#ffffff',
+        'sanitize_callback' => 'ethic_sanitize_hex_color',
+        'sanitize_js_callback' => 'ethic_sanitize_escaping',
+    ));
 
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_tagline_color', array(
+        'label' => 'Tagline Background color',
+        'section' => 'tagline_setting',
+        'settings' => 'ethic_tagline_color',
+        'priority' => 1,
+            )
+    ));
 
     // Tagline Title
     $wp_customize->add_setting('tagline_title', array(
@@ -510,6 +523,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Tagline', 'ethic'),
         'section' => 'tagline_setting',
         'settings' => 'tagline_title',
+        'priority' => 2,
     ));
 
     $wp_customize->add_setting('tagline_description', array('default' => '',
@@ -676,6 +690,20 @@ function ethic_customize_register($wp_customize) {
         'type' => 'checkbox',
     ));
     
+    $wp_customize->add_setting('ethic_video_color', array(
+        'default' => '#009cee',
+        'sanitize_callback' => 'ethic_sanitize_hex_color',
+        'sanitize_js_callback' => 'ethic_sanitize_escaping',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_video_color', array(
+        'label' => 'Video Background color',
+        'section' => 'video_setting',
+        'settings' => 'ethic_video_color',
+        'priority' => 2,
+            )
+    ));
+    
     // video Title
     $wp_customize->add_setting('video_title', array(
         'sanitize_callback' => 'sanitize_text_field',
@@ -686,7 +714,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Title', 'ethic'),
         'section' => 'video_setting',
         'settings' => 'video_title',
-        'priority' => 2,
+        'priority' => 3,
     ));
     
     $wp_customize->add_setting('video_description', array('default' => '',
@@ -698,7 +726,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Video Description', 'ethic'),
         'section' => 'video_setting',
         'settings' => 'video_description',
-        'priority' => 3,
+        'priority' => 4,
         )));
     
     $wp_customize->add_setting('video_code_title', array(
@@ -710,7 +738,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Video Title', 'ethic'),
         'section' => 'video_setting',
         'settings' => 'video_code_title',
-        'priority' => 4,
+        'priority' => 5,
     ));
 
     $wp_customize->add_setting('home_video', array('default' => '',
@@ -722,7 +750,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Video Code', 'ethic'),
         'section' => 'video_setting',
         'settings' => 'home_video',
-        'priority' => 5,
+        'priority' => 6,
     )));
     
     // Add new section team setting
@@ -823,6 +851,31 @@ function ethic_customize_register($wp_customize) {
         'priority' => 49,
     ));
      
+     $wp_customize->add_setting('ethic_gallery_check', array(
+        'default' => 0,
+        'sanitize_callback' => 'ethic_sanitize_checkbox',
+    ));
+    $wp_customize->add_control('ethic_gallery_check', array(
+        'label' => __('Show Gallery on Front Page', 'ethic'),
+        'section' => 'ethic_gallery_setting',
+        'priority' => 1,
+        'type' => 'checkbox',
+    ));
+     
+     $wp_customize->add_setting('ethic_gallery_color', array(
+        'default' => '#eeeeee',
+        'sanitize_callback' => 'ethic_sanitize_hex_color',
+        'sanitize_js_callback' => 'ethic_sanitize_escaping',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_gallery_color', array(
+        'label' => 'Gallery Background color',
+        'section' => 'ethic_gallery_setting',
+        'settings' => 'ethic_gallery_color',
+        'priority' => 2,
+            )
+    ));
+     
      $wp_customize->add_setting('galley_title', array(
         'sanitize_callback' => 'sanitize_text_field',
         'transport' => 'postMessage',
@@ -832,7 +885,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Title', 'ethic'),
         'section' => 'ethic_gallery_setting',
         'settings' => 'galley_title',
-        'priority' => 1,
+        'priority' => 3,
     ));
     
     $wp_customize->add_setting('ethic_gallery', array(
@@ -844,7 +897,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Gallery Code', 'ethic'),
         'section' => 'ethic_gallery_setting',
         'settings' => 'ethic_gallery',
-        'priority' => 2,
+        'priority' => 4,
     ));
      
     
@@ -865,7 +918,21 @@ function ethic_customize_register($wp_customize) {
         'priority' => 1,
         'type' => 'checkbox',
     ));
+    
+    $wp_customize->add_setting('ethic_testimonial_color', array(
+        'default' => '#ffffff',
+        'sanitize_callback' => 'ethic_sanitize_hex_color',
+        'sanitize_js_callback' => 'ethic_sanitize_escaping',
+    ));
 
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_testimonial_color', array(
+        'label' => 'Testimonial Background color',
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'ethic_testimonial_color',
+        'priority' => 2,
+            )
+    ));
+    
     $wp_customize->add_setting('testimonial_background_image', array(
         'transport' => 'postMessage',
     ));
@@ -876,7 +943,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Testimonial Background',
         'section' => 'testimonial_slider_setting',
         'settings' => 'testimonial_background_image',
-        'priority' => 2,
+        'priority' => 3,
             )
             )
     );
@@ -1179,6 +1246,7 @@ function ethic_customize_register($wp_customize) {
         'priority' => 40,
     ));
     
+    
     /* Front Products */
     $wp_customize->add_section('ethic_front_product_options', array(
         'title' => __('Product Settings', 'ethic'),
@@ -1195,6 +1263,20 @@ function ethic_customize_register($wp_customize) {
         'section' => 'ethic_front_product_options',
         'priority' => 1,
         'type' => 'checkbox',
+    ));
+    
+    $wp_customize->add_setting('ethic_product_color', array(
+        'default' => '#009cee',
+        'sanitize_callback' => 'ethic_sanitize_hex_color',
+        'sanitize_js_callback' => 'ethic_sanitize_escaping',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_product_color', array(
+        'label' => 'Product Background color',
+        'section' => 'ethic_front_product_options',
+        'settings' => 'ethic_product_color',
+        'priority' => 2,
+            )
     ));
     
     $wp_customize->add_setting('product_title', array(
@@ -1303,10 +1385,96 @@ function ethic_customize_register($wp_customize) {
     )));
 
     
-    // Add new section for Social Icons
+    // Add new section for Home Contact settings
+    $wp_customize->add_section('ethic_contact_form_setting', array(
+        'title' => __('Contact Form', 'ethic'),
+        'priority' => 59,
+    ));
+    
+    $wp_customize->add_setting('ethic_contact_color', array(
+        'default' => '#009cee',
+        'sanitize_callback' => 'ethic_sanitize_hex_color',
+        'sanitize_js_callback' => 'ethic_sanitize_escaping',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_contact_color', array(
+        'label' => 'Contact Background color',
+        'section' => 'ethic_contact_form_setting',
+        'settings' => 'ethic_contact_color',
+        'priority' => 1,
+            )
+    ));
+    
+    $wp_customize->add_setting('contact_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('contact_title', array(
+        'label' => __('Section Title', 'ethic'),
+        'section' => 'ethic_contact_form_setting',
+        'settings' => 'contact_title',
+        'priority' => 2,
+    ));
+    
+    $wp_customize->add_setting('contact_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'contact_description', array(
+        'label' => __('Description', 'ethic'),
+        'section' => 'ethic_contact_form_setting',
+        'settings' => 'contact_description',
+        'priority' => 3,
+    )));
+    
+    $wp_customize->add_setting('ethic_contact_form', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('ethic_contact_form', array(
+        'label' => __('Contact Form Short Code', 'ethic'),
+        'section' => 'ethic_contact_form_setting',
+        'settings' => 'ethic_contact_form',
+        'priority' => 4,
+    ));
+    
+    // Add new section for Home Contact settings
+    $wp_customize->add_section('ethic_contact_map_setting', array(
+        'title' => __('Contact Map', 'ethic'),
+        'priority' => 60,
+    ));
+    
+    $wp_customize->add_setting('map_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('map_title', array(
+        'label' => __('Section Title', 'ethic'),
+        'section' => 'ethic_contact_map_setting',
+        'settings' => 'map_title',
+        'priority' => 1,
+    ));
+    
+    $wp_customize->add_setting('home_map', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'home_map', array(
+        'label' => __('Map Code', 'ethic'),
+        'section' => 'ethic_contact_map_setting',
+        'settings' => 'home_map',
+        'priority' => 2,
+    )));
+    
+     // Add new section for Social Icons
     $wp_customize->add_section('social_icon_setting', array(
         'title' => __('Social Icons', 'ethic'),
-        'priority' => 58,
+        'priority' => 62,
     ));
 
     // link url
@@ -1446,79 +1614,6 @@ function ethic_customize_register($wp_customize) {
         'settings' => 'linkedin_link_url',
         'priority' => 11,
     ));
-
-    // Add new section for Home Contact settings
-    $wp_customize->add_section('ethic_contact_form_setting', array(
-        'title' => __('Contact Form', 'ethic'),
-        'priority' => 59,
-    ));
-    
-    $wp_customize->add_setting('contact_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('contact_title', array(
-        'label' => __('Section Title', 'ethic'),
-        'section' => 'ethic_contact_form_setting',
-        'settings' => 'contact_title',
-        'priority' => 1,
-    ));
-    
-    $wp_customize->add_setting('contact_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'contact_description', array(
-        'label' => __('Description', 'ethic'),
-        'section' => 'ethic_contact_form_setting',
-        'settings' => 'contact_description',
-        'priority' => 2,
-    )));
-    
-    $wp_customize->add_setting('ethic_contact_form', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('ethic_contact_form', array(
-        'label' => __('Contact Form Short Code', 'ethic'),
-        'section' => 'ethic_contact_form_setting',
-        'settings' => 'ethic_contact_form',
-        'priority' => 3,
-    ));
-    
-    // Add new section for Home Contact settings
-    $wp_customize->add_section('ethic_contact_map_setting', array(
-        'title' => __('Contact Map', 'ethic'),
-        'priority' => 60,
-    ));
-    
-    $wp_customize->add_setting('map_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('map_title', array(
-        'label' => __('Section Title', 'ethic'),
-        'section' => 'ethic_contact_map_setting',
-        'settings' => 'map_title',
-        'priority' => 1,
-    ));
-    
-    $wp_customize->add_setting('home_map', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'home_map', array(
-        'label' => __('Map Code', 'ethic'),
-        'section' => 'ethic_contact_map_setting',
-        'settings' => 'home_map',
-        'priority' => 2,
-    )));
-    
     
     // Add footer text section
     $wp_customize->add_section('ethic_footer', array(
@@ -1712,22 +1807,16 @@ add_action('wp_footer', 'ethic_footer_tracking_code');
 function ethic_background_image() {
 
     $background_testimonial = get_theme_mod('testimonial_background_image');
-    $background_featured = get_theme_mod('featured_background_image');
 
     // If we get this far, we have custom styles.
     ?>
-    <style type="text/css" id="passion-background-css">
+    <style type="text/css" id="ethic-background-image-css">
     <?php if (get_theme_mod('testimonial_background_image')) { ?>
             .testimonial-area{
                 background-image:url('<?php echo $background_testimonial ?>');
             }
     <?php } ?>
-    <?php if (get_theme_mod('featured_background_image')) { ?>
-            .slider-wrapper{
-                background-image:url('<?php echo $background_featured ?>');
-            }
-    <?php } ?>
-
+    
     </style>
 
     <?php
@@ -1742,19 +1831,24 @@ add_action('wp_head', 'ethic_background_image');
  */
 function ethic_background_color() {
 
-    $background_featured = get_theme_mod('ethic_featured_background_color');
+    $background_slider = get_theme_mod('ethic_home_slider_color');
     $background_project = get_theme_mod('ethic_project_background_color');
     $background_blog = get_theme_mod('ethic_blog_background_color');
     $background_team = get_theme_mod('ethic_team_background_color');
-    $background_cta = get_theme_mod('ethic_cta_background_color');
+    $background_tagline = get_theme_mod('ethic_tagline_color');
+    $background_video = get_theme_mod('ethic_video_color');
+    $background_gallery = get_theme_mod('ethic_gallery_color');
+    $background_testimonial = get_theme_mod('ethic_testimonial_color');
+    $background_product = get_theme_mod('ethic_product_color');
+    $background_contact = get_theme_mod('ethic_contact_color');
 
     // If we get this far, we have custom styles.
     ?>
 
     <style type="text/css" id="passion-background-color-css">
-    <?php if (get_theme_mod('ethic_featured_background_color')) { ?>
+    <?php if (get_theme_mod('ethic_home_slider_color')) { ?>
             .home-featured-area{
-                background:<?php echo $background_featured ?>;
+                background:<?php echo $background_slider ?>;
             }
     <?php } ?>
                     
@@ -1776,11 +1870,43 @@ function ethic_background_color() {
             }
     <?php } ?>
                 
-    <?php if (get_theme_mod('ethic_cta_background_color')) { ?>
-            .home-cta-area{
-                background:<?php echo $background_cta ?>;
+    <?php if (get_theme_mod('ethic_tagline_color')) { ?>
+            .business-tagline-area{
+                background:<?php echo $background_tagline ?>;
             }
     <?php } ?>
+    
+        <?php if (get_theme_mod('ethic_video_color')) { ?>
+        .home-video-area{
+            background:<?php echo $background_video ?>;
+        }
+    <?php } ?>
+        
+    <?php if (get_theme_mod('ethic_gallery_color')) { ?>
+            .gallery-area{
+                background:<?php echo $background_gallery ?>;
+            }
+    <?php } ?>
+            
+    <?php if (get_theme_mod('ethic_testimonial_color')) { ?>
+            .testimonial-area{
+                background:<?php echo $background_testimonial ?>;
+            }
+    <?php } ?>
+            
+    <?php if (get_theme_mod('ethic_product_color')) { ?>
+            .product-area{
+                background:<?php echo $background_product ?>;
+            }
+    <?php } ?>
+            
+     <?php if (get_theme_mod('ethic_contact_color')) { ?>
+            .contact-area{
+                background:<?php echo $background_contact ?>;
+            }
+    <?php } ?>
+            
+    
            
     </style>
 

@@ -338,6 +338,9 @@ object {
 
 /* Business Tagline */
 
+.business-tagline-area{
+    background:#fff;
+}
 .business-tagline{
     padding:0px 0 55px;
 }
@@ -389,6 +392,9 @@ object {
 
 /* Team Members */
 
+.team-member-area{
+    background:#fff;
+}
 .team-member-area p {
     font-size: 20px;
     margin: 20px 0;
@@ -504,6 +510,7 @@ object {
 
 .testimonial-slider{
     background: url(includes/images/tes-back.jpg) 50% -127.8px repeat fixed;
+    background-color:#fff;
 }
 
 .testimonial-wrap{
@@ -546,7 +553,11 @@ object {
     width: 20%;
 }
 
-/* Portfolio Area */
+/* Project Area */
+
+.project-area{
+    background:#fff;
+}
 
 .featured-project-content img{
     border-radius:100%;
@@ -567,6 +578,9 @@ object {
 
 /* Front Posts */
 
+.blog-area{
+    background:#fff;
+}
 .blog-wrap{
     padding:50px 0;
 }
