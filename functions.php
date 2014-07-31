@@ -262,7 +262,8 @@ if ( ! function_exists( 'ethic_posted_on' ) ) {
 		);
 
 		// Return the Categories as a list
-		$categories_list = get_the_category_list( esc_html__( ' ', 'ethic' ) );
+                
+		$categories_list = '<i class="fa fa-folder-o"></i>'.get_the_category_list( esc_html__( ', ', 'ethic' ) );
 
 		// Translators: 1: Permalink 2: Title 3: No. of Comments
 		$comments = sprintf( '<span class="comments-link"><i class="fa fa-comment"></i> <a href="%1$s" title="%2$s">%3$s</a></span>',
