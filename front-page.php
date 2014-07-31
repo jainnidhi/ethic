@@ -80,8 +80,10 @@ get_header();
           // load first slide
           if ( get_theme_mod('slider_one') !='' ) {  ?>
                     <li id="slider1" class="home-slider"> 
+                         <div class="slider-image col-lg-6">
                         <img href="<?php if ( get_theme_mod('slider_one_url') !='' ) { echo esc_url(get_theme_mod('slider_one_url')); } ?>" src="<?php echo get_theme_mod('slider_one'); ?>" alt=""/>
-                        <?php if ( get_theme_mod('slider_title_one') !='' || get_theme_mod('slider_one_url') !='' || get_theme_mod('slider_one_description') !='' ) {  ?>
+                         </div>
+                            <?php if ( get_theme_mod('slider_title_one') !='' || get_theme_mod('slider_one_url') !='' || get_theme_mod('slider_one_description') !='' ) {  ?>
                         <div class="flex-caption">
                             <div class="slider-text-container">
                                 <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_one_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_one')); ?></a></h2>
@@ -101,8 +103,9 @@ get_header();
                      // load second slide
                      if ( get_theme_mod('slider_two') !='' ) {  ?>
                     <li id="slider2" class="home-slider"> 
+                         <div class="slider-image col-lg-6">
                         <img href="<?php if ( get_theme_mod('slider_two_url') !='' ) { echo esc_url(get_theme_mod('slider_two_url')); } ?>" src="<?php echo get_theme_mod('slider_two'); ?>" alt=""/>
-                       
+                         </div>
                      <?php if ( get_theme_mod('slider_title_two') !='' || get_theme_mod('slider_two_url') !='' || get_theme_mod('slider_two_description') !='' ) {  ?>
                         <div class="flex-caption">
                             <div class="slider-text-container">
@@ -122,9 +125,10 @@ get_header();
                     <?php
                     // load third slide
                     if ( get_theme_mod('slider_three') !='' ) {  ?>
-                    <li id="slider3" class="home-slider">  
+                    <li id="slider3" class="home-slider"> 
+                         <div class="slider-image col-lg-6">
                         <img href="<?php if ( get_theme_mod('slider_three_url') !='' ) { echo esc_url(get_theme_mod('slider_three_url')); } ?>" src="<?php echo get_theme_mod('slider_three'); ?>" alt=""/>
-                       
+                         </div>
                    <?php if ( get_theme_mod('slider_title_three') !='' || get_theme_mod('slider_three_url') !='' || get_theme_mod('slider_three_description') !='' ) {  ?>
                         <div class="flex-caption">
                             <div class="slider-text-container">
@@ -146,8 +150,9 @@ get_header();
                     // load fourth slide
                     if ( get_theme_mod('slider_four') !='' ) {  ?>
                     <li id="slider4" class="home-slider"> 
+                         <div class="slider-image col-lg-6">
                         <img href="<?php if ( get_theme_mod('slider_four_url') !='' ) { echo esc_url(get_theme_mod('slider_four_url')); } ?>" src="<?php echo get_theme_mod('slider_four'); ?>" alt=""/>
-                       
+                         </div>
                     <?php if ( get_theme_mod('slider_title_four') !='' || get_theme_mod('slider_four_url') !='' || get_theme_mod('slider_four_description') !='' ) {  ?>
                         <div class="flex-caption">
                             <div class="slider-text-container">
@@ -169,8 +174,9 @@ get_header();
                     // load fifth slide
                     if ( get_theme_mod('slider_five') !='' ) {  ?>
                     <li id="slider5" class="home-slider">  
-                                <img href="<?php if ( get_theme_mod('slider_five_url') !='' ) { echo esc_url(get_theme_mod('slider_five_url')); } ?>" src="<?php echo get_theme_mod('slider_five'); ?>" alt=""/>
-                         
+                         <div class="slider-image col-lg-6">
+                            <img href="<?php if ( get_theme_mod('slider_five_url') !='' ) { echo esc_url(get_theme_mod('slider_five_url')); } ?>" src="<?php echo get_theme_mod('slider_five'); ?>" alt=""/>
+                         </div>
                     <?php if ( get_theme_mod('slider_title_five') !='' || get_theme_mod('slider_five_url') !='' || get_theme_mod('slider_five_description') !='' ) {  ?>
                         <div class="flex-caption">
                             <div class="slider-text-container">
@@ -420,7 +426,7 @@ get_header();
                       <div class="client-block clearfix">
                          <div class="testimonial-image">
                         <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/tes-1.jpg" alt=""/>
-                       
+                       </div>
                         <div class="flex-caption">
                             <div class="client-testimonial">
                                 <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
@@ -431,7 +437,7 @@ get_header();
                                     <?php esc_html_e('Johny', 'ethic') ?>
                                 </a>
                             </div>
-                         </div>
+                         
                         </div>
                       </div>
                     </li>
@@ -439,8 +445,10 @@ get_header();
                     
                      <?php if ( get_theme_mod('tslider_one') !='' ) {  ?>
                     <li class="col-lg-6" id="tslider1">
+                        <div class="testimonial-image">
                         <img  src="<?php echo get_theme_mod('tslider_one'); ?>" alt=""/>
-                      <?php if ( get_theme_mod('tslider_one_description') !='' || get_theme_mod('client_name_url_one') !='' || get_theme_mod('client_name_one') !='' ) {  ?>
+                        </div>
+                        <?php if ( get_theme_mod('tslider_one_description') !='' || get_theme_mod('client_name_url_one') !='' || get_theme_mod('client_name_one') !='' ) {  ?>
                         <div class="flex-caption">
                             <div class="client-testimonial">
                                 <?php echo wpautop(esc_html(get_theme_mod('tslider_one_description'))); ?>
@@ -456,7 +464,9 @@ get_header();
                     
                     <?php if ( get_theme_mod('tslider_two') !='' ) {  ?>
                     <li class="col-lg-6" id="tslider2">
+                        <div class="testimonial-image">
                         <img  src="<?php echo get_theme_mod('tslider_two'); ?>" alt=""/>
+                        </div>
                         <?php } ?>
                      <?php if ( get_theme_mod('tslider_two_description') !='' || get_theme_mod('client_name_url_two') !='' || get_theme_mod('client_name_two') !='' ) {  ?>
                         <div class="flex-caption">
@@ -474,7 +484,9 @@ get_header();
                     
                      <?php if ( get_theme_mod('tslider_three') !='' ) {  ?>
                      <li class="col-lg-6" id="tslider3"> 
+                         <div class="testimonial-image">
                         <img  src="<?php echo get_theme_mod('tslider_three'); ?>" alt=""/>
+                         </div>
                         <?php } ?>
                      <?php if ( get_theme_mod('tslider_three_description') !='' || get_theme_mod('client_name_url_three') !='' || get_theme_mod('client_name_three') !='' ) {  ?>
                         <div class="flex-caption">
@@ -492,7 +504,9 @@ get_header();
                     
                      <?php if ( get_theme_mod('tslider_four') !='' ) {  ?>
                      <li class="col-lg-6" id="tslider4"> 
-                        <img  src="<?php echo get_theme_mod('tslider_four'); ?>" alt=""/>
+                        <div class="testimonial-image">
+                            <img  src="<?php echo get_theme_mod('tslider_four'); ?>" alt=""/>
+                        </div>
                         <?php } ?>
                       <?php if ( get_theme_mod('tslider_four_description') !='' || get_theme_mod('client_name_url_four') !='' || get_theme_mod('client_name_four') !='' ) {  ?>
                         <div class="flex-caption">
