@@ -143,6 +143,20 @@ function ethic_customize_register($wp_customize) {
         'title' => __('Home Slider', 'ethic'),
         'priority' => 37,
     ));
+    
+    $wp_customize->add_setting('ethic_home_slider_color', array(
+        'default' => '#ffffff',
+        'sanitize_callback' => 'ethic_sanitize_hex_color',
+        'sanitize_js_callback' => 'ethic_sanitize_escaping',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_home_slider_color', array(
+        'label' => 'Home Sliders Background color',
+        'section' => 'home_slider_setting',
+        'settings' => 'ethic_home_slider_color',
+        'priority' => 1,
+            )
+    ));
 
     $wp_customize->add_setting('slider_one', array(
         'transport' => 'postMessage',
@@ -154,7 +168,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Slider 1',
         'section' => 'home_slider_setting',
         'settings' => 'slider_one',
-        'priority' => 1,
+        'priority' => 2,
             )
             )
     );
@@ -169,7 +183,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider One Title', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_title_one',
-        'priority' => 2,
+        'priority' => 3,
     ));
 
     $wp_customize->add_setting('slider_one_description', array('default' => '',
@@ -181,8 +195,34 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Description', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_one_description',
-        'priority' => 3,
+        'priority' => 4,
     )));
+    
+    // link text
+    $wp_customize->add_setting('slider_one_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_one_link_text', array(
+        'label' => __('Slider One Link Text', 'ethic'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_one_link_text',
+        'priority' => 5,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_one_link_url', array('default' => __('', 'ethic'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_one_link_url', array(
+        'label' => __('Slider One Link URL', 'ethic'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_one_link_url',
+        'priority' => 6,
+    ));
 
    
     $wp_customize->add_setting('slider_two', array(
@@ -195,7 +235,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Slider 2',
         'section' => 'home_slider_setting',
         'settings' => 'slider_two',
-        'priority' => 6,
+        'priority' => 7,
             )
             )
     );
@@ -210,7 +250,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Two Title', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_title_two',
-        'priority' => 7,
+        'priority' => 8,
     ));
 
     $wp_customize->add_setting('slider_two_description', array('default' => '',
@@ -222,8 +262,34 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Description', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_two_description',
-        'priority' => 8,
+        'priority' => 9,
     )));
+    
+     // link text
+    $wp_customize->add_setting('slider_two_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_two_link_text', array(
+        'label' => __('Slider Two Link Text', 'ethic'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_two_link_text',
+        'priority' => 10,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_two_link_url', array('default' => __('', 'ethic'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_two_link_url', array(
+        'label' => __('Slider Two Link URL', 'ethic'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_two_link_url',
+        'priority' => 11,
+    ));
 
    
     $wp_customize->add_setting('slider_three', array(
@@ -236,7 +302,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Slider 3',
         'section' => 'home_slider_setting',
         'settings' => 'slider_three',
-        'priority' => 11,
+        'priority' => 12,
             )
             )
     );
@@ -252,7 +318,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Three Title', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_title_three',
-        'priority' => 12,
+        'priority' => 13,
     ));
 
     $wp_customize->add_setting('slider_three_description', array('default' => '',
@@ -264,8 +330,34 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Description', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_three_description',
-        'priority' => 13,
+        'priority' => 14,
     )));
+    
+     // link text
+    $wp_customize->add_setting('slider_three_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_three_link_text', array(
+        'label' => __('Slider Three Link Text', 'ethic'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_three_link_text',
+        'priority' => 15,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_three_link_url', array('default' => __('', 'ethic'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_three_link_url', array(
+        'label' => __('Slider Three Link URL', 'ethic'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_three_link_url',
+        'priority' => 16,
+    ));
 
    
     $wp_customize->add_setting('slider_four', array(
@@ -278,7 +370,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Slider 4',
         'section' => 'home_slider_setting',
         'settings' => 'slider_four',
-        'priority' => 16,
+        'priority' => 17,
             )
             )
     );
@@ -293,7 +385,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Four Title', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_title_four',
-        'priority' => 17,
+        'priority' => 18,
     ));
 
     $wp_customize->add_setting('slider_four_description', array('default' => '',
@@ -305,8 +397,33 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Description', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_four_description',
-        'priority' => 18,
+        'priority' => 19,
     )));
+    
+    $wp_customize->add_setting('slider_four_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_four_link_text', array(
+        'label' => __('Slider Four Link Text', 'ethic'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_four_link_text',
+        'priority' => 20,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_four_link_url', array('default' => __('', 'ethic'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_four_link_url', array(
+        'label' => __('Slider Four Link URL', 'ethic'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_four_link_url',
+        'priority' => 21,
+    ));
 
 
     $wp_customize->add_setting('slider_five', array(
@@ -319,7 +436,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Slider 5',
         'section' => 'home_slider_setting',
         'settings' => 'slider_five',
-        'priority' => 21,
+        'priority' => 22,
             )
             )
     );
@@ -334,7 +451,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Five Title', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_title_five',
-        'priority' => 22,
+        'priority' => 23,
     ));
 
     $wp_customize->add_setting('slider_five_description', array('default' => '',
@@ -346,8 +463,35 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Description', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_five_description',
-        'priority' => 23,
+        'priority' => 24,
     )));
+    
+    // link text
+    $wp_customize->add_setting('slider_five_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_five_link_text', array(
+        'label' => __('Slider Five Link Text', 'ethic'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_five_link_text',
+        'priority' => 25,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_five_link_url', array('default' => __('', 'ethic'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_five_link_url', array(
+        'label' => __('Slider Five Link URL', 'ethic'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_five_link_url',
+        'priority' => 26,
+    ));
+    
 
    // Add new section for Home Tagline settings
     $wp_customize->add_section('tagline_setting', array(
@@ -521,6 +665,17 @@ function ethic_customize_register($wp_customize) {
         'priority' => 47,
     ));
     
+    $wp_customize->add_setting('ethic_video_section_check', array(
+        'default' => 0,
+        'sanitize_callback' => 'ethic_sanitize_checkbox',
+    ));
+    $wp_customize->add_control('ethic_video_section_check', array(
+        'label' => __('Show Video section on Front Page', 'ethic'),
+        'section' => 'video_setting',
+        'priority' => 1,
+        'type' => 'checkbox',
+    ));
+    
     // video Title
     $wp_customize->add_setting('video_title', array(
         'sanitize_callback' => 'sanitize_text_field',
@@ -531,7 +686,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Title', 'ethic'),
         'section' => 'video_setting',
         'settings' => 'video_title',
-        'priority' => 1,
+        'priority' => 2,
     ));
     
     $wp_customize->add_setting('video_description', array('default' => '',
@@ -543,8 +698,20 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Video Description', 'ethic'),
         'section' => 'video_setting',
         'settings' => 'video_description',
-        'priority' => 2,
+        'priority' => 3,
         )));
+    
+    $wp_customize->add_setting('video_code_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('video_code_title', array(
+        'label' => __('Video Title', 'ethic'),
+        'section' => 'video_setting',
+        'settings' => 'video_code_title',
+        'priority' => 4,
+    ));
 
     $wp_customize->add_setting('home_video', array('default' => '',
         'sanitize_js_callback' => 'ethic_sanitize_escaping',
@@ -555,14 +722,366 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Video Code', 'ethic'),
         'section' => 'video_setting',
         'settings' => 'home_video',
+        'priority' => 5,
+    )));
+    
+    // Add new section team setting
+    $wp_customize->add_section('ethic_team_settings', array(
+        'title' => __('Team Settings', 'ethic'),
+        'description' => __('Settings for team', 'ethic'),
+        'priority' => 48,
+    ));
+
+    // enable team member on front page?
+    $wp_customize->add_setting('ethic_front_team_members_check', array(
+        'default' => 0,
+        'sanitize_callback' => 'ethic_sanitize_checkbox',
+    ));
+    $wp_customize->add_control('ethic_front_team_members_check', array(
+        'label' => __('Show Team Members on Front Page', 'ethic'),
+        'section' => 'ethic_team_settings',
+        'priority' => 1,
+        'type' => 'checkbox',
+    ));
+    
+    $wp_customize->add_setting('ethic_team_background_color', array(
+        'default' => '#ffffff',
+        'sanitize_callback' => 'ethic_sanitize_hex_color',
+        'sanitize_js_callback' => 'ethic_sanitize_escaping',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_team_background_color', array(
+        'label' => 'Team Background color',
+        'section' => 'ethic_team_settings',
+        'settings' => 'ethic_team_background_color',
+        'priority' => 2,
+            )
+    ));
+
+    $wp_customize->add_setting('ethic_team_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('ethic_team_title', array(
+        'label' => __('Section Title', 'ethic'),
+        'section' => 'ethic_team_settings',
+        'settings' => 'ethic_team_title',
+        'priority' => 3,
+    ));
+
+    $wp_customize->add_setting('team_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'team_description', array(
+        'label' => __('Description', 'ethic'),
+        'section' => 'ethic_team_settings',
+        'settings' => 'team_description',
         'priority' => 4,
     )));
+
+    $wp_customize->add_setting(
+            'ethic_team_members_count', array(
+                'default' => '3',
+        'sanitize_callback' => 'ethic_sanitize_team_member_count_option',
+            )
+    );
+
+    $wp_customize->add_control(
+            'ethic_team_members_count', array(
+        'type' => 'select',
+        'label' => 'Number of columns',
+        'section' => 'ethic_team_settings',
+        'priority' => 10,
+        'choices' => array(
+            '1' => 'One',
+            '2' => 'Two',
+            '3' => 'Three',
+            '4' => 'Four',
+        ),
+            )
+    );
+
+    // select number of posts for featured posts on front page
+    $wp_customize->add_setting('ethic_front_team_members_count', array(
+        'default' => 3,
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+    $wp_customize->add_control('ethic_front_team_members_count', array(
+        'label' => __('Number of Team Members to display', 'ethic'),
+        'section' => 'ethic_team_settings',
+        'settings' => 'ethic_front_team_members_count',
+        'priority' => 20,
+    ));
+    
+    // Add new section for Testimonial slider settings
+    $wp_customize->add_section('testimonial_slider_setting', array(
+        'title' => __('Testimonial Settings', 'ethic'),
+        'priority' => 50,
+    ));
+    
+    $wp_customize->add_setting('ethic_testimonial_slider_check', array(
+        'default' => 0,
+        'sanitize_callback' => 'ethic_sanitize_checkbox',
+    ));
+    $wp_customize->add_control('ethic_testimonial_slider_check', array(
+        'label' => __('Show Testimonial Slider Front Page', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'priority' => 1,
+        'type' => 'checkbox',
+    ));
+
+    $wp_customize->add_setting('testimonial_background_image', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'testimonial_background_image', array(
+        'label' => 'Testimonial Background',
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'testimonial_background_image',
+        'priority' => 2,
+            )
+            )
+    );
+
+    // home Title
+    $wp_customize->add_setting('feedback_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('feedback_title', array(
+        'label' => __('Section Title', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'feedback_title',
+        'priority' => 3,
+    ));
+
+    $wp_customize->add_setting('testimonial_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'testimonial_description', array(
+        'label' => __('Description', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'testimonial_description',
+        'priority' => 4,
+    )));
+
+
+    $wp_customize->add_setting('tslider_one', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'tslider_one', array(
+        'label' => 'Slider 1',
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'tslider_one',
+        'priority' => 5,
+            )
+            )
+    );
+
+
+    $wp_customize->add_setting('tslider_one_description', array('default' => '',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'tslider_one_description', array(
+        'label' => __('Description', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'tslider_one_description',
+        'priority' => 6,
+    )));
+
+    $wp_customize->add_setting('client_name_one', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('client_name_one', array(
+        'label' => __('Client Name', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'client_name_one',
+        'priority' => 7,
+    ));
+
+    $wp_customize->add_setting('client_name_url_one', array('default' => __('', 'ethic'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('client_name_url_one', array(
+        'label' => __('URL', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'client_name_url_one',
+        'priority' => 8,
+    ));
+
+    $wp_customize->add_setting('tslider_two', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'tslider_two', array(
+        'label' => 'Slider 2',
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'tslider_two',
+        'priority' => 9,
+            )
+            )
+    );
+
+    $wp_customize->add_setting('tslider_two_description', array('default' => '',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'tslider_two_description', array(
+        'label' => __('Description', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'tslider_two_description',
+        'priority' => 10,
+    )));
+
+    $wp_customize->add_setting('client_name_two', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('client_name_two', array(
+        'label' => __('Client Name', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'client_name_two',
+        'priority' => 11,
+    ));
+
+    $wp_customize->add_setting('client_name_url_two', array('default' => __('', 'ethic'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('client_name_url_two', array(
+        'label' => __('URL', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'client_name_url_two',
+        'priority' => 12,
+    ));
+
+    $wp_customize->add_setting('tslider_three', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'tslider_three', array(
+        'label' => 'Slider 3',
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'tslider_three',
+        'priority' => 13,
+            )
+            )
+    );
+
+    $wp_customize->add_setting('tslider_three_description', array('default' => '',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'tslider_three_description', array(
+        'label' => __('Description', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'tslider_three_description',
+        'priority' => 14,
+    )));
+
+    $wp_customize->add_setting('client_name_three', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('client_name_three', array(
+        'label' => __('Client Name', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'client_name_three',
+        'priority' => 15,
+    ));
+
+    $wp_customize->add_setting('client_name_url_three', array('default' => __('', 'ethic'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('client_name_url_three', array(
+        'label' => __('URL', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'client_name_url_three',
+        'priority' => 16,
+    ));
+
+    $wp_customize->add_setting('tslider_four', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'tslider_four', array(
+        'label' => 'Slider 4',
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'tslider_four',
+        'priority' => 17,
+            )
+            )
+    );
+
+    $wp_customize->add_setting('tslider_four_description', array('default' => '',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'tslider_four_description', array(
+        'label' => __('Description', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'tslider_four_description',
+        'priority' => 18,
+    )));
+
+    $wp_customize->add_setting('client_name_four', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('client_name_four', array(
+        'label' => __('Client Name', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'client_name_four',
+        'priority' => 19,
+    ));
+
+    $wp_customize->add_setting('client_name_url_four', array('default' => __('', 'ethic'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('client_name_url_four', array(
+        'label' => __('URL', 'ethic'),
+        'section' => 'testimonial_slider_setting',
+        'settings' => 'client_name_url_four',
+        'priority' => 20,
+    ));
+
   
     // Add new section for displaying Featured Project on Front Page
     $wp_customize->add_section('ethic_front_page_project_options', array(
         'title' => __('Project Settings', 'ethic'),
         'description' => __('Settings for displaying featured project on Front Page', 'ethic'),
-        'priority' => 52,
+        'priority' => 51,
     ));
 
     // enable featured project on front page?
@@ -654,10 +1173,22 @@ function ethic_customize_register($wp_customize) {
         'priority' => 40,
     ));
     
+    /* Front Products */
     $wp_customize->add_section('ethic_front_product_options', array(
         'title' => __('Product Settings', 'ethic'),
         'description' => __('Settings for displaying featured product on Front Page', 'ethic'),
         'priority' => 52,
+    ));
+    
+    $wp_customize->add_setting('ethic_product_section_check', array(
+        'default' => 0,
+        'sanitize_callback' => 'ethic_sanitize_checkbox',
+    ));
+    $wp_customize->add_control('ethic_product_section_check', array(
+        'label' => __('Show Products Front Page', 'ethic'),
+        'section' => 'ethic_front_product_options',
+        'priority' => 1,
+        'type' => 'checkbox',
     ));
     
     $wp_customize->add_setting('product_title', array(
@@ -671,19 +1202,7 @@ function ethic_customize_register($wp_customize) {
         'settings' => 'product_title',
         'priority' => 4,
     ));
-
-    $wp_customize->add_setting('product_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'product_description', array(
-        'label' => __('Description', 'ethic'),
-        'section' => 'ethic_front_product_options',
-        'settings' => 'product_description',
-        'priority' => 5,
-    )));
-    
+      
      $wp_customize->add_setting('ethic_products', array('default' => '',
         'sanitize_callback' => 'sanitize_text_field',
         'transport' => 'postMessage',
@@ -695,54 +1214,6 @@ function ethic_customize_register($wp_customize) {
         'settings' => 'ethic_products',
         'priority' => 6,
     )));
-
-
-    // Add new section for blog settings
-    $wp_customize->add_section('ethic_blog_page_settings', array(
-        'title' => __('Blog Settings', 'ethic'),
-        'description' => __('Settings for blog page', 'ethic'),
-        'priority' => 55,
-    ));
-
-    $wp_customize->add_setting('blog_featured_image', array(
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-            $wp_customize, 'blog_featured_image', array(
-        'label' => 'Blog Featured Image',
-        'section' => 'ethic_blog_page_settings',
-        'settings' => 'blog_featured_image',
-        'priority' => 1,
-            )
-            )
-    );
-
-    $wp_customize->add_setting('blog_page_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('blog_page_title', array(
-        'label' => __('Section Title', 'ethic'),
-        'section' => 'ethic_blog_page_settings',
-        'settings' => 'blog_page_title',
-        'priority' => 2,
-    ));
-
-    $wp_customize->add_setting('blog_page_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'blog_page_description', array(
-        'label' => __('Description', 'ethic'),
-        'section' => 'ethic_blog_page_settings',
-        'settings' => 'blog_page_description',
-        'priority' => 3,
-    )));
-
 
 
     // Add new section for displaying Featured Posts on Front Page
@@ -825,99 +1296,7 @@ function ethic_customize_register($wp_customize) {
         'priority' => 30,
     )));
 
-    // Add new section team setting
-    $wp_customize->add_section('ethic_team_settings', array(
-        'title' => __('Team Settings', 'ethic'),
-        'description' => __('Settings for team', 'ethic'),
-        'priority' => 56,
-    ));
-
-    // enable team member on front page?
-    $wp_customize->add_setting('ethic_front_team_members_check', array(
-        'default' => 0,
-        'sanitize_callback' => 'ethic_sanitize_checkbox',
-    ));
-    $wp_customize->add_control('ethic_front_team_members_check', array(
-        'label' => __('Show Team Members on Front Page', 'ethic'),
-        'section' => 'ethic_team_settings',
-        'priority' => 1,
-        'type' => 'checkbox',
-    ));
     
-    $wp_customize->add_setting('ethic_team_background_color', array(
-        'default' => '#ffffff',
-        'sanitize_callback' => 'ethic_sanitize_hex_color',
-        'sanitize_js_callback' => 'ethic_sanitize_escaping',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_team_background_color', array(
-        'label' => 'Team Background color',
-        'section' => 'ethic_team_settings',
-        'settings' => 'ethic_team_background_color',
-        'priority' => 2,
-            )
-    ));
-
-    $wp_customize->add_setting('ethic_team_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('ethic_team_title', array(
-        'label' => __('Section Title', 'ethic'),
-        'section' => 'ethic_team_settings',
-        'settings' => 'ethic_team_title',
-        'priority' => 3,
-    ));
-
-    $wp_customize->add_setting('team_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'team_description', array(
-        'label' => __('Description', 'ethic'),
-        'section' => 'ethic_team_settings',
-        'settings' => 'team_description',
-        'priority' => 4,
-    )));
-
-    $wp_customize->add_setting(
-            'ethic_team_members_count', array(
-                'default' => '3',
-        'sanitize_callback' => 'ethic_sanitize_team_member_count_option',
-            )
-    );
-
-    $wp_customize->add_control(
-            'ethic_team_members_count', array(
-        'type' => 'select',
-        'label' => 'Number of columns',
-        'section' => 'ethic_team_settings',
-        'priority' => 10,
-        'choices' => array(
-            '1' => 'One',
-            '2' => 'Two',
-            '3' => 'Three',
-            '4' => 'Four',
-        ),
-            )
-    );
-
-    // select number of posts for featured posts on front page
-    $wp_customize->add_setting('ethic_front_team_members_count', array(
-        'default' => 3,
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-    $wp_customize->add_control('ethic_front_team_members_count', array(
-        'label' => __('Number of Team Members to display', 'ethic'),
-        'section' => 'ethic_team_settings',
-        'settings' => 'ethic_front_team_members_count',
-        'priority' => 20,
-    ));
-
-
     // Add new section for Social Icons
     $wp_customize->add_section('social_icon_setting', array(
         'title' => __('Social Icons', 'ethic'),
@@ -1062,285 +1441,7 @@ function ethic_customize_register($wp_customize) {
         'priority' => 11,
     ));
 
-   
-    // link text
-    $wp_customize->add_setting('home_cta_link_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('home_cta_link_text', array(
-        'label' => __('Link Text', 'ethic'),
-        'section' => 'home_cta_setting',
-        'settings' => 'home_cta_link_text',
-        'priority' => 4,
-    ));
-
-    // link url
-    $wp_customize->add_setting('home_cta_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('home_cta_link_url', array(
-        'label' => __('Link URL', 'ethic'),
-        'section' => 'home_cta_setting',
-        'settings' => 'home_cta_link_url',
-        'priority' => 5,
-    ));
-
-
-    // Add new section for Testimonial slider settings
-    $wp_customize->add_section('testimonial_slider_setting', array(
-        'title' => __('Testimonial Settings', 'ethic'),
-        'priority' => 53,
-    ));
-
-    $wp_customize->add_setting('testimonial_background_image', array(
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-            $wp_customize, 'testimonial_background_image', array(
-        'label' => 'Testimonial Background',
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'testimonial_background_image',
-        'priority' => 1,
-            )
-            )
-    );
-
-    // home Title
-    $wp_customize->add_setting('feedback_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('feedback_title', array(
-        'label' => __('Section Title', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'feedback_title',
-        'priority' => 2,
-    ));
-
-    $wp_customize->add_setting('testimonial_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'testimonial_description', array(
-        'label' => __('Description', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'testimonial_description',
-        'priority' => 3,
-    )));
-
-
-    $wp_customize->add_setting('tslider_one', array(
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-            $wp_customize, 'tslider_one', array(
-        'label' => 'Slider 1',
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_one',
-        'priority' => 4,
-            )
-            )
-    );
-
-
-    $wp_customize->add_setting('tslider_one_description', array('default' => '',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'tslider_one_description', array(
-        'label' => __('Description', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_one_description',
-        'priority' => 5,
-    )));
-
-    $wp_customize->add_setting('client_name_one', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('client_name_one', array(
-        'label' => __('Client Name', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'client_name_one',
-        'priority' => 6,
-    ));
-
-    $wp_customize->add_setting('client_name_url_one', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('client_name_url_one', array(
-        'label' => __('URL', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'client_name_url_one',
-        'priority' => 7,
-    ));
-
-    $wp_customize->add_setting('tslider_two', array(
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-            $wp_customize, 'tslider_two', array(
-        'label' => 'Slider 2',
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_two',
-        'priority' => 8,
-            )
-            )
-    );
-
-    $wp_customize->add_setting('tslider_two_description', array('default' => '',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'tslider_two_description', array(
-        'label' => __('Description', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_two_description',
-        'priority' => 9,
-    )));
-
-    $wp_customize->add_setting('client_name_two', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('client_name_two', array(
-        'label' => __('Client Name', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'client_name_two',
-        'priority' => 10,
-    ));
-
-    $wp_customize->add_setting('client_name_url_two', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('client_name_url_two', array(
-        'label' => __('URL', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'client_name_url_two',
-        'priority' => 11,
-    ));
-
-    $wp_customize->add_setting('tslider_three', array(
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-            $wp_customize, 'tslider_three', array(
-        'label' => 'Slider 3',
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_three',
-        'priority' => 12,
-            )
-            )
-    );
-
-    $wp_customize->add_setting('tslider_three_description', array('default' => '',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'tslider_three_description', array(
-        'label' => __('Description', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_three_description',
-        'priority' => 13,
-    )));
-
-    $wp_customize->add_setting('client_name_three', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('client_name_three', array(
-        'label' => __('Client Name', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'client_name_three',
-        'priority' => 14,
-    ));
-
-    $wp_customize->add_setting('client_name_url_three', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('client_name_url_three', array(
-        'label' => __('URL', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'client_name_url_three',
-        'priority' => 15,
-    ));
-
-    $wp_customize->add_setting('tslider_four', array(
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-            $wp_customize, 'tslider_four', array(
-        'label' => 'Slider 4',
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_four',
-        'priority' => 16,
-            )
-            )
-    );
-
-    $wp_customize->add_setting('tslider_four_description', array('default' => '',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'tslider_four_description', array(
-        'label' => __('Description', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_four_description',
-        'priority' => 17,
-    )));
-
-    $wp_customize->add_setting('client_name_four', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('client_name_four', array(
-        'label' => __('Client Name', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'client_name_four',
-        'priority' => 18,
-    ));
-
-    $wp_customize->add_setting('client_name_url_four', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('client_name_url_four', array(
-        'label' => __('URL', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'client_name_url_four',
-        'priority' => 19,
-    ));
-
-
-
-   // Add new section for Home Contact settings
+    // Add new section for Home Contact settings
     $wp_customize->add_section('ethic_contact_form_setting', array(
         'title' => __('Contact Form', 'ethic'),
         'priority' => 59,

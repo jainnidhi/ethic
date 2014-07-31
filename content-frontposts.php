@@ -30,11 +30,11 @@ if (get_theme_mod('ethic_front_featured_posts_check')) {
     <div class="home-post-title-area" id="post-title">
             <div class="home-post-title section-title">
                  <?php if ( get_theme_mod('ethic_post_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('ethic_post_title')); ?></h3>
-                  <?php } else {  ?> <h3 class="title"><?php esc_html_e('Recent Blogs', 'ethic') ?></h3>
+                  <?php } else {  ?> <h3 class="title"><?php esc_html_e('Blog', 'ethic') ?></h3>
                            <?php } ?>
                   
                   <?php if ( get_theme_mod('ethic_post_description') !='' ) {  ?><p><?php echo esc_html(get_theme_mod('ethic_post_description')); ?></p>
-                  <?php } else {  ?> <p><?php esc_html_e('Recent Blogs', 'ethic') ?></p>
+                  <?php } else {  ?> <p><?php esc_html_e('Technology news and updates from around the world', 'ethic') ?></p>
                            <?php } ?>
             </div>
         </div>

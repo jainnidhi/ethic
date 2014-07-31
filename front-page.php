@@ -20,7 +20,9 @@ get_header();
 
 
 <section class="slider-wrapper clearfix">
-      <div class="flexslider loading col-sm-12"  id="main-slider">
+    <div class="container slider-block">
+        <div class="row">
+      <div class="loading col-sm-12"  id="main-slider">
         <ul class="slides">
             <?php 
             // check if the slider is blank.
@@ -28,34 +30,46 @@ get_header();
             
             if ( get_theme_mod('slider_one') =='' ) {  ?>
                 <li>
-                <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/slider-1.jpg" alt="first-slider-image"/>
-                <div class="flex-caption">
+                    <div class="slider-image col-lg-6">
+                    <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/slider-1.jpg" alt="first-slider-image"/>
+                    </div>
+                <div class="flex-caption col-lg-6">
                     <div class="slider-text-container">
                      <h2 class="slider-title"><a href="#"><?php esc_html_e('Showcase Your Restaurant Services', 'ethic') ?></a></h2>
                           <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
-                        
+                           <a class="slider-button" href="#">
+                            <?php esc_html_e('Start Building Your Website Now', 'ethic') ?>
+                        </a>
                     </div>
                 </div>
                 </li>
                 
                 <li>
+                <div class="slider-image col-lg-6">
                 <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/slider-2.jpg" alt="second-slider-image"/>
-                <div class="flex-caption">
+                </div>
+                <div class="flex-caption col-lg-6">
                     <div class="slider-text-container">
                      <h2 class="slider-title"><a href="#"><?php esc_html_e('Showcase Your Restaurant Services', 'ethic') ?></a></h2>
                           <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
-                         
+                          <a class="slider-button" href="#">
+                            <?php esc_html_e('Start Building Your Website Now', 'ethic') ?>
+                        </a>
                     </div>
                  </div>
                 </li>
                 
                 <li>
+                  <div class="slider-image col-lg-6">
                 <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/slider-3.jpg" alt=""/>
-                <div class="flex-caption">
+                  </div>
+                <div class="flex-caption col-lg-6">
                     <div class="slider-text-container">
                      <h2 class="slider-title"><a href="#"><?php esc_html_e('Showcase Your Restaurant Services', 'ethic') ?></a></h2>
                           <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
-                          
+                           <a class="slider-button" href="#">
+                            <?php esc_html_e('Start Building Your Website Now', 'ethic') ?>
+                        </a>
                     </div>
                  </div>
                 </li>
@@ -73,6 +87,11 @@ get_header();
                                 <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_one_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_one')); ?></a></h2>
                                     <p><?php echo esc_html(get_theme_mod('slider_one_description')); ?></p>
                             
+                            <?php if ( get_theme_mod('slider_one_link_url') !='' && get_theme_mod('slider_one_link_text') !=''  ) {  ?>
+                           <a class="slider-button" href="<?php echo esc_url(get_theme_mod('slider_one_link_url')); ?>">
+                            <?php  echo esc_html(get_theme_mod('slider_one_link_text')); ?>
+                            <?php } ?> 
+                            </a>
                             </div>
                          </div>
                          <?php } ?>
@@ -89,7 +108,11 @@ get_header();
                             <div class="slider-text-container">
                             <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_two_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_two')); ?></a></h2>
                                 <p><?php echo esc_html(get_theme_mod('slider_two_description')); ?></p>
-                         
+                                <?php if ( get_theme_mod('slider_two_link_url') !='' && get_theme_mod('slider_two_link_text') !=''  ) {  ?>
+                            <a class="slider-button" href="<?php echo esc_url(get_theme_mod('slider_two_link_url')); ?>">
+                              <?php echo esc_html(get_theme_mod('slider_two_link_text')); ?>
+                                <?php } ?>
+                            </a>
                             </div>
                          </div>
                          <?php } ?>
@@ -107,7 +130,12 @@ get_header();
                             <div class="slider-text-container">
                             <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_three_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_three')); ?></a></h2>
                               <p><?php echo esc_html(get_theme_mod('slider_three_description')); ?></p>
-                      
+                             
+                              <?php if ( get_theme_mod('slider_three_link_url') !='' && get_theme_mod('slider_three_link_text') !=''  ) {  ?>
+                            <a class="slider-button" href="<?php echo esc_url(get_theme_mod('slider_three_link_url')); ?>">
+                            <?php echo esc_html(get_theme_mod('slider_three_link_text')); ?>
+                                <?php } ?>
+                            </a>
                             </div>
                          </div>
                    <?php } ?>
@@ -125,7 +153,12 @@ get_header();
                             <div class="slider-text-container">
                             <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_four_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_four')); ?></a></h2>
                                 <p><?php echo esc_html(get_theme_mod('slider_four_description')); ?></p>
-                          
+                                
+                                  <?php if ( get_theme_mod('slider_four_link_url') !='' && get_theme_mod('slider_four_link_text') !=''  ) {  ?>
+                                   <a class="slider-button" href="<?php echo esc_url(get_theme_mod('slider_four_link_url')); ?>">
+                                     <?php echo esc_html(get_theme_mod('slider_four_link_text')); ?>
+                                        <?php } ?>
+                                   </a>
                             </div>
                         </div>
                     <?php } ?>
@@ -143,7 +176,16 @@ get_header();
                             <div class="slider-text-container">
                             <h2 class="slider-title"><a href="<?php echo esc_url(get_theme_mod('slider_five_url')); ?>"><?php echo esc_html(get_theme_mod('slider_title_five')); ?></a></h2>
                               <p><?php echo esc_html(get_theme_mod('slider_five_description')); ?></p>
-                    
+                              
+                              <?php if ( get_theme_mod('slider_five_link_url') !='' && get_theme_mod('slider_five_link_text') !=''  ) {  ?>
+                                      <a class="slider-button" href="<?php echo esc_url(get_theme_mod('slider_five_link_url')); ?>">
+                                         <?php echo esc_html(get_theme_mod('slider_five_link_text')); ?>
+                                        <?php } ?>
+                                    </a><?php if ( get_theme_mod('slider_five_link_url') !='' && get_theme_mod('slider_five_link_text') !=''  ) {  ?>
+                                      <a class="slider-button" href="<?php echo esc_url(get_theme_mod('slider_five_link_url')); ?>">
+                                         <?php echo esc_html(get_theme_mod('slider_five_link_text')); ?>
+                                        <?php } ?>
+                                    </a>
                             </div>
                          </div>
                     <?php } ?>
@@ -152,6 +194,8 @@ get_header();
            <?php } ?>
         </ul>
       </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
 </section><!-- /.slider-wrapper -->
 
  <!-- Start business-tagline area -->
@@ -253,10 +297,11 @@ get_header();
      </div> <!-- /.container -->
     </section><!-- end home featured area -->
     
+    <?php if(get_theme_mod('ethic_video_section_check')) { ?>
     <div class="home-video-area">
         <div class="container video-wrap">
             <div class="row">
-                <div class="col-lg-12" data-scroll-reveal="enter from the top after 0.2s">
+                <div class="col-lg-6 video-content" data-scroll-reveal="enter from the left after 0.2s">
                       <?php if ( get_theme_mod('video_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('video_title')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Take A Quick Look To Ethic Demo', 'ethic') ?></h3>
                            <?php } ?>
@@ -264,87 +309,136 @@ get_header();
                   <?php if ( get_theme_mod('video_description') !='' ) {  ?><p><?php echo esc_html(get_theme_mod('video_description')); ?></p>
                   <?php } else {  ?> <p><?php esc_html_e('Why Ethic is a perfect Theme- Watch this quick demo and you will get the answer.', 'ethic') ?></p>
                            <?php } ?>
+                   </div>
+                    <div class="video-code col-lg-6" data-scroll-reveal="enter from the right after 0.2s">
+                         <?php if ( get_theme_mod('video_code_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('video_code_title')); ?></h3>
+                  <?php } else {  ?> <h3><?php esc_html_e('Video Title', 'ethic') ?></h3>
+                           <?php } ?>
                   
-                    <div class="video-code">
                         <?php if ( get_theme_mod('home_video') !='' ) {  ?> 
                          <?php echo get_theme_mod('home_video'); ?>
                           <?php } else { ?>
                        <iframe width="560" height="315" src="//www.youtube.com/embed/j5q780fa1vY" frameborder="0" allowfullscreen></iframe> 
                            <?php } ?>
-                      </div>
-                </div>
+                    </div>
+               
             </div><!-- /.row -->
         </div><!-- /.container -->
                     
     </div><!-- /. home-video-area -->
+    <?php } ?>
         
                
       <?php  // Display featured posts on front page
             get_template_part('content', 'frontteam'); ?>
+    
+    <div class="gallery-area">
+        <div class="container gallery-block">
+            <div class="row">
+                <?php if ( get_theme_mod('gallery_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('gallery_title')); ?></h3>
+                  <?php } else {  ?> <h3><?php esc_html_e('Gallery', 'ethic') ?></h3>
+                           <?php } ?>
+                  <div class="gallery-wrap">
+                      <?php if ( get_theme_mod('ethic_gallery') !='' ) {  ?> 
+                         <?php echo do_shortcode(get_theme_mod('ethic_gallery')); ?>
+                        <?php } else { ?>
+                        <?php esc_html_e('You can add your gallery here.', 'ethic'); ?> 
+                          <?php } ?>
+                  </div>
+            </div>
+        </div>
+    </div>
         
         
     <!-- Home testimonial slider starts here --> 
+    <?php if(get_theme_mod('ethic_testimonial_slider_check')) { ?>
         <section class="testimonial-slider">
             <div class="container testimonial-wrap">
                 <div class="row">
-            <div class="flexslider" id="reviewslider">
-                <ul class="slides">
+            <div id="reviewslider">
+                <ul class="client-wrapper">
                     <?php if ( get_theme_mod('tslider_one') =='' ) {  ?>
-                        <li id="tslider1">
-                            <div class="testimonial-image col-lg-2">
+                      <li class="col-lg-6" id="tslider1">
+                         <div class="client-block clearfix">
+                            <div class="testimonial-image">
                             <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/tes-1.jpg" alt=""/>
-                             <div class="client-name">
+                            
+                            </div>
+                            <div class="flex-caption">
+                                <div class="client-testimonial">
+                                    <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
+                                </div>
+                                 <div class="client-name">
                                  <a class="client" href="#">
                                     <?php esc_html_e('John', 'ethic') ?>
                                 </a>
                             </div>
-                            </div>
-                        <div class="flex-caption col-lg-10">
-                            <div class="client-testimonial">
-                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
-                            </div>
-                           
-                       </div>
+                           </div>
+                        </div>
                     </li>
                     
-                    <li id="tslider2">
-                        <div class="testimonial-image col-lg-2">
+                    <li class="col-lg-6" id="tslider2">
+                      <div class="client-block clearfix">
+                        <div class="testimonial-image">
                         <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/tes-2.jpg" alt=""/>
-                        <div class="client-name">
+                        
+                        </div>
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                               <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>                  
+                            </div>
+                            <div class="client-name">
                                  <a class="client" href="#">
                                     <?php esc_html_e('Era', 'ethic') ?>
                                 </a>
                             </div>
-                        </div>
-                        <div class="flex-caption col-lg-10">
-                            <div class="client-testimonial">
-                               <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>                  
-                            </div>
                             
                         </div>
+                      </div>
                     </li>
                     
-                     <li id="tslider3">
-                         <div class="testimonial-image col-lg-2">
+                     <li class="col-lg-6" id="tslider3">
+                       <div class="client-block clearfix">
+                         <div class="testimonial-image">
                         <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/tes-3.jpg" alt=""/>
-                        <div class="client-name">
+                        
+                         </div>
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
+                            </div>
+                            <div class="client-name">
+                                 <a class="client" href="#">
+                                    <?php esc_html_e('Johny', 'ethic') ?>
+                                </a>
+                            </div>
+                        </div>
+                       </div>
+                    </li>
+                    
+                    <li class="col-lg-6" id="tslider4">
+                      <div class="client-block clearfix">
+                         <div class="testimonial-image">
+                        <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/tes-1.jpg" alt=""/>
+                       
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
+                            </div>
+                            
+                             <div class="client-name">
                                  <a class="client" href="#">
                                     <?php esc_html_e('Johny', 'ethic') ?>
                                 </a>
                             </div>
                          </div>
-                        <div class="flex-caption col-lg-10">
-                            <div class="client-testimonial">
-                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'ethic') ?> </p>
-                            </div>
-                            
                         </div>
+                      </div>
                     </li>
-                    
                 <?php } ?>
                     
                      <?php if ( get_theme_mod('tslider_one') !='' ) {  ?>
-                    <li id="tslider1">
+                    <li class="col-lg-6" id="tslider1">
                         <img  src="<?php echo get_theme_mod('tslider_one'); ?>" alt=""/>
                       <?php if ( get_theme_mod('tslider_one_description') !='' || get_theme_mod('client_name_url_one') !='' || get_theme_mod('client_name_one') !='' ) {  ?>
                         <div class="flex-caption">
@@ -361,7 +455,7 @@ get_header();
                     </li>
                     
                     <?php if ( get_theme_mod('tslider_two') !='' ) {  ?>
-                    <li id="tslider2">
+                    <li class="col-lg-6" id="tslider2">
                         <img  src="<?php echo get_theme_mod('tslider_two'); ?>" alt=""/>
                         <?php } ?>
                      <?php if ( get_theme_mod('tslider_two_description') !='' || get_theme_mod('client_name_url_two') !='' || get_theme_mod('client_name_two') !='' ) {  ?>
@@ -379,7 +473,7 @@ get_header();
                     </li>
                     
                      <?php if ( get_theme_mod('tslider_three') !='' ) {  ?>
-                     <li id="tslider3"> 
+                     <li class="col-lg-6" id="tslider3"> 
                         <img  src="<?php echo get_theme_mod('tslider_three'); ?>" alt=""/>
                         <?php } ?>
                      <?php if ( get_theme_mod('tslider_three_description') !='' || get_theme_mod('client_name_url_three') !='' || get_theme_mod('client_name_three') !='' ) {  ?>
@@ -397,7 +491,7 @@ get_header();
                     </li>
                     
                      <?php if ( get_theme_mod('tslider_four') !='' ) {  ?>
-                     <li id="tslider4"> 
+                     <li class="col-lg-6" id="tslider4"> 
                         <img  src="<?php echo get_theme_mod('tslider_four'); ?>" alt=""/>
                         <?php } ?>
                       <?php if ( get_theme_mod('tslider_four_description') !='' || get_theme_mod('client_name_url_four') !='' || get_theme_mod('client_name_four') !='' ) {  ?>
@@ -413,25 +507,7 @@ get_header();
                        </div>
                       <?php } ?>
                     </li>
-                    
-                     <?php if ( get_theme_mod('tslider_five') !='' ) {  ?>
-                     <li id="tslider5"> 
-                        <img  src="<?php echo get_theme_mod('tslider_five'); ?>" alt=""/>
-                        <?php } ?>
-                        <?php if ( get_theme_mod('tslider_five_description') !='' || get_theme_mod('client_name_url_five') !='' || get_theme_mod('client_name_five') !='' ) {  ?>
-                        <div class="flex-caption">
-                            <div class="client-testimonial">
-                                <?php echo wpautop(esc_html(get_theme_mod('tslider_five_description'))); ?>
-                            </div>
-                            <div class="client-name">
-                                 <a href="<?php echo esc_url(get_theme_mod('client_name_url_five')); ?>">
-                                     <?php echo esc_html(get_theme_mod('client_name_five')); ?>
-                                 </a>
-                            </div>
-                         </div>
-                        <?php } ?>
-                    </li>
-                    
+                                       
                  <?php } ?>
                     
                </ul>
@@ -439,9 +515,12 @@ get_header();
         </div><!-- /.row -->
        </div><!-- /.container -->
     </section>
+    <?php } ?>
     
     <?php
     get_template_part('content','frontprojects'); ?>
+    
+    <?php if(get_theme_mod('ethic_product_section_check')) { ?>
     <div class="product-area">
         <div class="container product-wrap">
             <div class="row">
@@ -449,11 +528,7 @@ get_header();
 
                           <?php } else {  ?> <h3><?php esc_html_e('Our recent products', 'ethic') ?></h3>
                                    <?php } ?>
-                          
-                <?php if ( get_theme_mod('product_description') !='' ) {  ?><p><?php echo esc_html(get_theme_mod('product_description')); ?></p>
-
-               <?php } else {  ?> <p><?php esc_html_e('This is the product description block.', 'ethic') ?></p>
-                        <?php } ?>
+             
                <div class="product-wrapper">
                         <?php if ( get_theme_mod('ethic_products') !='' ) {  ?> 
                          <?php echo do_shortcode(get_theme_mod('ethic_products')); ?>
@@ -464,6 +539,7 @@ get_header();
             </div>
         </div>
     </div>
+    <?php } ?>
     
   <?php  get_template_part('content','frontposts'); ?>
       

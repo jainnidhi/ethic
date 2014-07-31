@@ -25,6 +25,10 @@ Twitter Bootstrap
 /* Import the necessary TK Bootstrap WP CSS additions */
 @import url( includes/css/bootstrap-wp.css );
 
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
 
 
 /* My Minimal WordPress Styling comes here */
@@ -77,11 +81,11 @@ input[type="reset"],
 input[type="submit"],
 textarea:focus,
 .button {
-	-webkit-transition: all 0.1s ease-in-out;
-	-moz-transition:    all 0.1s ease-in-out;
-	-ms-transition:     all 0.1s ease-in-out;
-	-o-transition:      all 0.1s ease-in-out;
-	transition:         all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition:    all 0.1s ease-in-out;
+    -ms-transition:     all 0.1s ease-in-out;
+    -o-transition:      all 0.1s ease-in-out;
+    transition:         all 0.1s ease-in-out;
 }
 
 
@@ -281,6 +285,13 @@ object {
 
 /* Home Slider */
 
+.slider-wrapper{
+    background:#009cee;
+}
+
+.slider-block{
+    padding:50px 0;
+}
 .flexslider{
     margin-bottom:0;
 }
@@ -288,23 +299,32 @@ object {
 .slider-wrapper .flex-caption {
     padding: 10px;
     margin-bottom: 0;
-    position: absolute;
     right: auto;
     color: #fff;
     font-size: 13px;
     line-height: 18px;
     height: auto;
     bottom: 35%;
-    background: #009cee;
-    opacity:0.6;
+    background: rgba(0, 156, 238, 0.6);
+    text-align:center;
 }
 
+.slider-button{
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #fff;
+    display: inline-block;
+}
 .flex-caption h2{
     color:#fff;
 }
 
 .flex-caption h2 a{
     color:#fff;
+}
+
+.slider-wrapper .flex-control-nav{
+    display:none;
 }
 
 .flex-direction-nav a.flex-prev:before,
@@ -365,10 +385,6 @@ object {
 .video-wrap h3,
 .video-wrap p{
     color:#fff;
-}
-
-.video-code{
-    padding-top:30px;
 }
 
 /* Team Members */
@@ -468,6 +484,22 @@ object {
     width:0;
 }
 
+/* Gallery Area */
+.gallery-area{
+    background:#eee;
+}
+
+.gallery-block{
+    padding:50px 0;
+    text-align:center;
+}
+
+.gallery-block h3{
+    font-size:24px;
+    font-weight:400;
+    margin-top:0;
+}
+
 /* Tstimonial Slider */
 
 .testimonial-slider{
@@ -485,33 +517,10 @@ object {
     border-radius:0;
 }
 
-#reviewslider .slides img{
-    width:auto;
-    margin:0 auto;
-}
-
-#reviewslider flex-direction-nav{
-    display:none;
-}
-
 #reviewslider .flex-caption{
-    background:#009cee;
-    padding:40px;
-    position:relative;
-    text-align:center;
-}
-
-#reviewslider .flex-caption:after {
-    content:"";
-    display:block;
-    position: absolute;
-    left: -16px;
-    top: 28px;
-    width: 0;
-    height: 0;
-    border-top: 16px solid transparent;
-    border-right: 16px solid #009cee;
-    border-bottom: 16px solid transparent;
+    padding: 20px;
+    float: right;
+    width: 80%;
 }
 
 #reviewslider .flex-direction-nav{
@@ -520,12 +529,21 @@ object {
 
 .client-name{
     margin:5px 0;
-    text-align:center;
 }
 
-#reviewslider .flex-caption p,
 .client-name a{
-    color:#fff;
+    color:#009cee;
+}
+.client-block{
+    background:#f5f5f5;
+    padding:30px;
+    margin-bottom:20px;
+}
+
+.client-block img{
+    border-radius: 100%;
+    float: left;
+    width: 20%;
 }
 
 /* Portfolio Area */
@@ -569,6 +587,11 @@ object {
 
 .home-post-title-area{
     text-align:center;
+}
+
+.home-post-title h3{
+    font-size:30px;
+    font-weight:700;
 }
 
 .home-featured-post .featured-post-content{
@@ -832,7 +855,7 @@ time, address, .post-categories {
     border-radius: 0;
     background: #009cee;
     border: none;
-    padding: 8px 12px;
+    padding: 10px 24px;
 }
 
 .form-control{
@@ -852,6 +875,16 @@ time, address, .post-categories {
     padding: 0.8em;
     display: none;
     cursor: pointer;
+}
+
+/* Search form */
+
+.search-form label{
+    width:100%;
+}
+
+input[type="search"]{
+    padding:20px;
 }
 /* ==========================================================================
    Social Links Navigation - Intelligence overloaded. Thanks to Justin Tadlock 
@@ -948,6 +981,8 @@ time, address, .post-categories {
     color:   #0e76a8;
 }
 
+/* Product Area */
+
 .product-area{
     background:#009cee;
 }
@@ -958,6 +993,12 @@ time, address, .post-categories {
     color:#fff;
 }
 
+.product-wrap h3{
+    color: #fff;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top:0;
+}
 .product-wrapper{
     padding-top:20px;
 }
@@ -1015,4 +1056,25 @@ time, address, .post-categories {
 /* Footer */
 .site-footer-inner{
     text-align:center;
+}
+
+/* Contact Details */
+
+.contact-details{
+    text-align:center;
+    padding:10px 0;
+}
+
+.contact-details #email:before {
+    font-family: "FontAwesome";
+    content: "\f0e0";
+    margin-right: 10px;
+    color: #009cee;
+}
+
+.contact-details #phone:before {
+    font-family: "FontAwesome";
+    content: "\f095";
+    margin-right: 10px;
+    color: #009cee;
 }

@@ -22,11 +22,6 @@ jQuery(window).load(function() {
 	nextText: "<i class='fa fa-angle-right'></i>"
     });
 
-    jQuery('#reviewslider').flexslider({
-        animation: "slide",
-        prevText: "<i class='fa fa-angle-left'></i>",
-	nextText: "<i class='fa fa-angle-right'></i>"
-    });
 });
 
 jQuery(function() {
