@@ -249,7 +249,7 @@ if ( ! function_exists( 'ethic_posted_on' ) ) {
 		$date = sprintf( '<i class="fa fa-calendar-o"></i> <a href="%2$s" title="Posted %3$s" rel="bookmark"><time class="entry-date" datetime="%4$s" itemprop="datePublished">%5$s</time></a>',
 			$post_icon,
 			esc_url( get_permalink() ),
-			sprintf( esc_html__( '%1$s @ %2$s', 'superb' ), esc_html( get_the_date() ), esc_attr( get_the_time() ) ),
+			sprintf( esc_html__( '%1$s @ %2$s', 'ethic' ), esc_html( get_the_date() ), esc_attr( get_the_time() ) ),
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() )
 		);
@@ -257,22 +257,22 @@ if ( ! function_exists( 'ethic_posted_on' ) ) {
 		// Translators: 1: Date link 2: Author link 3: Categories 4: No. of Comments
 		$author = sprintf( '<i class="fa fa-user"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'superb' ), get_the_author() ) ),
+			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'ethic' ), get_the_author() ) ),
 			get_the_author()
 		);
 
 		// Return the Categories as a list
-		$categories_list = get_the_category_list( esc_html__( ' ', 'superb' ) );
+		$categories_list = get_the_category_list( esc_html__( ' ', 'ethic' ) );
 
 		// Translators: 1: Permalink 2: Title 3: No. of Comments
 		$comments = sprintf( '<span class="comments-link"><i class="fa fa-comment"></i> <a href="%1$s" title="%2$s">%3$s</a></span>',
 			esc_url( get_comments_link() ),
 			esc_attr( esc_html__( 'Comment on ' . the_title_attribute( 'echo=0' ) ) ),
-			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number() ), get_comments_number() ) : esc_html__( 'No Comments', 'superb' ) )
+			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number() ), get_comments_number() ) : esc_html__( 'No Comments', 'ethic' ) )
 		);
 
 		// Translators: 1: Date 2: Author 3: Categories 4: Comments
-		printf( wp_kses( __( '<div class="header-meta">%1$s%2$s<span class="post-categories">%3$s</span>%4$s</div>', 'superb' ), array( 
+		printf( wp_kses( __( '<div class="header-meta">%1$s%2$s<span class="post-categories">%3$s</span>%4$s</div>', 'ethic' ), array( 
 			'div' => array ( 
 				'class' => array() ), 
 			'span' => array( 

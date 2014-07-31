@@ -275,6 +275,10 @@ object {
     float: right;
 }
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+    background:none;
+}
+
 /* Home Slider */
 
 .flexslider{
@@ -305,7 +309,7 @@ object {
 
 .flex-direction-nav a.flex-prev:before,
 .flex-direction-nav a.flex-next:before{
-    display:none;
+    display:none !important;
 }
 
 .flex-direction-nav a.flex-prev{
@@ -809,13 +813,13 @@ time, address, .post-categories {
 }
 
 .comments-title{
-    font-size:20px;
+    font-size:24px;
     font-weight:700;
     margin-bottom:22px;
 }
 
 #reply-title{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -988,8 +992,25 @@ time, address, .post-categories {
     content:"\f101";
     font-family:"FontAwesome";
     float: left;
-    margin-top: 9px;
+    margin-right: 10px;
     color:#009cee;
+}
+
+.sidebar a:hover{
+    color:#009cee;
+}
+
+.nav>li>a:hover, .nav>li>a:focus{
+    background:none;
+}
+
+.sidebar .nav>li>a{
+    padding:0;
+}
+
+.sidebar ul li{
+    padding-bottom:5px;
+    margin-bottom:10px;
 }
 /* Footer */
 .site-footer-inner{
