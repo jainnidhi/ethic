@@ -22,7 +22,7 @@ get_header();
 <section class="slider-wrapper clearfix">
     <div class="container slider-block">
         <div class="row">
-      <div class="loading col-sm-12"  id="main-slider">
+      <div class="flexslider loading col-lg-12"  id="main-slider">
         <ul class="slides">
             <?php 
             // check if the slider is blank.
@@ -561,7 +561,7 @@ get_header();
     
   <?php  get_template_part('content','frontposts'); ?>
       
-    <div class="contact-area">
+    <section class="contact-area">
         <div class="container contact-wrap">
             <div class="row">
                 <div class="home-contact-form col-lg-12">
@@ -586,8 +586,9 @@ get_header();
                 </div>
             </div>
         </div>
-    </div>
-    <div class="contact-map">
+    </section>
+    
+    <section class="contact-map">
         <div class="container">
             <div class="row">
          <?php if ( get_theme_mod('map_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('map_title')); ?></h3>
@@ -605,7 +606,7 @@ get_header();
                            <?php } ?>
                       </div>
         
-    </div>
+    </section>
        
          <span class="top"><a class="back-to-top"><i class="fa fa-arrow-up"></i></a></span>
             

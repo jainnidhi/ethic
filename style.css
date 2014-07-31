@@ -292,8 +292,10 @@ object {
 .slider-block{
     padding:50px 0;
 }
-.flexslider{
-    margin-bottom:0;
+
+.slider-wrapper .flexslider{
+    background:none;
+    box-shadow:none;
 }
 
 .slider-wrapper .flex-caption {
@@ -305,10 +307,12 @@ object {
     line-height: 18px;
     height: auto;
     bottom: 35%;
-    background: rgba(0, 156, 238, 0.6);
     text-align:center;
 }
 
+#main-slider img{
+    border:3px solid #fff;
+}
 .slider-button{
     color: #fff;
     padding: 10px;
@@ -1068,6 +1072,10 @@ input[type="search"]{
     margin-bottom:10px;
 }
 /* Footer */
+
+.site-footer{
+    border-top:2px solid #ddd;
+}
 .site-footer-inner{
     text-align:center;
 }
@@ -1091,4 +1099,262 @@ input[type="search"]{
     content: "\f095";
     margin-right: 10px;
     color: #009cee;
+}
+
+/* ===========================
+   Color Schemes
+   =========================== */
+
+/* Ethic Red */
+
+.ethic-red .slider-wrapper,
+.ethic-red .featured-image,
+.ethic-red .home-video-area,
+.ethic-red .product-area,
+.ethic-red .contact-area,
+.ethic-red .contact-map h3,
+.ethic-red .more-link,
+.ethic-red .featured-post-image .post_format,
+.ethic-red #commentsubmit,
+.ethic-red .pager li > a:hover{
+    background:#f14141;
+}
+
+.ethic-red .home-featured-team{
+    border:3px solid #f14141;
+}
+.ethic-red .featured-project-content img{
+    border:4px solid #f14141;
+}
+
+.ethic-red .sidebar h3:after{
+    border-bottom:1px solid #f14141;
+}
+
+.ethic-red .site-title a,
+.ethic-red .client-name a,
+.ethic-red .contact-details #email:before,
+.ethic-red .contact-details #phone:before,
+.ethic-red .sidebar li:before,
+.ethic-red .comment-reply-link,
+.ethic-red .sidebar a:hover{
+    color:#f14141;
+}
+
+/* Ethic Green */
+
+.ethic-green .slider-wrapper,
+.ethic-green .featured-image,
+.ethic-green .home-video-area,
+.ethic-green .product-area,
+.ethic-green .contact-area,
+.ethic-green .contact-map h3,
+.ethic-green .more-link,
+.ethic-green .featured-post-image .post_format,
+.ethic-green #commentsubmit,
+.ethic-green .pager li > a:hover{
+    background:#3DB943;
+}
+
+.ethic-green .home-featured-team{
+    border:3px solid #3DB943;
+}
+.ethic-green .featured-project-content img{
+    border:4px solid #3DB943;
+}
+
+.ethic-green .sidebar h3:after{
+    border-bottom:1px solid #3DB943;
+}
+
+.ethic-green .site-title a,
+.ethic-green .client-name a,
+.ethic-green .contact-details #email:before,
+.ethic-green .contact-details #phone:before,
+.ethic-green .sidebar li:before,
+.ethic-green .comment-reply-link,
+.ethic-green .sidebar a:hover{
+    color:#3DB943;
+}
+
+
+/* Ethic Yellow */
+
+.ethic-yellow .slider-wrapper,
+.ethic-yellow .featured-image,
+.ethic-yellow .home-video-area,
+.ethic-yellow .product-area,
+.ethic-yellow .contact-area,
+.ethic-yellow .contact-map h3,
+.ethic-yellow .more-link,
+.ethic-yellow .featured-post-image .post_format,
+.ethic-yellow #commentsubmit,
+.ethic-yellow .pager li > a:hover{
+    background:#F1A708;
+}
+
+.ethic-yellow .home-featured-team{
+    border:3px solid #F1A708;
+}
+.ethic-yellow .featured-project-content img{
+    border:4px solid #F1A708;
+}
+
+.ethic-yellow .sidebar h3:after{
+    border-bottom:1px solid #F1A708;
+}
+
+.ethic-yellow .site-title a,
+.ethic-yellow .client-name a,
+.ethic-yellow .contact-details #email:before,
+.ethic-yellow .contact-details #phone:before,
+.ethic-yellow .sidebar li:before,
+.ethic-yellow .comment-reply-link,
+.ethic-yellow .sidebar a:hover{
+    color:#F1A708;
+}
+
+
+/* Ethic Purple */
+
+.ethic-purple .slider-wrapper,
+.ethic-purple .featured-image,
+.ethic-purple .home-video-area,
+.ethic-purple .product-area,
+.ethic-purple .contact-area,
+.ethic-purple .contact-map h3,
+.ethic-purple .more-link,
+.ethic-purple .featured-post-image .post_format,
+.ethic-purple #commentsubmit,
+.ethic-purple .pager li > a:hover{
+    background:#996bc5;
+}
+
+.ethic-purple .home-featured-team{
+    border:3px solid #996bc5;
+}
+.ethic-purple .featured-project-content img{
+    border:4px solid #996bc5;
+}
+
+.ethic-purple .sidebar h3:after{
+    border-bottom:1px solid #996bc5;
+}
+
+.ethic-purple .site-title a,
+.ethic-purple .client-name a,
+.ethic-purple .contact-details #email:before,
+.ethic-purple .contact-details #phone:before,
+.ethic-purple .sidebar li:before,
+.ethic-purple .comment-reply-link,
+.ethic-purple .sidebar a:hover{
+    color:#996bc5;
+}
+
+/* Ethic Orange */
+
+.ethic-orange .slider-wrapper,
+.ethic-orange .featured-image,
+.ethic-orange .home-video-area,
+.ethic-orange .product-area,
+.ethic-orange .contact-area,
+.ethic-orange .contact-map h3,
+.ethic-orange .more-link,
+.ethic-orange .featured-post-image .post_format,
+.ethic-orange #commentsubmit,
+.ethic-orange .pager li > a:hover{
+    background:#FC8B23;
+}
+
+.ethic-orange .home-featured-team{
+    border:3px solid #FC8B23;
+}
+.ethic-orange .featured-project-content img{
+    border:4px solid #FC8B23;
+}
+
+.ethic-orange .sidebar h3:after{
+    border-bottom:1px solid #FC8B23;
+}
+
+.ethic-orange .site-title a,
+.ethic-orange .client-name a,
+.ethic-orange .contact-details #email:before,
+.ethic-orange .contact-details #phone:before,
+.ethic-orange .sidebar li:before,
+.ethic-orange .comment-reply-link,
+.ethic-orange .sidebar a:hover{
+    color:#FC8B23;
+}
+
+/* Ethic Brown */
+
+.ethic-brown .slider-wrapper,
+.ethic-brown .featured-image,
+.ethic-brown .home-video-area,
+.ethic-brown .product-area,
+.ethic-brown .contact-area,
+.ethic-brown .contact-map h3,
+.ethic-brown .more-link,
+.ethic-brown .featured-post-image .post_format,
+.ethic-brown #commentsubmit,
+.ethic-brown .pager li > a:hover{
+    background:#C78926;
+}
+
+.ethic-brown .home-featured-team{
+    border:3px solid #C78926;
+}
+.ethic-brown .featured-project-content img{
+    border:4px solid #C78926;
+}
+
+.ethic-brown .sidebar h3:after{
+    border-bottom:1px solid #C78926;
+}
+
+.ethic-brown .site-title a,
+.ethic-brown .client-name a,
+.ethic-brown .contact-details #email:before,
+.ethic-brown .contact-details #phone:before,
+.ethic-brown .sidebar li:before,
+.ethic-brown .comment-reply-link,
+.ethic-brown .sidebar a:hover{
+    color:#C78926;
+}
+
+/* Ethic Pink */
+
+.ethic-pink .slider-wrapper,
+.ethic-pink .featured-image,
+.ethic-pink .home-video-area,
+.ethic-pink .product-area,
+.ethic-pink .contact-area,
+.ethic-pink .contact-map h3,
+.ethic-pink .more-link,
+.ethic-pink .featured-post-image .post_format,
+.ethic-pink #commentsubmit,
+.ethic-pink .pager li > a:hover{
+    background:#EE3178;
+}
+
+.ethic-pink .home-featured-team{
+    border:3px solid #EE3178;
+}
+.ethic-pink .featured-project-content img{
+    border:4px solid #EE3178;
+}
+
+.ethic-pink .sidebar h3:after{
+    border-bottom:1px solid #EE3178;
+}
+
+.ethic-pink .site-title a,
+.ethic-pink .client-name a,
+.ethic-pink .contact-details #email:before,
+.ethic-pink .contact-details #phone:before,
+.ethic-pink .sidebar li:before,
+.ethic-pink .comment-reply-link,
+.ethic-pink .sidebar a:hover{
+    color:#EE3178;
 }
