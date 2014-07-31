@@ -273,6 +273,18 @@ jQuery(document).ready(function($) {
             $('.team-member-area p').text(to);
         });
     });
+    
+    wp.customize('gallery_title', function(value) {
+        value.bind(function(to) {
+            $('.gallery-block h3').text(to);
+        });
+    });
+    
+    wp.customize('ethic_gallery', function(value) {
+        value.bind(function(to) {
+            $('.gallery-wrap').text(to);
+        });
+    });
 
     wp.customize('tslider_one', function(value) {
         value.bind(function(to) {

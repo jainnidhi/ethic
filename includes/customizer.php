@@ -817,6 +817,38 @@ function ethic_customize_register($wp_customize) {
         'priority' => 20,
     ));
     
+    /* Gellery Settings */
+     $wp_customize->add_section('ethic_gallery_setting', array(
+        'title' => __('Gallery Settings', 'ethic'),
+        'priority' => 49,
+    ));
+     
+     $wp_customize->add_setting('galley_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('galley_title', array(
+        'label' => __('Title', 'ethic'),
+        'section' => 'ethic_gallery_setting',
+        'settings' => 'galley_title',
+        'priority' => 1,
+    ));
+    
+    $wp_customize->add_setting('ethic_gallery', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('ethic_gallery', array(
+        'label' => __('Gallery Code', 'ethic'),
+        'section' => 'ethic_gallery_setting',
+        'settings' => 'ethic_gallery',
+        'priority' => 2,
+    ));
+     
+    
+    
     // Add new section for Testimonial slider settings
     $wp_customize->add_section('testimonial_slider_setting', array(
         'title' => __('Testimonial Settings', 'ethic'),
@@ -848,32 +880,6 @@ function ethic_customize_register($wp_customize) {
             )
             )
     );
-
-    // home Title
-    $wp_customize->add_setting('feedback_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control('feedback_title', array(
-        'label' => __('Section Title', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'feedback_title',
-        'priority' => 3,
-    ));
-
-    $wp_customize->add_setting('testimonial_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport' => 'postMessage',
-    ));
-
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'testimonial_description', array(
-        'label' => __('Description', 'ethic'),
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'testimonial_description',
-        'priority' => 4,
-    )));
-
 
     $wp_customize->add_setting('tslider_one', array(
         'transport' => 'postMessage',
