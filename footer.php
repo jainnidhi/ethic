@@ -18,15 +18,17 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="container">
 		<div class="row">
-                    <div class="contact-details"><?php if ( get_theme_mod('contact_email') !='' ) {  ?><p id="email"><?php echo esc_html(get_theme_mod('contact_email')); ?></p>
+                    <div class="contact-details">
+                        <ul><?php if ( get_theme_mod('contact_email') !='' ) {  ?><li id="email"><?php echo esc_html(get_theme_mod('contact_email')); ?></li>
 
-                          <?php } else {  ?> <p id="email"> <?php esc_html_e('hello@ideaboxcreations.com', 'superb') ?></p>
+                          <?php } else {  ?> <li id="email"> <?php esc_html_e('hello@ideaboxcreations.com', 'superb') ?></li>
                                    <?php } ?>
 
-                          <?php if ( get_theme_mod('contact_phone') !='' ) {  ?><p id="phone"><?php echo esc_html(get_theme_mod('contact_phone')); ?></p>
+                          <?php if ( get_theme_mod('contact_phone') !='' ) {  ?><li id="phone"><?php echo esc_html(get_theme_mod('contact_phone')); ?></li>
 
-                          <?php } else {  ?> <p id="phone"><?php esc_html_e('0294-678456', 'superb') ?></p>
+                          <?php } else {  ?> <li id="phone"><?php esc_html_e('0294-678456', 'superb') ?></li>
                                    <?php } ?>
+                          </ul>
                              </div>
                     <div class="social-links col-lg-12">
                                 <ul>

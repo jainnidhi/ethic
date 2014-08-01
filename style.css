@@ -280,9 +280,32 @@ object {
     float: right;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus{
     background:none;
 }
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:hover, 
+.navbar-default .navbar-nav>.open>a:focus{
+    background:none;
+}
+
+.dropdown-menu{
+    border-radius:0;
+    padding:0;
+    margin-top:0;
+}
+
+.dropdown-menu li a{
+    padding:10px 20px;
+}
+
+.dropdown-menu li a:hover, .dropdown-menu li a:focus{
+    background:#009cee;
+}
+
 
 /* Home Slider */
 
@@ -472,9 +495,9 @@ object {
 
 .team-meta li a:before{
     border-radius: 100px;
-    width: 17px;
-    padding: 6px 10px;
-    color: #111;
+    width: 30px;
+    padding: 3px 10px;
+    color: #fff;
     font-family:"FontAwesome";
     display:inline-block;
     background:#fff;
@@ -482,10 +505,12 @@ object {
 
 .team-meta li a[href*="facebook.com"]::before {
     content: '\f09a';
+    background:#3b5998;
 }
 
 .team-meta li a[href*="twitter.com"]::before {
     content: '\f099';
+    background:#33ccff;
 }
 
 .team-meta span{
@@ -610,6 +635,7 @@ object {
 .portfolio h2{
     font-size:20px;
     text-align:center;
+    margin-top:0;
 }
 
 .portfolio-buttons{
@@ -969,9 +995,9 @@ time, address, .post-categories {
 #respond form input[type="text"], 
 #respond form input[type="email"], 
 #respond form textarea {
-width: 100%;
-padding: 6px;
-margin-top: 5px;
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
 }
 
 #respond form p:nth-child(4){
@@ -1039,11 +1065,14 @@ input[type="search"]{
 .social-links li a::before {
     display:        inline-block;
     padding:        10px;
+    width:          44px;
     font-family:    'FontAwesome';
     vertical-align: top;
     -webkit-font-smoothing: antialiased;
     font-size:30px;
     transition: all 0.3s ease;
+    color:#fff;
+    border-radius:100%;
 }
 
 .social-links li:hover a::before {
@@ -1054,51 +1083,51 @@ input[type="search"]{
 
 .social-links li a[href*="facebook.com"]::before {
     content: '\f09a';
-    color:   #3b5998;
+    background:   #3b5998;
 }
 .social-links li a[href*="twitter.com"]::before {
     content: '\f099';
-    color:   #33ccff;
+    background:   #33ccff;
 }
 #menu-social li a[href*="dribbble.com"]::before {
     content: '\f17d';
-    color:   #ea4c89;
+    background:   #ea4c89;
 }
 .social-links li a[href*="plus.google.com"]::before {
     content: '\f0d5';
-    color: #dd4b39;
+    background: #dd4b39;
 }
 .social-links li a[href*="pinterest.com"]::before {
     content: '\f0d2';
-    color:   #c8232c;
+    background:   #c8232c;
 }
 .social-links li a[href*="github.com"]::before {
     content: '\f113';
-    color:   #171515;
+    background:   #171515;
 }
 .social-links li a[href*="tumblr.com"]::before {
     content: '\f173';
-    color:   #34526f;
+    background:   #34526f;
 }
 .social-links li a[href*="youtube.com"]::before {
     content: '\f16a';
-    color:   #c4302b;
+    background:   #c4302b;
 }
 .social-links li a[href*="flickr.com"]::before {
     content: '\f16e';
-    color:   #ff0084;
+    background:   #ff0084;
 }
 .social-links li a[href*="vimeo.com"]::before {
     content: '\f194';
-    color:   #1AB7EA;
+    background:   #1AB7EA;
 }
 .social-links li a[href*="instagram.com"]::before {
     content: '\f16d';
-    color:   #3f729b;
+    background:   #3f729b;
 }
 .social-links li a[href*="linkedin.com"]::before {
     content: '\f0e1';
-    color:   #0e76a8;
+    background:   #0e76a8;
 }
 
 /* Product Area */
@@ -1203,6 +1232,14 @@ input[type="search"]{
     color: #009cee;
 }
 
+.contact-details li {
+    list-style: none;
+    margin-bottom: 10px;
+    float: none;
+    margin-right: 10px;
+    display: inline-block;
+}
+
 /* ===========================
    Color Schemes
    =========================== */
@@ -1219,7 +1256,8 @@ input[type="search"]{
 .ethic-red .featured-post-image .post_format,
 .ethic-red #commentsubmit,
 .ethic-red .pager li > a:hover,
-.ethic-red .portfolio-buttons a{
+.ethic-red .portfolio-buttons a,
+.ethic-red .dropdown-menu li a:hover{
     background:#f14141;
 }
 
@@ -1256,7 +1294,8 @@ input[type="search"]{
 .ethic-green .featured-post-image .post_format,
 .ethic-green #commentsubmit,
 .ethic-green .pager li > a:hover,
-.ethic-green .portfolio-buttons a{
+.ethic-green .portfolio-buttons a,
+.ethic-green .dropdown-menu li a:hover{
     background:#3DB943;
 }
 
@@ -1294,7 +1333,8 @@ input[type="search"]{
 .ethic-yellow .featured-post-image .post_format,
 .ethic-yellow #commentsubmit,
 .ethic-yellow .pager li > a:hover,
-.ethic-yellow .portfolio-buttons a{
+.ethic-yellow .portfolio-buttons a,
+.ethic-yellow .dropdown-menu li a:hover{
     background:#F1A708;
 }
 
@@ -1332,7 +1372,8 @@ input[type="search"]{
 .ethic-purple .featured-post-image .post_format,
 .ethic-purple #commentsubmit,
 .ethic-purple .pager li > a:hover,
-.ethic-purple .portfolio-buttons a{
+.ethic-purple .portfolio-buttons a,
+.ethic-purple .dropdown-menu li a:hover{
     background:#996bc5;
 }
 
@@ -1369,7 +1410,8 @@ input[type="search"]{
 .ethic-orange .featured-post-image .post_format,
 .ethic-orange #commentsubmit,
 .ethic-orange .pager li > a:hover,
-.ethic-orange .portfolio-buttons a{
+.ethic-orange .portfolio-buttons a,
+.ethic-orange .dropdown-menu li a:hover{
     background:#FC8B23;
 }
 
@@ -1406,7 +1448,8 @@ input[type="search"]{
 .ethic-brown .featured-post-image .post_format,
 .ethic-brown #commentsubmit,
 .ethic-brown .pager li > a:hover,
-.ethic-brown .portfolio-buttons a{
+.ethic-brown .portfolio-buttons a,
+.ethic-brown .dropdown-menu li a:hover{
     background:#C78926;
 }
 
@@ -1443,7 +1486,8 @@ input[type="search"]{
 .ethic-pink .featured-post-image .post_format,
 .ethic-pink #commentsubmit,
 .ethic-pink .pager li > a:hover,
-.ethic-pink .portfolio-buttons a{
+.ethic-pink .portfolio-buttons a,
+.ethic-pink .dropdown-menu li a:hover{
     background:#EE3178;
 }
 
