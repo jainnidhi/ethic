@@ -477,6 +477,7 @@ object {
     border: 3px solid #009cee;
     width: 257px !important;
     margin-right: 37px;
+    margin:0 auto;
 }
 
 .team-meta{
@@ -983,9 +984,9 @@ time, address, .post-categories {
     border-radius:0;
 }
 
-#respond form p:nth-child(2), 
-#respond form p:nth-child(3), 
-#respond form p:nth-child(4){
+#respond form .comment-form-author, 
+#respond form .comment-form-email, 
+#respond form .comment-form-url{
     width: 32.5%;
     float: left;
     margin-right: 10px;
@@ -1000,7 +1001,7 @@ time, address, .post-categories {
     margin-top: 5px;
 }
 
-#respond form p:nth-child(4){
+#respond form .comment-form-url{
     margin-right:0;
 }
 
