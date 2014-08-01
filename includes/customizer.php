@@ -1832,7 +1832,7 @@ function ethic_background_color() {
 
     <style type="text/css" id="passion-background-color-css">
     <?php if (get_theme_mod('ethic_home_slider_color')) { ?>
-            .home-featured-area{
+            .slider-wrapper{
                 background:<?php echo $background_slider ?>;
             }
     <?php } ?>
@@ -1885,8 +1885,6 @@ function ethic_background_color() {
             }
     <?php } ?>
             
-    
-           
     </style>
 
     <?php

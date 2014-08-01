@@ -75,6 +75,9 @@ if (get_theme_mod('ethic_front_team_members_check')) {
                                     } ?>
                                     
                                 </p>
+                                <div class="content">
+                                    <?php the_excerpt(); ?>
+                                </div>
                                 
                                  <div class="team-meta">
                                         <?php
