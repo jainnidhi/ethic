@@ -17,7 +17,7 @@ get_header(); ?>
 
         <?php
         $current_page = get_query_var('paged');
-        $per_page = intval(get_theme_mod('passion_portfolio_front_count'));
+        $per_page = intval(get_theme_mod('ethic_portfolio_front_count'));
         $offset = $current_page > 0 ? $per_page * ($current_page - 1) : 0;
         $portfolio_args = array(
             'post_type' => 'portfolio',
@@ -41,7 +41,7 @@ get_header(); ?>
                              <?php the_title(); ?>
                             </a></h2>
                          <div class="portfolio-buttons">
-                            <a href="<?php the_permalink(); ?>"><?php _e('View Details','passion'); ?></a>
+                            <a href="<?php the_permalink(); ?>"><?php _e('View Details','ethic'); ?></a>
                         </div><!--end .product-buttons-->
                       </div>
                           
@@ -65,8 +65,8 @@ get_header(); ?>
                 ?>
             </div>
         <?php else : ?>
-                <h2 class="title"><?php _e('Not Found', 'passion'); ?></h2>
-                <p><?php _e('Sorry, but you are looking for something that is not here.', 'passion'); ?></p>
+                <h2 class="title"><?php _e('Not Found', 'ethic'); ?></h2>
+                <p><?php _e('Sorry, but you are looking for something that is not here.', 'ethic'); ?></p>
                 <?php get_search_form(); ?>
 
 <?php endif; ?>
