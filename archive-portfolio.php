@@ -4,7 +4,7 @@
  * A custom portfolio page template to display portfolio grid
  * Requires Portfolio Custom Post Type plugin to be activated
  * 
- * @package : Passion
+ * @package : Ethic
  * @version : 1.0
  * @since : 1.0 
  * 
