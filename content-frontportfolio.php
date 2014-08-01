@@ -36,6 +36,23 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                                             <?php } ?>
             </div>
     </div>
+            
+            <ul id="filters">
+                    <?php
+                        $terms = get_terms('portfolio_category');
+                        $count = count($terms);
+                            echo '<li><a href="javascript:void(0)" data-filter="all" class="filter active">All</a></li>';
+                        if ( $count > 0 ){
+
+                            foreach ( $terms as $term ) {
+
+                                $termname = strtolower($term->name);
+                                $termname = str_replace(' ', '-', $termname);
+                                echo '<li><a href="javascript:void(0)" class="filter" data-filter=".'.$termname.'">'.$term->name.'</a></li>';
+                            }
+                        }
+                    ?>
+                </ul>
      
 
             <div id="featured-portfolio" class="clearfix">
@@ -44,8 +61,25 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                 <?php if ($featuredportfolio->have_posts()) : $i = 1; ?>
 
                     <?php while ($featuredportfolio->have_posts()) : $featuredportfolio->the_post(); ?>
+                    <?php 
+                    $terms = get_the_terms( $post->ID, 'portfolio_category' );	
+                    if ( $terms && ! is_wp_error( $terms ) ) : 
+
+                        $links = array();
+
+                        foreach ( $terms as $term ) {
+                            $links[] = $term->name;
+                        }
+
+                        $tax_links = join( " ", str_replace(' ', '-', $links));          
+                        $tax = strtolower($tax_links);
+                    else :	
+                        $tax = '';					
+                    endif; 
+                     $containerClass = $tax; 
+                     ?>
                                      
-                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="home-featured-portfolio all mix col-lg-3 col-md-3 col-sm-6 col-xs-12 <?php echo $containerClass; ?>">
 
                             <div class="featured-portfolio-content">
 

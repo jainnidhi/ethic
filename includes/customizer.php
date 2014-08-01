@@ -157,6 +157,21 @@ function ethic_customize_register($wp_customize) {
         'priority' => 1,
             )
     ));
+    
+    $wp_customize->add_setting('slider_background_image', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'slider_background_image', array(
+        'label' => 'Slider Background Image',
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_background_image',
+        'priority' => 2,
+            )
+            )
+    );
 
     $wp_customize->add_setting('slider_one', array(
         'transport' => 'postMessage',
@@ -168,7 +183,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Slider 1',
         'section' => 'home_slider_setting',
         'settings' => 'slider_one',
-        'priority' => 2,
+        'priority' => 3,
             )
             )
     );
@@ -183,7 +198,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider One Title', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_title_one',
-        'priority' => 3,
+        'priority' => 4,
     ));
 
     $wp_customize->add_setting('slider_one_description', array('default' => '',
@@ -195,7 +210,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Description', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_one_description',
-        'priority' => 4,
+        'priority' => 5,
     )));
     
     // link text
@@ -208,7 +223,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider One Link Text', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_one_link_text',
-        'priority' => 5,
+        'priority' => 6,
     ));
 
     // link url
@@ -221,7 +236,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider One Link URL', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_one_link_url',
-        'priority' => 6,
+        'priority' => 7,
     ));
 
    
@@ -235,7 +250,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Slider 2',
         'section' => 'home_slider_setting',
         'settings' => 'slider_two',
-        'priority' => 7,
+        'priority' => 8,
             )
             )
     );
@@ -250,7 +265,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Two Title', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_title_two',
-        'priority' => 8,
+        'priority' => 9,
     ));
 
     $wp_customize->add_setting('slider_two_description', array('default' => '',
@@ -262,7 +277,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Description', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_two_description',
-        'priority' => 9,
+        'priority' => 10,
     )));
     
      // link text
@@ -275,7 +290,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Two Link Text', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_two_link_text',
-        'priority' => 10,
+        'priority' => 11,
     ));
 
     // link url
@@ -288,7 +303,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Two Link URL', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_two_link_url',
-        'priority' => 11,
+        'priority' => 12,
     ));
 
    
@@ -302,7 +317,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Slider 3',
         'section' => 'home_slider_setting',
         'settings' => 'slider_three',
-        'priority' => 12,
+        'priority' => 13,
             )
             )
     );
@@ -318,7 +333,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Three Title', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_title_three',
-        'priority' => 13,
+        'priority' => 14,
     ));
 
     $wp_customize->add_setting('slider_three_description', array('default' => '',
@@ -330,7 +345,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Description', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_three_description',
-        'priority' => 14,
+        'priority' => 15,
     )));
     
      // link text
@@ -343,7 +358,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Three Link Text', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_three_link_text',
-        'priority' => 15,
+        'priority' => 16,
     ));
 
     // link url
@@ -356,7 +371,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Three Link URL', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_three_link_url',
-        'priority' => 16,
+        'priority' => 17,
     ));
 
    
@@ -370,7 +385,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Slider 4',
         'section' => 'home_slider_setting',
         'settings' => 'slider_four',
-        'priority' => 17,
+        'priority' => 18,
             )
             )
     );
@@ -385,7 +400,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Four Title', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_title_four',
-        'priority' => 18,
+        'priority' => 19,
     ));
 
     $wp_customize->add_setting('slider_four_description', array('default' => '',
@@ -397,7 +412,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Description', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_four_description',
-        'priority' => 19,
+        'priority' => 20,
     )));
     
     $wp_customize->add_setting('slider_four_link_text', array(
@@ -409,7 +424,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Four Link Text', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_four_link_text',
-        'priority' => 20,
+        'priority' => 21,
     ));
 
     // link url
@@ -422,7 +437,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Four Link URL', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_four_link_url',
-        'priority' => 21,
+        'priority' => 22,
     ));
 
 
@@ -436,7 +451,7 @@ function ethic_customize_register($wp_customize) {
         'label' => 'Slider 5',
         'section' => 'home_slider_setting',
         'settings' => 'slider_five',
-        'priority' => 22,
+        'priority' => 23,
             )
             )
     );
@@ -451,7 +466,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Five Title', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_title_five',
-        'priority' => 23,
+        'priority' => 24,
     ));
 
     $wp_customize->add_setting('slider_five_description', array('default' => '',
@@ -463,7 +478,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Description', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_five_description',
-        'priority' => 24,
+        'priority' => 25,
     )));
     
     // link text
@@ -476,7 +491,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Five Link Text', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_five_link_text',
-        'priority' => 25,
+        'priority' => 26,
     ));
 
     // link url
@@ -489,7 +504,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Slider Five Link URL', 'ethic'),
         'section' => 'home_slider_setting',
         'settings' => 'slider_five_link_url',
-        'priority' => 26,
+        'priority' => 27,
     ));
     
 
@@ -1791,12 +1806,20 @@ add_action('wp_footer', 'ethic_footer_tracking_code');
  * @since Ethic 1.0
  */
 function ethic_background_image() {
-
+    
+    $background_slider = get_theme_mod('slider_background_image');
     $background_testimonial = get_theme_mod('testimonial_background_image');
 
     // If we get this far, we have custom styles.
     ?>
     <style type="text/css" id="ethic-background-image-css">
+        
+    <?php if (get_theme_mod('slider_background_image')) { ?>
+            .slider-wrapper{
+                background-image:url('<?php echo $background_slider ?>');
+            }
+    <?php } ?>
+            
     <?php if (get_theme_mod('testimonial_background_image')) { ?>
             .testimonial-area{
                 background-image:url('<?php echo $background_testimonial ?>');

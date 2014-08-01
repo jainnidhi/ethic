@@ -311,6 +311,7 @@ object {
 
 .slider-wrapper{
     background:#009cee;
+    background: url(includes/images/tes-back.jpg) 50% -127.8px repeat fixed;
 }
 
 .slider-block{
@@ -609,6 +610,31 @@ object {
     font-size:30px;
     font-weight:700;
 }
+
+.portfolio-area #filters {
+    margin: 50px auto 0;
+    list-style: none;
+    padding: 0px 0 85px;
+    text-align: center;
+    display: block;
+}
+
+.portfolio-area #filters li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.portfolio-area #filters li a {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.home-featured-portfolio.mix {
+    display: none; 
+}
+
 
 .portfolio{
     padding:0;

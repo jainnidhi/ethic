@@ -21,7 +21,8 @@ jQuery(window).load(function() {
         prevText: "<i class='fa fa-angle-left'></i>",
 	nextText: "<i class='fa fa-angle-right'></i>"
     });
-
+    
+    jQuery('.portfolio-wrap').mixItUp();
 });
 
 jQuery(function() {
@@ -47,5 +48,7 @@ jQuery(document).ready(function() {
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
     });
+    
+    
     
 });
