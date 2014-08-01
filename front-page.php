@@ -544,7 +544,7 @@ get_header();
     <?php } ?>
     
     <?php
-    get_template_part('content','frontprojects'); ?>
+    get_template_part('content','frontportfolio'); ?>
     
     <?php if(get_theme_mod('ethic_product_section_check')) { ?>
     <div class="product-area">

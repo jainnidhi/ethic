@@ -1136,99 +1136,99 @@ function ethic_customize_register($wp_customize) {
     ));
 
   
-    // Add new section for displaying Featured Project on Front Page
-    $wp_customize->add_section('ethic_front_page_project_options', array(
-        'title' => __('Project Settings', 'ethic'),
-        'description' => __('Settings for displaying featured project on Front Page', 'ethic'),
+    // Add new section for displaying Featured portfolio on Front Page
+    $wp_customize->add_section('ethic_front_page_portfolio_options', array(
+        'title' => __('Portfolio Settings', 'ethic'),
+        'description' => __('Settings for displaying featured portfolio on Front Page', 'ethic'),
         'priority' => 51,
     ));
 
-    // enable featured project on front page?
-    $wp_customize->add_setting('ethic_front_featured_project_check', array(
+    // enable featured portfolio on front page?
+    $wp_customize->add_setting('ethic_front_featured_portfolio_check', array(
         'default' => 0,
         'sanitize_callback' => 'ethic_sanitize_checkbox',
     ));
-    $wp_customize->add_control('ethic_front_featured_project_check', array(
-        'label' => __('Show featured project on Front Page', 'ethic'),
-        'section' => 'ethic_front_page_project_options',
+    $wp_customize->add_control('ethic_front_featured_portfolio_check', array(
+        'label' => __('Show featured portfolio on Front Page', 'ethic'),
+        'section' => 'ethic_front_page_portfolio_options',
         'priority' => 1,
         'type' => 'checkbox',
     ));
 
-    $wp_customize->add_setting('ethic_hide_sample_project', array(
+    $wp_customize->add_setting('ethic_hide_sample_portfolio', array(
         'default' => 1,
         'sanitize_callback' => 'ethic_sanitize_checkbox',
     ));
-    $wp_customize->add_control('ethic_hide_sample_project', array(
-        'label' => __('Hide sample project on Front Page', 'ethic'),
-        'section' => 'ethic_front_page_project_options',
+    $wp_customize->add_control('ethic_hide_sample_portfolio', array(
+        'label' => __('Hide sample portfolio on Front Page', 'ethic'),
+        'section' => 'ethic_front_page_portfolio_options',
         'priority' => 2,
         'type' => 'checkbox',
     ));
     
-    $wp_customize->add_setting('ethic_project_background_color', array(
+    $wp_customize->add_setting('ethic_portfolio_background_color', array(
         'default' => '#fff',
         'sanitize_callback' => 'ethic_sanitize_hex_color',
         'sanitize_js_callback' => 'ethic_sanitize_escaping',
     ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_project_background_color', array(
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_portfolio_background_color', array(
         'label' => 'Section Background color',
-        'section' => 'ethic_front_page_project_options',
-        'settings' => 'ethic_project_background_color',
+        'section' => 'ethic_front_page_portfolio_options',
+        'settings' => 'ethic_portfolio_background_color',
         'priority' => 3,
             )
     ));
     
     // post Title
-    $wp_customize->add_setting('ethic_project_title', array(
+    $wp_customize->add_setting('ethic_portfolio_title', array(
         'sanitize_callback' => 'sanitize_text_field',
         'transport' => 'postMessage',
     ));
 
-    $wp_customize->add_control('ethic_project_title', array(
+    $wp_customize->add_control('ethic_portfolio_title', array(
         'label' => __('Section Title', 'ethic'),
-        'section' => 'ethic_front_page_project_options',
-        'settings' => 'ethic_project_title',
+        'section' => 'ethic_front_page_portfolio_options',
+        'settings' => 'ethic_portfolio_title',
         'priority' => 4,
     ));
 
-    $wp_customize->add_setting('project_description', array('default' => '',
+    $wp_customize->add_setting('portfolio_description', array('default' => '',
         'sanitize_callback' => 'sanitize_text_field',
         'transport' => 'postMessage',
     ));
 
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'project_description', array(
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'portfolio_description', array(
         'label' => __('Description', 'ethic'),
-        'section' => 'ethic_front_page_project_options',
-        'settings' => 'project_description',
+        'section' => 'ethic_front_page_portfolio_options',
+        'settings' => 'portfolio_description',
         'priority' => 5,
     )));
 
 
 
     // select number of posts for featured posts on front page
-    $wp_customize->add_setting('ethic_front_featured_project_count', array(
+    $wp_customize->add_setting('ethic_front_featured_portfolio_count', array(
         'default' => 3,
         'sanitize_callback' => 'sanitize_text_field',
         'transport' => 'postMessage',
     ));
-    $wp_customize->add_control('ethic_front_featured_project_count', array(
-        'label' => __('Number of project to display', 'ethic'),
-        'section' => 'ethic_front_page_project_options',
-        'settings' => 'ethic_front_featured_project_count',
+    $wp_customize->add_control('ethic_front_featured_portfolio_count', array(
+        'label' => __('Number of portfolio to display', 'ethic'),
+        'section' => 'ethic_front_page_portfolio_options',
+        'settings' => 'ethic_front_featured_portfolio_count',
         'priority' => 20,
     ));
 
 
-    $wp_customize->add_setting('ethic_project_front_count', array(
+    $wp_customize->add_setting('ethic_portfolio_front_count', array(
         'default' => 9,
         'sanitize_callback' => 'ethic_sanitize_integer',
     ));
-    $wp_customize->add_control('ethic_project_front_count', array(
-        'label' => __('Project Item Count', 'ethic'),
-        'section' => 'ethic_front_page_project_options',
-        'settings' => 'ethic_project_front_count',
+    $wp_customize->add_control('ethic_portfolio_front_count', array(
+        'label' => __('portfolio Item Count', 'ethic'),
+        'section' => 'ethic_front_page_portfolio_options',
+        'settings' => 'ethic_portfolio_front_count',
         'priority' => 40,
     ));
     
@@ -1818,7 +1818,7 @@ add_action('wp_head', 'ethic_background_image');
 function ethic_background_color() {
 
     $background_slider = get_theme_mod('ethic_home_slider_color');
-    $background_project = get_theme_mod('ethic_project_background_color');
+    $background_portfolio = get_theme_mod('ethic_portfolio_background_color');
     $background_blog = get_theme_mod('ethic_blog_background_color');
     $background_team = get_theme_mod('ethic_team_background_color');
     $background_video = get_theme_mod('ethic_video_color');
@@ -1837,9 +1837,9 @@ function ethic_background_color() {
             }
     <?php } ?>
                     
-    <?php if (get_theme_mod('ethic_project_background_color')) { ?>
-            .project-area{
-                background:<?php echo $background_project ?>;
+    <?php if (get_theme_mod('ethic_portfolio_background_color')) { ?>
+            .portfolio-area{
+                background:<?php echo $background_portfolio ?>;
             }
     <?php } ?>
                 

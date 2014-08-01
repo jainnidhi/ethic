@@ -77,7 +77,7 @@
 </header><!-- #masthead -->
 
 
-<?php if(!is_front_page()) { ?>
+<?php if(!is_front_page() && !is_post_type_archive('portfolio')) { ?>
 
 <div class="main-content">
 	<div class="container">
