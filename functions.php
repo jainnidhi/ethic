@@ -176,6 +176,9 @@ require get_template_directory() . '/includes/jetpack.php';
 require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
 
 
+/* Include plugin activation file to install plugins */
+include get_template_directory() . '/includes/plugin-activation/plugin-details.php';
+
 /**
  * Returns a "Continue Reading" link for excerpts
  *

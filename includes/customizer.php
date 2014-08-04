@@ -1853,7 +1853,7 @@ function ethic_background_color() {
     // If we get this far, we have custom styles.
     ?>
 
-    <style type="text/css" id="passion-background-color-css">
+    <style type="text/css" id="ethic-background-color-css">
     <?php if (get_theme_mod('ethic_home_slider_color')) { ?>
             .slider-wrapper{
                 background:<?php echo $background_slider ?>;
