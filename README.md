@@ -59,14 +59,6 @@ Good luck!
 
 == License ==
 
-Ethic is licensed under the [GNU General Public License version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
-
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the
-Free Software Foundation; either version 2 of the License, or (at your option) any later version.
-
-
-== License ==
-
 Ethic WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.
 Ethic WordPress Theme is distributed under the terms of the GNU GPL
 
@@ -76,13 +68,9 @@ Font Awesome Copyright Dave Gandy
 Font Awesome is licensed under the MIT license
 source: http://fortawesome.github.io/Font-Awesome
 
-Open Sans font Copyright Steve Metteson
-Open Sans font is licensed under Apache License 2.0
-source: http://www.google.com/fonts/specimen/Open+Sans
-
-Roboto Slab font Copyright Christian Robertson
-Roboto Slab font is licensed under Apache License 2.0
-source: http://www.google.com/fonts/specimen/Roboto+Slab
+Raleway font Copyright Multiple Designers
+Raleway font is licensed under SIL Open Font License, 1.1
+source: http://www.google.com/fonts/specimen/Raleway
 
 Flexslider Copyright 2012 WooThemes
 Flexslider by WooThemes, licensed under GPLv2 
