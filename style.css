@@ -312,6 +312,7 @@ object {
 .slider-wrapper{
     background:#009cee;
     background: url(includes/images/tes-back.jpg) 50% -127.8px repeat fixed;
+    background-size:cover;
 }
 
 .slider-block{
@@ -543,6 +544,7 @@ object {
 .testimonial-slider{
     background: url(includes/images/tes-back.jpg) 50% -127.8px repeat fixed;
     background-color:#fff;
+    background-size:cover;
 }
 
 .testimonial-wrap{
@@ -679,7 +681,7 @@ object {
 .portfolio h2 a{
     color:#fff;
 }
-.portfolio-inner{
+.archive .portfolio-inner{
     opacity: 0;
     width: 50%;
     margin: auto;
@@ -692,8 +694,8 @@ object {
     z-index: 100;
 }
 
-.portfolio:hover:before,
-.portfolio:hover .portfolio-inner{
+.archive .portfolio:hover:before,
+.archive .portfolio:hover .portfolio-inner{
     opacity: 0.8;
 }
 /* Front Posts */
@@ -1537,4 +1539,19 @@ input[type="search"]{
 .ethic-pink .comment-reply-link,
 .ethic-pink .sidebar a:hover{
     color:#EE3178;
+}
+
+@media (min-width:768px){
+    .site-navigation-inner{
+        float:right;
+    }
+}
+
+@media (min-width:320px){
+    .site-navigation-inner{
+        float:none;
+    }
+    .navbar-nav>li>a{
+        padding:10px 20px;
+    }
 }

@@ -126,12 +126,20 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                     <p><?php esc_html_e('This is the Portfolio Description block.', 'ethic') ?> </p>
             </div>
     </div>
+            
+            
+            <ul id="filters">
+                <li><a href="javascript:void(0)" data-filter="all" class="filter active">All</a></li>
+                <li><a class="filter active" data-filter=".web">Web</a></li>
+                <li><a class="filter active" data-filter=".design">Design</a></li>
+                <li><a class="filter active" data-filter=".development">Development</a></li>
+            </ul>
    
 
             <div id="featured-portfolio" class="clearfix">
                 <div class="portfolio-wrap">
                   
-                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12" id="portfolio-one" data-scroll-reveal="enter from the left after 0.3s">
+                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix Development" id="portfolio-one" data-scroll-reveal="enter from the left after 0.3s">
                              <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-1.jpg" alt=""/>
@@ -141,7 +149,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                         </div><!--end .home-featured-portfolio-->
                         
                         
-                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12" id="portfolio-two" data-scroll-reveal="enter from the left after 0.3s">
+                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix Design Web" id="portfolio-two" data-scroll-reveal="enter from the left after 0.3s">
                             <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-2.jpg" alt=""/>
@@ -150,7 +158,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                             </div> <!--end .featured-post-content -->
                         </div><!--end .home-featured-portfolio-->
                         
-                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12" id="portfolio-three" data-scroll-reveal="enter from the right after 0.3s">
+                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix Web" id="portfolio-three" data-scroll-reveal="enter from the right after 0.3s">
                             <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-3.jpg" alt=""/>
@@ -159,7 +167,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                             </div> <!--end .featured-post-content -->
                         </div><!--end .home-featured-portfolio-->
                         
-                         <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12" id="portfolio-four" data-scroll-reveal="enter from the right after 0.3s">
+                         <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix Development Design" id="portfolio-four" data-scroll-reveal="enter from the right after 0.3s">
                             <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-4.jpg" alt=""/>

@@ -429,7 +429,7 @@ get_header();
                     <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="tslider4">
                       <div class="client-block clearfix">
                          <div class="testimonial-image">
-                        <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/tes-1.jpg" alt=""/>
+                        <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/tes-4.jpg" alt=""/>
                        </div>
                         <div class="flex-caption">
                             <div class="client-testimonial">

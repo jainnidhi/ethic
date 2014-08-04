@@ -23,7 +23,7 @@
 <header id="masthead" class="site-header" role="banner">
 	<div class="container">
 		<div class="row">
-			<div class="site-header-inner col-lg-5">
+			<div class="site-header-inner col-lg-5 col-md-5 col-sm-5">
 
 				<?php $header_image = get_header_image();
 				if ( ! empty( $header_image ) ) { ?>
@@ -40,7 +40,7 @@
 
 			</div>
                     
-                     <nav class="site-navigation col-lg-7">
+                     <nav class="site-navigation col-lg-7 col-md-7 col-sm-7">
 			<div class="site-navigation-inner">
 				<div class="navbar navbar-default">
 					<div class="navbar-header">
