@@ -22,7 +22,7 @@ jQuery(window).load(function() {
 	nextText: "<i class='fa fa-angle-right'></i>"
     });
     
-    jQuery('.portfolio-wrap').mixItUp();
+    
 });
 
 jQuery(function() {
@@ -50,5 +50,5 @@ jQuery(document).ready(function() {
     });
     
     
-    
+    jQuery('.portfolio-wrap').mixItUp();
 });

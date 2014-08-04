@@ -14,7 +14,15 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div id="content" class="main-content-inner col-lg-12">
-
+                           <?php if ( get_theme_mod('ethic_portfolio_page_title') !='' ) {  ?><h1><?php echo esc_html(get_theme_mod('ethic_portfolio_page_title')); ?></h1>
+                  <?php } else {  ?> <h1 class="title"><?php esc_html_e('Portfolio', 'ethic') ?></h1>
+                           <?php } ?>
+                  
+                   <?php if ( get_theme_mod('portfolio_page_description') !='' ) {  ?>
+                            <p><?php echo esc_html(get_theme_mod('portfolio_page_description')); ?></p>
+                                     <?php } else { ?>
+                                    <p><?php esc_html_e('This is the Portfolio Description block.', 'ethic') ?> </p>
+                                            <?php } ?>
         <?php
         $current_page = get_query_var('paged');
         $per_page = intval(get_theme_mod('ethic_portfolio_front_count'));
@@ -40,6 +48,7 @@ get_header(); ?>
                          <h2 class="title"> <a href="<?php the_permalink(); ?>">
                              <?php the_title(); ?>
                             </a></h2>
+                         
                          <div class="portfolio-buttons">
                             <a href="<?php the_permalink(); ?>"><?php _e('View Details','ethic'); ?></a>
                         </div><!--end .product-buttons-->

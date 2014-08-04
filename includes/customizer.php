@@ -1153,7 +1153,7 @@ function ethic_customize_register($wp_customize) {
   
     // Add new section for displaying Featured portfolio on Front Page
     $wp_customize->add_section('ethic_front_page_portfolio_options', array(
-        'title' => __('Portfolio Settings', 'ethic'),
+        'title' => __(' Front Portfolio Settings', 'ethic'),
         'description' => __('Settings for displaying featured portfolio on Front Page', 'ethic'),
         'priority' => 51,
     ));
@@ -1234,10 +1234,33 @@ function ethic_customize_register($wp_customize) {
         'settings' => 'ethic_front_featured_portfolio_count',
         'priority' => 20,
     ));
+    
+    $wp_customize->add_setting('ethic_portfolio_page_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
 
+    $wp_customize->add_control('ethic_portfolio_page_title', array(
+        'label' => __('Page Title', 'ethic'),
+        'section' => 'ethic_front_page_portfolio_options',
+        'settings' => 'ethic_portfolio_page_title',
+        'priority' => 4,
+    ));
+
+    $wp_customize->add_setting('portfolio_page_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'portfolio_page_description', array(
+        'label' => __('Page Description', 'ethic'),
+        'section' => 'ethic_front_page_portfolio_options',
+        'settings' => 'portfolio_page_description',
+        'priority' => 5,
+    )));
 
     $wp_customize->add_setting('ethic_portfolio_front_count', array(
-        'default' => 9,
+        'default' => 3,
         'sanitize_callback' => 'ethic_sanitize_integer',
     ));
     $wp_customize->add_control('ethic_portfolio_front_count', array(

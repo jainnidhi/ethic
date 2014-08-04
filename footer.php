@@ -70,10 +70,17 @@
 			<div class="site-footer-inner col-lg-12">
 
 				<div class="site-info">
-					<?php do_action( 'ethic_credits' ); ?>
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'ethic' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'ethic' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-					<?php printf( __( 'Theme: %1$s by %2$s.', 'ethic' ), 'ethic', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+				
+                                        <?php if(get_theme_mod('ethic_footer_footer_text')) { ?>
+                                        <?php echo esc_html(get_theme_mod('ethic_footer_footer_text')); ?>
+                                        <?php } else { ?>
+                                        <p>
+                                            <a href="<?php $ethic_theme = wp_get_theme(); echo $ethic_theme->get( 'ThemeURI' ); ?>">
+                                                <?php _e('Ethic WordPress theme by IdeaBox', 'ethic'); ?>
+                                            </a>
+                                        </p>
+                                        <?php } ?>
+                                        
 				</div><!-- close .site-info -->
 
 			</div>
