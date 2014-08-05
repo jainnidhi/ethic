@@ -41,8 +41,5 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-        
-        <?php if(!is_home()) { ?>
-	
-        <?php } ?>
+     
 </article><!-- #post-## -->
