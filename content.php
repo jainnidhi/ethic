@@ -43,7 +43,7 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
         
-        <?php if(!is_home()) { ?>
+        <?php if(!is_archive && !is_home()) { ?>
 	<footer class="entry-meta">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
