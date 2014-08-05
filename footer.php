@@ -29,7 +29,7 @@
                           <?php } else {  ?> <li id="phone"><?php esc_html_e('0294-678456', 'superb') ?></li>
                                    <?php } ?>
                           </ul>
-                             </div>
+                    </div>
                     <div class="social-links col-lg-12">
                                 <ul>
                                     <?php if (get_theme_mod('facebook_link_url')) { ?>
