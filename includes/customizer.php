@@ -125,7 +125,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('tracking_code', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'sanitize_js_callback' => 'ethic_sanitize_escaping',
     ));
 
@@ -190,7 +190,7 @@ function ethic_customize_register($wp_customize) {
 
     // slider Title
     $wp_customize->add_setting('slider_title_one', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -202,7 +202,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('slider_one_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -215,7 +215,7 @@ function ethic_customize_register($wp_customize) {
     
     // link text
     $wp_customize->add_setting('slider_one_link_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -228,7 +228,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('slider_one_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -257,7 +257,7 @@ function ethic_customize_register($wp_customize) {
 
     // slider Title
     $wp_customize->add_setting('slider_title_two', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -269,7 +269,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('slider_two_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -282,7 +282,7 @@ function ethic_customize_register($wp_customize) {
     
      // link text
     $wp_customize->add_setting('slider_two_link_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -295,7 +295,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('slider_two_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -325,7 +325,7 @@ function ethic_customize_register($wp_customize) {
 
     // slider Title
     $wp_customize->add_setting('slider_title_three', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -337,7 +337,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('slider_three_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -350,7 +350,7 @@ function ethic_customize_register($wp_customize) {
     
      // link text
     $wp_customize->add_setting('slider_three_link_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -363,7 +363,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('slider_three_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -392,7 +392,7 @@ function ethic_customize_register($wp_customize) {
 
     // slider Title
     $wp_customize->add_setting('slider_title_four', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -404,7 +404,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('slider_four_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -416,7 +416,7 @@ function ethic_customize_register($wp_customize) {
     )));
     
     $wp_customize->add_setting('slider_four_link_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -429,7 +429,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('slider_four_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -458,7 +458,7 @@ function ethic_customize_register($wp_customize) {
 
     // slider Title
     $wp_customize->add_setting('slider_title_five', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -470,7 +470,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('slider_five_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -483,7 +483,7 @@ function ethic_customize_register($wp_customize) {
     
     // link text
     $wp_customize->add_setting('slider_five_link_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -496,7 +496,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('slider_five_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -548,7 +548,7 @@ function ethic_customize_register($wp_customize) {
 
 
     $wp_customize->add_setting('home_featured_one', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -561,7 +561,7 @@ function ethic_customize_register($wp_customize) {
     
     // home Title
     $wp_customize->add_setting('home_title_one', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -573,7 +573,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('home_description_one', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -593,7 +593,7 @@ function ethic_customize_register($wp_customize) {
 
 
      $wp_customize->add_setting('home_featured_two', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -606,7 +606,7 @@ function ethic_customize_register($wp_customize) {
 
     // home Title
     $wp_customize->add_setting('home_title_two', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -618,7 +618,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('home_description_two', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -638,7 +638,7 @@ function ethic_customize_register($wp_customize) {
 
 
      $wp_customize->add_setting('home_featured_three', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -651,7 +651,7 @@ function ethic_customize_register($wp_customize) {
 
     // home Title
     $wp_customize->add_setting('home_title_three', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -663,7 +663,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('home_description_three', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -707,7 +707,7 @@ function ethic_customize_register($wp_customize) {
     
     // video Title
     $wp_customize->add_setting('video_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -731,7 +731,7 @@ function ethic_customize_register($wp_customize) {
         )));
     
     $wp_customize->add_setting('video_code_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -788,7 +788,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('ethic_team_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -800,7 +800,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('team_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -836,7 +836,7 @@ function ethic_customize_register($wp_customize) {
     // select number of posts for featured posts on front page
     $wp_customize->add_setting('ethic_front_team_members_count', array(
         'default' => 3,
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
     $wp_customize->add_control('ethic_front_team_members_count', array(
@@ -878,7 +878,7 @@ function ethic_customize_register($wp_customize) {
     ));
      
      $wp_customize->add_setting('galley_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -890,7 +890,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('ethic_gallery', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -977,7 +977,7 @@ function ethic_customize_register($wp_customize) {
     )));
 
     $wp_customize->add_setting('client_name_one', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -989,7 +989,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('client_name_url_one', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1027,7 +1027,7 @@ function ethic_customize_register($wp_customize) {
     )));
 
     $wp_customize->add_setting('client_name_two', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1039,7 +1039,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('client_name_url_two', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1077,7 +1077,7 @@ function ethic_customize_register($wp_customize) {
     )));
 
     $wp_customize->add_setting('client_name_three', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1089,7 +1089,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('client_name_url_three', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1127,7 +1127,7 @@ function ethic_customize_register($wp_customize) {
     )));
 
     $wp_customize->add_setting('client_name_four', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1139,7 +1139,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('client_name_url_four', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1197,7 +1197,7 @@ function ethic_customize_register($wp_customize) {
     
     // post Title
     $wp_customize->add_setting('ethic_portfolio_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1209,7 +1209,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('portfolio_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1225,7 +1225,7 @@ function ethic_customize_register($wp_customize) {
     // select number of posts for featured posts on front page
     $wp_customize->add_setting('ethic_front_featured_portfolio_count', array(
         'default' => 3,
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
     $wp_customize->add_control('ethic_front_featured_portfolio_count', array(
@@ -1236,7 +1236,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('ethic_portfolio_page_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1248,7 +1248,7 @@ function ethic_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('portfolio_page_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1304,7 +1304,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('cta_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1363,7 +1363,7 @@ function ethic_customize_register($wp_customize) {
     
     // post Title
     $wp_customize->add_setting('ethic_post_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1375,7 +1375,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('ethic_post_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1389,7 +1389,7 @@ function ethic_customize_register($wp_customize) {
     // select number of posts for featured posts on front page
     $wp_customize->add_setting('ethic_front_featured_posts_count', array(
         'default' => 3,
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
     $wp_customize->add_control('ethic_front_featured_posts_count', array(
@@ -1430,7 +1430,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('contact_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1442,7 +1442,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('contact_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1454,7 +1454,7 @@ function ethic_customize_register($wp_customize) {
     )));
     
     $wp_customize->add_setting('ethic_contact_form', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1472,7 +1472,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('map_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1484,7 +1484,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('home_map', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1503,7 +1503,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('facebook_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1516,7 +1516,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('twitter_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1529,7 +1529,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('googleplus_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1542,7 +1542,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('pinterest_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1555,7 +1555,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('github_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1568,7 +1568,7 @@ function ethic_customize_register($wp_customize) {
 
     // link url
     $wp_customize->add_setting('youtube_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1580,7 +1580,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('dribbble_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1592,7 +1592,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('tumblr_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1604,7 +1604,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('flickr_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1616,7 +1616,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('vimeo_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1628,7 +1628,7 @@ function ethic_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('linkedin_link_url', array('default' => __('', 'ethic'),
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
