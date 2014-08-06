@@ -39,7 +39,7 @@ function ethic_setup() {
 		*/
 		add_theme_support( 'post-thumbnails' );
                 
-                add_image_size('post_project_thumb', 400, 400, true);
+                add_image_size('post_portfolio_thumb', 400, 400, true);
                 
                 add_image_size('post_feature_main_thumb', 790, 392, true);
                 
