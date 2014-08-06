@@ -1271,59 +1271,59 @@ function ethic_customize_register($wp_customize) {
     ));
     
     
-    /* Front Products */
-    $wp_customize->add_section('ethic_front_product_options', array(
-        'title' => __('Product Settings', 'ethic'),
-        'description' => __('Settings for displaying featured product on Front Page', 'ethic'),
+    /* Front CTA */
+    $wp_customize->add_section('ethic_front_cta_options', array(
+        'title' => __('CTA Settings', 'ethic'),
+        'description' => __('Settings for displaying featured cta on Front Page', 'ethic'),
         'priority' => 52,
     ));
     
-    $wp_customize->add_setting('ethic_product_section_check', array(
+    $wp_customize->add_setting('ethic_cta_section_check', array(
         'default' => 0,
         'sanitize_callback' => 'ethic_sanitize_checkbox',
     ));
-    $wp_customize->add_control('ethic_product_section_check', array(
-        'label' => __('Show Products Front Page', 'ethic'),
-        'section' => 'ethic_front_product_options',
+    $wp_customize->add_control('ethic_cta_section_check', array(
+        'label' => __('Show CTA Front Page', 'ethic'),
+        'section' => 'ethic_front_cta_options',
         'priority' => 1,
         'type' => 'checkbox',
     ));
     
-    $wp_customize->add_setting('ethic_product_color', array(
+    $wp_customize->add_setting('ethic_cta_color', array(
         'default' => '#009cee',
         'sanitize_callback' => 'ethic_sanitize_hex_color',
         'sanitize_js_callback' => 'ethic_sanitize_escaping',
     ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_product_color', array(
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ethic_cta_color', array(
         'label' => 'Section Background color',
-        'section' => 'ethic_front_product_options',
-        'settings' => 'ethic_product_color',
+        'section' => 'ethic_front_cta_options',
+        'settings' => 'ethic_cta_color',
         'priority' => 2,
             )
     ));
     
-    $wp_customize->add_setting('product_title', array(
+    $wp_customize->add_setting('cta_title', array(
         'sanitize_callback' => 'sanitize_text_field',
         'transport' => 'postMessage',
     ));
 
-    $wp_customize->add_control('product_title', array(
+    $wp_customize->add_control('cta_title', array(
         'label' => __('Title', 'ethic'),
-        'section' => 'ethic_front_product_options',
-        'settings' => 'product_title',
+        'section' => 'ethic_front_cta_options',
+        'settings' => 'cta_title',
         'priority' => 4,
     ));
       
-     $wp_customize->add_setting('ethic_products', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+     $wp_customize->add_setting('ethic_cta', array('default' => '',
+        'sanitize_callback' => 'ethic_sanitize_text',
         'transport' => 'postMessage',
     ));
 
-    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'ethic_products', array(
-        'label' => __('Products', 'ethic'),
-        'section' => 'ethic_front_product_options',
-        'settings' => 'ethic_products',
+    $wp_customize->add_control(new ethic_customize_textarea_control($wp_customize, 'ethic_cta', array(
+        'label' => __('Text/HTML', 'ethic'),
+        'section' => 'ethic_front_cta_options',
+        'settings' => 'ethic_cta',
         'priority' => 6,
     )));
 
@@ -1870,7 +1870,7 @@ function ethic_background_color() {
     $background_video = get_theme_mod('ethic_video_color');
     $background_gallery = get_theme_mod('ethic_gallery_color');
     $background_testimonial = get_theme_mod('ethic_testimonial_color');
-    $background_product = get_theme_mod('ethic_product_color');
+    $background_cta = get_theme_mod('ethic_cta_color');
     $background_contact = get_theme_mod('ethic_contact_color');
 
     // If we get this far, we have custom styles.
@@ -1919,9 +1919,9 @@ function ethic_background_color() {
             }
     <?php } ?>
             
-    <?php if (get_theme_mod('ethic_product_color')) { ?>
-            .product-area{
-                background:<?php echo $background_product ?>;
+    <?php if (get_theme_mod('ethic_cta_color')) { ?>
+            .cta-area{
+                background:<?php echo $background_cta ?>;
             }
     <?php } ?>
             

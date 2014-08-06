@@ -227,7 +227,7 @@ get_header();
          <div class="row">
         
             <div class="home-featured clearfix">
-                <div class="home-featured-one col-lg-4 col-md-6 col-sm-6 col-xs-12" data-scroll-reveal="enter from the bottom after 0.2s">
+                <div class="home-featured-one col-lg-4 col-md-4 col-sm-4 col-xs-12" data-scroll-reveal="enter from the bottom after 0.2s">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_one') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_one'); ?></div>
@@ -249,7 +249,7 @@ get_header();
                     </div>
                 </div>
 
-                <div class="home-featured-two col-lg-4 col-md-6 col-sm-6 col-xs-12" data-scroll-reveal="enter from the bottom after 0.2s">
+                <div class="home-featured-two col-lg-4 col-md-4 col-sm-4 col-xs-12" data-scroll-reveal="enter from the bottom after 0.2s">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_two') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_two'); ?></div>
@@ -272,7 +272,7 @@ get_header();
                 </div>
 
 
-                <div class="home-featured-three col-lg-4 col-md-6 col-sm-6 col-xs-12" data-scroll-reveal="enter from the bottom after 0.2s">
+                <div class="home-featured-three col-lg-4 col-md-4 col-sm-4 col-xs-12" data-scroll-reveal="enter from the bottom after 0.2s">
                     <div class="featured">
                     <?php if ( get_theme_mod('home_featured_three') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_three'); ?></div>
@@ -542,22 +542,31 @@ get_header();
     <?php
     get_template_part('content','frontportfolio'); ?>
     
-    <?php if(get_theme_mod('ethic_product_section_check')) { ?>
-    <div class="product-area">
-        <div class="container product-wrap">
+    <?php if(get_theme_mod('ethic_cta_section_check')) { ?>
+    <div class="cta-area">
+        <div class="container cta-wrap">
             <div class="row">
-                <?php if ( get_theme_mod('product_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('product_title')); ?></h3>
+                <?php if ( get_theme_mod('cta_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('cta_title')); ?></h3>
 
-                          <?php } else {  ?> <h3><?php esc_html_e('Our recent products', 'ethic') ?></h3>
+                          <?php } else {  ?> <h3><?php esc_html_e('CTA Title', 'ethic') ?></h3>
                                    <?php } ?>
              
-               <div class="product-wrapper">
-                        <?php if ( get_theme_mod('ethic_products') !='' ) {  ?> 
-                         <?php echo do_shortcode(get_theme_mod('ethic_products')); ?>
+               <div class="cta-wrapper">
+                        <?php if ( get_theme_mod('ethic_cta') !='' ) {  ?> 
+                         <?php echo do_shortcode(get_theme_mod('ethic_cta')); ?>
                         <?php } else { ?>
-                        <?php esc_html_e('You can add your products here.', 'ethic'); ?> 
+                        <?php esc_html_e('You can add your cta text here.', 'ethic'); ?> 
                           <?php } ?>
                         </div>
+                    <?php if ( get_theme_mod('cta_link_url') !='' && get_theme_mod('cta_link_text') !=''  ) {  ?>
+                            <a class="cta-button" href="<?php echo esc_url(get_theme_mod('cta_link_url')); ?>">
+                              <?php echo esc_html(get_theme_mod('cta_link_text')); ?>
+                            </a>
+                    <?php } else { ?>
+                           <a class="cta-button" href="#">
+                              <?php esc_html_e('Read More', 'ethic'); ?>
+                            </a>
+                    <?php } ?>
             </div>
         </div>
     </div>

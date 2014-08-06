@@ -130,16 +130,16 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
             
             <ul id="filters">
                 <li><a href="javascript:void(0)" data-filter="all" class="filter active">All</a></li>
-                <li><a href="javascript:void(0)" class="filter active" data-filter=".web">Web</a></li>
-                <li><a href="javascript:void(0)" class="filter active" data-filter=".design">Design</a></li>
-                <li><a href="javascript:void(0)" class="filter active" data-filter=".development">Development</a></li>
+                <li><a href="javascript:void(0)" class="filter" data-filter=".web">Web</a></li>
+                <li><a href="javascript:void(0)" class="filter" data-filter=".design">Design</a></li>
+                <li><a href="javascript:void(0)" class="filter" data-filter=".development">Development</a></li>
             </ul>
    
 
             <div id="featured-portfolio" class="clearfix">
                 <div class="portfolio-wrap clearfix">
                   
-                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix development" id="portfolio-one" data-scroll-reveal="enter from the left after 0.3s">
+                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix development" id="portfolio-one">
                              <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-1.jpg" alt=""/>
@@ -149,7 +149,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                         </div><!--end .home-featured-portfolio-->
                         
                         
-                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix design web" id="portfolio-two" data-scroll-reveal="enter from the left after 0.3s">
+                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix design web" id="portfolio-two">
                             <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-2.jpg" alt=""/>
@@ -158,7 +158,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                             </div> <!--end .featured-post-content -->
                         </div><!--end .home-featured-portfolio-->
                         
-                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix web" id="portfolio-three" data-scroll-reveal="enter from the right after 0.3s">
+                        <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix web" id="portfolio-three">
                             <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-3.jpg" alt=""/>
@@ -167,7 +167,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                             </div> <!--end .featured-post-content -->
                         </div><!--end .home-featured-portfolio-->
                         
-                         <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix Development Design" id="portfolio-four" data-scroll-reveal="enter from the right after 0.3s">
+                         <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix Development Design" id="portfolio-four">
                             <div class="featured-portfolio-content">
                                 <a href="#">
                                     <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-4.jpg" alt=""/>

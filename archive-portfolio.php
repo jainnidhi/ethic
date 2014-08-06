@@ -13,7 +13,7 @@ get_header(); ?>
 <div class="main-content">
 	<div class="container">
 		<div class="row">
-			<div id="content" class="main-content-inner col-lg-12">
+			<div id="content" class="main-content-inner portfolio-page">
                            <?php if ( get_theme_mod('ethic_portfolio_page_title') !='' ) {  ?><h1><?php echo esc_html(get_theme_mod('ethic_portfolio_page_title')); ?></h1>
                   <?php } else {  ?> <h1 class="title"><?php esc_html_e('Portfolio', 'ethic') ?></h1>
                            <?php } ?>
@@ -23,21 +23,55 @@ get_header(); ?>
                                      <?php } else { ?>
                                     <p><?php esc_html_e('This is the Portfolio Description block.', 'ethic') ?> </p>
                                             <?php } ?>
-        <?php
-        $current_page = get_query_var('paged');
-        $per_page = intval(get_theme_mod('ethic_portfolio_front_count'));
-        $offset = $current_page > 0 ? $per_page * ($current_page - 1) : 0;
-        $portfolio_args = array(
-            'post_type' => 'portfolio',
-            'posts_per_page' => $per_page,
-            'offset' => $offset
-        );
-        $products = new WP_Query($portfolio_args);
-        ?>
-        <?php if ($products->have_posts()) : $i = 1; ?>
-            <?php while ($products->have_posts()) : $products->the_post(); ?>
+                <ul id="filters">
+                        <?php
+                            $terms = get_terms('portfolio_category');
+                            $count = count($terms);
+                                echo '<li><a href="javascript:void(0)" data-filter="all" class="filter active">All</a></li>';
+                            if ( $count > 0 ){
 
-                <div id="post-<?php the_ID(); ?>" class="col-lg-4 portfolio<?php if ($i % 4 == 0) { echo ' last'; } ?>">
+                                foreach ( $terms as $term ) {
+
+                                    $termname = strtolower($term->name);
+                                    $termname = str_replace(' ', '-', $termname);
+                                    echo '<li><a href="javascript:void(0)" class="filter" data-filter=".'.$termname.'">'.$term->name.'</a></li>';
+                                }
+                            }
+                        ?>
+                </ul>
+        <div class="portfolio-page-wrapper">
+                <?php
+                $current_page = get_query_var('paged');
+                $per_page = intval(get_theme_mod('ethic_portfolio_front_count'));
+                $offset = $current_page > 0 ? $per_page * ($current_page - 1) : 0;
+                $portfolio_args = array(
+                    'post_type' => 'portfolio',
+                    'posts_per_page' => $per_page,
+                    'offset' => $offset
+                );
+                $products = new WP_Query($portfolio_args);
+                ?>
+                <?php if ($products->have_posts()) : $i = 1; ?>
+                    <?php while ($products->have_posts()) : $products->the_post(); ?>
+                         <?php 
+                            $terms = get_the_terms( $post->ID, 'portfolio_category' );	
+                            if ( $terms && ! is_wp_error( $terms ) ) : 
+
+                                $links = array();
+
+                                foreach ( $terms as $term ) {
+                                    $links[] = $term->name;
+                                }
+
+                                $tax_links = join( " ", str_replace(' ', '-', $links));          
+                                $tax = strtolower($tax_links);
+                            else :	
+                                $tax = '';					
+                            endif; 
+                             $containerClass = $tax; 
+                            ?>
+
+                <div id="post-<?php the_ID(); ?>" class="col-lg-4 portfolio all mix<?php if ($i % 4 == 0) { echo ' last'; } ?> <?php echo $containerClass; ?>">
 
                     <div class="portfolio-image">
                         <a href="<?php the_permalink(); ?>">
@@ -79,6 +113,7 @@ get_header(); ?>
                 <?php get_search_form(); ?>
 
 <?php endif; ?>
+            </div><!-- /.portfolio-page-wrapper -->
     </div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
 		</div><!-- close .row -->
 	</div><!-- close .container -->

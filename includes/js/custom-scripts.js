@@ -25,11 +25,6 @@ jQuery(window).load(function() {
     
 });
 
-jQuery(function() {
-
-        window.scrollReveal = new scrollReveal({ reset: false, move: '50px' });
-      });
-
 /* Add a custom back to top button */
 jQuery(document).ready(function() {
     var offset = 220;
@@ -50,5 +45,11 @@ jQuery(document).ready(function() {
     });
     
     
-    jQuery('.portfolio-wrap').mixItUp();
+   jQuery(function() {
+        jQuery('.portfolio-wrap').mixItUp();
+    });
+    
+    jQuery(function() {
+        jQuery('.portfolio-page-wrapper').mixItUp();
+    });
 });

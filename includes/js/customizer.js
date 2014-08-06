@@ -369,27 +369,37 @@ jQuery(document).ready(function($) {
         });
     });
 
-    wp.customize('ethic_project_title', function(value) {
+    wp.customize('ethic_portfolio_title', function(value) {
         value.bind(function(to) {
             $('.home-project-title h3').text(to);
         });
     });
-    wp.customize('project_description', function(value) {
+    wp.customize('portfolio_description', function(value) {
         value.bind(function(to) {
             $('.home-project-title p').text(to);
         });
     });
 
-    wp.customize('product_title', function(value) {
+    wp.customize('cta_title', function(value) {
         value.bind(function(to) {
             $('.product-wrap h3').text(to);
         });
     });
-    wp.customize('ethic_products', function(value) {
+    wp.customize('ethic_cta', function(value) {
         value.bind(function(to) {
             $('.product-wrapper').text(to);
         });
     });
+     wp.customize('cta_link_url', function(value) {
+        value.bind(function(to) {
+            $('.cta-button').attr('href', to);
+        });
+    });
+    wp.customize('cta_link_text', function(value) {
+        value.bind(function(to) {
+            $('.cta-button').text(to);
+        });
+    });    
 
     wp.customize('ethic_post_title', function(value) {
         value.bind(function(to) {

@@ -116,15 +116,16 @@ function ethic_scripts() {
 	wp_enqueue_script( 'ethic-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );
 
 	wp_enqueue_script( 'ethic-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
-        
+        wp_enqueue_script('ethic-custom-scripts', get_template_directory_uri() . '/includes/js/custom-scripts.js', array(), '1.0', 'all', false);
         if(is_front_page()) {
         wp_enqueue_style( 'flexslider', trailingslashit( get_template_directory_uri() ) . 'includes/css/flexslider.css' , array(), '1.0', 'all' );
         wp_enqueue_script('ethic-slider', get_template_directory_uri() . '/includes/js/jquery.flexslider-min.js', array('jquery'));
        
         wp_enqueue_script('ethic-scroll-reveal', get_template_directory_uri() . '/includes/js/scrollReveal.min.js', array('jquery'));
          
-        wp_enqueue_script('ethic-custom-scripts', get_template_directory_uri() . '/includes/js/custom-scripts.js', array(), '1.0', 'all', false);
         }
+        
+        
         
         wp_enqueue_script('mixitup', get_template_directory_uri() . '/includes/js/jquery.mixitup.js', array('jquery'));
 
@@ -290,3 +291,17 @@ if ( ! function_exists( 'ethic_posted_on' ) ) {
 		);
 	}
 }
+
+function ethic_scroll_reveal_js() { 
+    if(is_front_page()) { ?>
+    <script type="text/javascript">
+        /* Trigger home page slider */
+        /* Slider powered by FlexSlider by WooThemes */
+        jQuery(function() {
+
+        window.scrollReveal = new scrollReveal({ reset: false, move: '50px' });
+      });
+    </script>
+<?php }
+}
+add_action('wp_footer','ethic_scroll_reveal_js');
