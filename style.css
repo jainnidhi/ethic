@@ -874,7 +874,7 @@ object {
 }
 
 .home-contact-form h3,
-.home-contact-form > p{
+.home-contact-form .description{
     text-align:center;
     color:#fff;
 }

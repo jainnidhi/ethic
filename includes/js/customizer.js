@@ -189,12 +189,12 @@ jQuery(document).ready(function($) {
 
     wp.customize('home_featured_one', function(value) {
         value.bind(function(to) {
-            $('.home-featured-one .featured-image img').attr('src', to);
+            $('.home-featured-one .featured-image').attr('src', to);
         });
     });
     wp.customize('home_title_one', function(value) {
         value.bind(function(to) {
-            $('.home-featured-one h3 a').text(to);
+            $('.home-featured-one h3').text(to);
         });
     });
 
@@ -206,12 +206,12 @@ jQuery(document).ready(function($) {
 
     wp.customize('home_featured_two', function(value) {
         value.bind(function(to) {
-            $('.home-featured-two .featured-image img').attr('src', to);
+            $('.home-featured-two .featured-image').attr('src', to);
         });
     });
     wp.customize('home_title_two', function(value) {
         value.bind(function(to) {
-            $('.home-featured-two h3 a').text(to);
+            $('.home-featured-two h3').text(to);
         });
     });
 
@@ -223,12 +223,12 @@ jQuery(document).ready(function($) {
 
     wp.customize('home_featured_three', function(value) {
         value.bind(function(to) {
-            $('.home-featured-three .featured-image img').attr('src', to);
+            $('.home-featured-three .featured-image').attr('src', to);
         });
     });
     wp.customize('home_title_three', function(value) {
         value.bind(function(to) {
-            $('.home-featured-three h3 a').text(to);
+            $('.home-featured-three h3').text(to);
         });
     });
 
@@ -371,23 +371,34 @@ jQuery(document).ready(function($) {
 
     wp.customize('ethic_portfolio_title', function(value) {
         value.bind(function(to) {
-            $('.home-project-title h3').text(to);
+            $('.home-portfolio-title h3').text(to);
         });
     });
     wp.customize('portfolio_description', function(value) {
         value.bind(function(to) {
-            $('.home-project-title p').text(to);
+            $('.home-portfolio-title p').text(to);
+        });
+    });
+    
+    wp.customize('ethic_portfolio_page_title', function(value) {
+        value.bind(function(to) {
+            $('.portfolio-page h1').text(to);
+        });
+    });
+    wp.customize('portfolio_page_description', function(value) {
+        value.bind(function(to) {
+            $('.portfolio-page p').text(to);
         });
     });
 
     wp.customize('cta_title', function(value) {
         value.bind(function(to) {
-            $('.product-wrap h3').text(to);
+            $('.cta-title').text(to);
         });
     });
     wp.customize('ethic_cta', function(value) {
         value.bind(function(to) {
-            $('.product-wrapper').text(to);
+            $('.cta-wrapper').text(to);
         });
     });
      wp.customize('cta_link_url', function(value) {
@@ -419,7 +430,7 @@ jQuery(document).ready(function($) {
     });
     wp.customize('contact_description', function(value) {
         value.bind(function(to) {
-            $('.home-contact-form p').text(to);
+            $('.home-contact-form .description').text(to);
         });
     });
 

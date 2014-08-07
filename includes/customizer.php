@@ -1244,7 +1244,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Page Title', 'ethic'),
         'section' => 'ethic_front_page_portfolio_options',
         'settings' => 'ethic_portfolio_page_title',
-        'priority' => 4,
+        'priority' => 21,
     ));
 
     $wp_customize->add_setting('portfolio_page_description', array('default' => '',
@@ -1256,7 +1256,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('Page Description', 'ethic'),
         'section' => 'ethic_front_page_portfolio_options',
         'settings' => 'portfolio_page_description',
-        'priority' => 5,
+        'priority' =>22,
     )));
 
     $wp_customize->add_setting('ethic_portfolio_front_count', array(
@@ -1267,7 +1267,7 @@ function ethic_customize_register($wp_customize) {
         'label' => __('portfolio Item Count', 'ethic'),
         'section' => 'ethic_front_page_portfolio_options',
         'settings' => 'ethic_portfolio_front_count',
-        'priority' => 40,
+        'priority' => 25,
     ));
     
     
@@ -1326,6 +1326,30 @@ function ethic_customize_register($wp_customize) {
         'settings' => 'ethic_cta',
         'priority' => 6,
     )));
+    
+    $wp_customize->add_setting('cta_link_text', array(
+        'sanitize_callback' => 'ethic_sanitize_text',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('cta_link_text', array(
+        'label' => __(' Link Text', 'ethic'),
+        'section' => 'ethic_front_cta_options',
+        'settings' => 'cta_link_text',
+        'priority' => 15,
+    ));
+
+    $wp_customize->add_setting('cta_link_url', array('default' => __('', 'ethic'),
+        'sanitize_callback' => 'ethic_sanitize_text',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('cta_link_url', array(
+        'label' => __('Link URL', 'ethic'),
+        'section' => 'ethic_front_cta_options',
+        'settings' => 'cta_link_url',
+        'priority' => 16,
+    ));
 
 
     // Add new section for displaying Featured Posts on Front Page
@@ -1494,6 +1518,36 @@ function ethic_customize_register($wp_customize) {
         'settings' => 'home_map',
         'priority' => 2,
     )));
+    
+    // Add new section for Contact Details settings
+    $wp_customize->add_section('contact_setting', array(
+        'title' => __('Contact Details', 'ethic'),
+        'priority' => 61,
+    ));
+   
+    $wp_customize->add_setting('contact_email', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('contact_email', array(
+        'label' => __('Email', 'ethic'),
+        'section' => 'contact_setting',
+        'settings' => 'contact_email',
+        'priority' => 4,
+    ));
+
+    $wp_customize->add_setting('contact_phone', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('contact_phone', array(
+        'label' => __('Phone', 'ethic'),
+        'section' => 'contact_setting',
+        'settings' => 'contact_phone',
+        'priority' => 5,
+    ));
     
      // Add new section for Social Icons
     $wp_customize->add_section('social_icon_setting', array(

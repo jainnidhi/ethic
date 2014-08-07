@@ -61,7 +61,7 @@ get_header();
                 
                 <li>
                   <div class="slider-image col-lg-6 col-md-6 col-sm-6">
-                <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/slider-3.jpg" alt=""/>
+                <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/slider-3.jpg" alt=" third-slider-image"/>
                   </div>
                 <div class="flex-caption col-lg-6 col-md-6 col-sm-6">
                     <div class="slider-text-container">
@@ -81,7 +81,7 @@ get_header();
           if ( get_theme_mod('slider_one') !='' ) {  ?>
                     <li id="slider1" class="home-slider"> 
                          <div class="slider-image col-lg-6 col-md-6 col-sm-6">
-                        <img href="#" src="<?php echo esc_url(get_theme_mod('slider_one')); ?>" alt=""/>
+                        <img href="#" src="<?php echo esc_url(get_theme_mod('slider_one')); ?>" alt="first-slider-image"/>
                          </div>
                             <?php if ( get_theme_mod('slider_title_one') !='' ||  get_theme_mod('slider_one_description') !='' ) {  ?>
                         <div class="flex-caption col-lg-6 col-md-6 col-sm-6">
@@ -104,7 +104,7 @@ get_header();
                      if ( get_theme_mod('slider_two') !='' ) {  ?>
                     <li id="slider2" class="home-slider"> 
                          <div class="slider-image col-lg-6 col-md-6 col-sm-6">
-                        <img href="#" src="<?php echo esc_url(get_theme_mod('slider_two')); ?>" alt=""/>
+                        <img href="#" src="<?php echo esc_url(get_theme_mod('slider_two')); ?>" alt="second-slider-image"/>
                          </div>
                      <?php if ( get_theme_mod('slider_title_two') !='' || get_theme_mod('slider_two_description') !='' ) {  ?>
                         <div class="flex-caption col-lg-6 col-md-6 col-sm-6">
@@ -127,7 +127,7 @@ get_header();
                     if ( get_theme_mod('slider_three') !='' ) {  ?>
                     <li id="slider3" class="home-slider"> 
                          <div class="slider-image col-lg-6 col-md-6 col-sm-6">
-                        <img href="#" src="<?php echo esc_url(get_theme_mod('slider_three')); ?>" alt=""/>
+                        <img href="#" src="<?php echo esc_url(get_theme_mod('slider_three')); ?>" alt="third-slider-image"/>
                          </div>
                    <?php if ( get_theme_mod('slider_title_three') !='' || get_theme_mod('slider_three_description') !='' ) {  ?>
                         <div class="flex-caption col-lg-6 col-md-6 col-sm-6">
@@ -151,7 +151,7 @@ get_header();
                     if ( get_theme_mod('slider_four') !='' ) {  ?>
                     <li id="slider4" class="home-slider"> 
                          <div class="slider-image col-lg-6 col-md-6 col-sm-6">
-                        <img href="#" src="<?php echo esc_url(get_theme_mod('slider_four')); ?>" alt=""/>
+                        <img href="#" src="<?php echo esc_url(get_theme_mod('slider_four')); ?>" alt="fourth-slider-image"/>
                          </div>
                     <?php if ( get_theme_mod('slider_title_four') !='' || get_theme_mod('slider_four_description') !='' ) {  ?>
                         <div class="flex-caption col-lg-6 col-md-6 col-sm-6">
@@ -175,7 +175,7 @@ get_header();
                     if ( get_theme_mod('slider_five') !='' ) {  ?>
                     <li id="slider5" class="home-slider">  
                          <div class="slider-image col-lg-6 col-md-6 col-sm-6">
-                            <img href="#" src="<?php echo esc_url(get_theme_mod('slider_five')); ?>" alt=""/>
+                            <img href="#" src="<?php echo esc_url(get_theme_mod('slider_five')); ?>" alt="fifth-slider-image"/>
                          </div>
                     <?php if ( get_theme_mod('slider_title_five') !='' || get_theme_mod('slider_five_description') !='' ) {  ?>
                         <div class="flex-caption col-lg-6 col-md-6 col-sm-6">
@@ -546,7 +546,7 @@ get_header();
     <div class="cta-area">
         <div class="container cta-wrap">
             <div class="row">
-                <?php if ( get_theme_mod('cta_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('cta_title')); ?></h3>
+                <?php if ( get_theme_mod('cta_title') !='' ) {  ?><h3 class="cta-title"><?php echo esc_html(get_theme_mod('cta_title')); ?></h3>
 
                           <?php } else {  ?> <h3><?php esc_html_e('CTA Title', 'ethic') ?></h3>
                                    <?php } ?>
@@ -583,9 +583,9 @@ get_header();
                           <?php } else {  ?> <h3><?php esc_html_e('Contact Us', 'ethic') ?></h3>
                                    <?php } ?>
                           
-                           <?php if ( get_theme_mod('contact_description') !='' ) {  ?><p><?php echo esc_html(get_theme_mod('contact_description')); ?></p>
+                           <?php if ( get_theme_mod('contact_description') !='' ) {  ?><p class="description"><?php echo esc_html(get_theme_mod('contact_description')); ?></p>
 
-                          <?php } else {  ?> <p><?php esc_html_e('Send in your queries and we will get back to you!!', 'ethic') ?></p>
+                          <?php } else {  ?> <p class="description"><?php esc_html_e('Send in your queries and we will get back to you!!', 'ethic') ?></p>
                                    <?php } ?>
                           
                         <div class="contact-form-wrapper">
