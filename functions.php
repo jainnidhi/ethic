@@ -137,7 +137,7 @@ function ethic_scripts() {
 	}
         
         
-	$fonts_url = 'http://fonts.googleapis.com/css?family=Raleway:400,300,700';
+	$fonts_url = 'http://fonts.googleapis.com/css?family=Roboto:400,300,700';
 	if ( !empty( $fonts_url ) ) {
 		wp_enqueue_style( 'ethic-fonts', esc_url_raw( $fonts_url ), array(), null );
 	}

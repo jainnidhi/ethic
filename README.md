@@ -16,45 +16,71 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
+Ethic is a multipurpose responsive WordPress theme built on Bootstrap. It has unique front end customization and single click installation features. You can use this theme to setup a busiess website, personal portfolio, photography website or a simple blog. It comes with multiple color schemes, slider, testimonial, call to action sections, home page contact and map sections, footer social icons and links.  
 
-Hi. I'm a starter theme called `Ethic`. I'm a theme meant for hacking so don't use me as just as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+== Description ==
+-----------------
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+Ethic is a multipurpose responsive WordPress theme built on Bootstrap. I
+t has unique front end customization and single click installation features. 
+You can use this theme to setup a busiess website, personal portfolio, photography website or a simple blog. 
+It comes with multiple color schemes, slider, testimonial, call to action sections, home page contact and map sections, footer social icons and links.  
 
-* Full Bootstrap Power, seamlessly integrated in Automattic's starter theme _s to bring these two together the cleanest way.
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A sample custom header implementation in `includes/custom-header.php` that can be activated by uncommenting one line in functions.php and adding the code snippet found the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `includes/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `includes/extras.php` that can improve your theming experience.
-* Keyboard navigation for image attachment templates. The script can be found in `js/keyboard-navigation.js`. It's enqueued in `functions.php`.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv3 or later. :) Use it to make something cool.
+The main navigation uses the standard WordPress menu. Support for dropdown menus is included by default. 
+
+Post Formats
+
+All the standard WordPress Post Formats are supported. These include; Aside, Gallery, Link, Image, Quote, Status, Video, Audio, Chat and of course, 
+your standard post.
+
+Widgets
+
+Sidebar widget area can be used for displaying widgets across the site. 
+
+Custom Header
+
+The Default logo can be easily changed using the Custom Header feature. You change this in the Appearance > Header menu option
+
+Custom Background
+
+The background pattern can be changed using the Custom Background feature. You change this in the Appearance > Background menu option
+
+Theme Customizer
+
+Additional Theme Customization Options can be found in the Appearance > Customize menu option. These include options for:
+Specifying color schemes 
+Social Icons
+Featured slider
+Featured services
+Business tagline and description
+Video and Intro Text
+Display team members
+Displaying featured gallery
+Portfolio items
+Call to action area text, description and link.
+Changing the footer credit text
+Adding custom CSS
+Adding custom tracking code for Google Analytics
+Upload a custom favicon
+Adding contact details
+
 
 == Getting Started ==
 ---------------------
 
-If you want to keep it simple, head over to http://underscores.me and generate your `Ethic` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+Install and activate the theme. 
 
-If you want to set things up manually, download `Ethic` from github. The first thing you want to do is copy the `Ethic` directory and change the name to something else - Like, say, `megatherium` - then you'll need to do a three-step find and replace on the name in all the templates.
+After that create a new page as: Home and another page as: Blog
+Now go to Settings > Reading
+Front Page displays : A static page
+Then select HOME from Page Dropdown 
+and BLOG from Posts Page Dropdown
 
-1. Search for `'ethic'` (inside single quotations) to capture the text domain.
-2. Search for `ethic_` to capture all the function names.
-3. Search for <code>&nbsp;Ethic</code> (with a space before it) to capture DocBlocks.
-4. Search for `ethic-` to capture prefixed handles.
+Save the settings and now start customizing your theme. 
 
-OR
+To do this, click on Customize link under Appearance section. 
 
-* Search for: `'ethic'` and replace with: `'megatherium'`
-* Search for: `ethic_` and replace with: `megatherium_`
-* Search for: <code>&nbsp;Ethic</code> and replace with: <code>&nbsp;Megatherium</code>
-* Search for: `ethic-` and replace with: `megatherium-`
-
-Then, update the stylesheet header in style.css and the links in footer.php with your own information. Next, update or delete this readme.
-
-Now you're ready to go! The next step is easy to say but harder to do: make an awesome WordPress theme. :)
-
-Good luck!
+Once you are done with all the changes, click on blue Save and Publish button to save your changes. 
 
 
 == License ==
@@ -63,14 +89,14 @@ Ethic WordPress Theme is derived from Underscores WordPress Theme, Copyright 201
 Ethic WordPress Theme is distributed under the terms of the GNU GPL
 
 Ethic utilises the following awesomeness:
-
+    
 Font Awesome Copyright Dave Gandy
 Font Awesome is licensed under the MIT license
 source: http://fortawesome.github.io/Font-Awesome
 
-Raleway font Copyright Multiple Designers
-Raleway font is licensed under SIL Open Font License, 1.1
-source: http://www.google.com/fonts/specimen/Raleway
+Roboto font Copyright Christian Robertson
+Roboto font is licensed under Apache License, version 2.0
+source: http://www.google.com/fonts/specimen/Roboto
 
 Flexslider Copyright 2012 WooThemes
 Flexslider by WooThemes, licensed under GPLv2 
