@@ -5,26 +5,6 @@
  * 
  */
 
-
-/* Trigger home page slider and testimonial slider */
-/* Both home page and testimonial slider are powered by FlexSlider by WooThemes */
-jQuery(window).load(function() {
-    jQuery('#main-slider').flexslider( { 
-        prevText: "<i class='fa fa-angle-left'></i>",
-	nextText: "<i class='fa fa-angle-right'></i>",
-        start: function(slider) {
-                        slider.removeClass('loading');
-                }
-    });
-    
-    jQuery('.gallery').flexslider( { 
-        prevText: "<i class='fa fa-angle-left'></i>",
-	nextText: "<i class='fa fa-angle-right'></i>"
-    });
-    
-    
-});
-
 /* Add a custom back to top button */
 jQuery(document).ready(function() {
     var offset = 220;

@@ -339,8 +339,8 @@ get_header();
         <div class="container gallery-block">
             <div class="row">
                 <div class="col-lg-12">
-                <?php if ( get_theme_mod('gallery_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('gallery_title')); ?></h3>
-                  <?php } else {  ?> <h3><?php esc_html_e('Gallery', 'ethic') ?></h3>
+                <?php if ( get_theme_mod('gallery_title') !='' ) {  ?><h3 class="gallery-title"><?php echo esc_html(get_theme_mod('gallery_title')); ?></h3>
+                  <?php } else {  ?> <h3 class="gallery-title"><?php esc_html_e('Gallery', 'ethic') ?></h3>
                            <?php } ?>
                     <div class="gallery-wrap">
                         <?php if ( get_theme_mod('ethic_gallery') !='' ) {  ?> 
@@ -548,7 +548,7 @@ get_header();
             <div class="row">
                 <?php if ( get_theme_mod('cta_title') !='' ) {  ?><h3 class="cta-title"><?php echo esc_html(get_theme_mod('cta_title')); ?></h3>
 
-                          <?php } else {  ?> <h3><?php esc_html_e('CTA Title', 'ethic') ?></h3>
+                          <?php } else {  ?> <h3 class="cta-title"><?php esc_html_e('CTA Title', 'ethic') ?></h3>
                                    <?php } ?>
              
                <div class="cta-wrapper">
@@ -621,9 +621,7 @@ get_header();
         
     </section>
        
-         <span class="top"><a class="back-to-top"><i class="fa fa-arrow-up"></i></a></span>
-            
-  
+         
 <?php
 get_footer();
 ?>

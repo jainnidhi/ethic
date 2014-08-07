@@ -142,7 +142,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                         <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix development" id="portfolio-one">
                              <div class="featured-portfolio-content">
                                 <a href="#">
-                                    <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-1.jpg" alt=""/>
+                                    <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-1.jpg" alt="portfolio-1"/>
                                    
                                 </a>
                             </div> <!--end .featured-post-content -->
@@ -152,7 +152,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                         <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix design web" id="portfolio-two">
                             <div class="featured-portfolio-content">
                                 <a href="#">
-                                    <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-2.jpg" alt=""/>
+                                    <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-2.jpg" alt="portfolio-2"/>
                                    
                                 </a>
                             </div> <!--end .featured-post-content -->
@@ -161,7 +161,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                         <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix web" id="portfolio-three">
                             <div class="featured-portfolio-content">
                                 <a href="#">
-                                    <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-3.jpg" alt=""/>
+                                    <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-3.jpg" alt="portfolio-3"/>
                                    
                                 </a>
                             </div> <!--end .featured-post-content -->
@@ -170,7 +170,7 @@ if (get_theme_mod('ethic_front_featured_portfolio_check')) {
                          <div class="home-featured-portfolio col-lg-3 col-md-3 col-sm-6 col-xs-12 all mix Development Design" id="portfolio-four">
                             <div class="featured-portfolio-content">
                                 <a href="#">
-                                    <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-4.jpg" alt=""/>
+                                    <img class="attachment-post_feature_thumb" src="<?php echo get_template_directory_uri(); ?>/includes/images/port-4.jpg" alt="portfolio-4"/>
                                     
                                 </a>
                             </div> <!--end .featured-post-content -->

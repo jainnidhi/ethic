@@ -187,11 +187,6 @@ jQuery(document).ready(function($) {
         });
     });
 
-    wp.customize('home_featured_one', function(value) {
-        value.bind(function(to) {
-            $('.home-featured-one .featured-image').attr('src', to);
-        });
-    });
     wp.customize('home_title_one', function(value) {
         value.bind(function(to) {
             $('.home-featured-one h3').text(to);
@@ -204,11 +199,6 @@ jQuery(document).ready(function($) {
         });
     });
 
-    wp.customize('home_featured_two', function(value) {
-        value.bind(function(to) {
-            $('.home-featured-two .featured-image').attr('src', to);
-        });
-    });
     wp.customize('home_title_two', function(value) {
         value.bind(function(to) {
             $('.home-featured-two h3').text(to);
@@ -221,11 +211,6 @@ jQuery(document).ready(function($) {
         });
     });
 
-    wp.customize('home_featured_three', function(value) {
-        value.bind(function(to) {
-            $('.home-featured-three .featured-image').attr('src', to);
-        });
-    });
     wp.customize('home_title_three', function(value) {
         value.bind(function(to) {
             $('.home-featured-three h3').text(to);
@@ -276,7 +261,7 @@ jQuery(document).ready(function($) {
     
     wp.customize('gallery_title', function(value) {
         value.bind(function(to) {
-            $('.gallery-block h3').text(to);
+            $('.gallery-title').text(to);
         });
     });
     
@@ -463,7 +448,7 @@ jQuery(document).ready(function($) {
             $('.contact-details #phone').text(to);
         });
     });
-    wp.customize('ethic_footer', function(value) {
+    wp.customize('ethic_footer_footer_text', function(value) {
         value.bind(function(to) {
             $('.site-info').text(to);
         });

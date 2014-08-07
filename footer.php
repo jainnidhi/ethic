@@ -85,9 +85,12 @@
 
 			</div>
 		</div>
+            
 	</div><!-- close .container -->
 </footer><!-- close #colophon -->
-
+<span class="top"><a class="back-to-top"><i class="fa fa-arrow-up"></i></a></span>
+            
+  
 <?php wp_footer(); ?>
 
 </body>

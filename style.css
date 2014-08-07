@@ -923,14 +923,15 @@ article .page-header{
 }
 
 .blog .page-header,
-.archive .page-header,
 #comments .page-header{
     border-bottom:0;
 }
 
-.archive .content-padder> .page-header{
-    text-align:center;
+.archive .page-header,
+.archive .page-header .page-title{
+    margin-top:0;
 }
+
 .post-image{
     margin-bottom:20px;
 }

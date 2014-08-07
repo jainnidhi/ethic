@@ -5,11 +5,7 @@
  * @package Ethic
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) )
-	$content_width = 750; /* pixels */
+
 
 if ( ! function_exists( 'ethic_setup' ) ) :
 /**
@@ -21,6 +17,12 @@ if ( ! function_exists( 'ethic_setup' ) ) :
  */
 function ethic_setup() {
 	global $cap, $content_width;
+
+            /**
+             * Set the content width based on the theme's design and stylesheet.
+             */
+            if ( ! isset( $content_width ) )
+                    $content_width = 800; /* pixels */
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
@@ -126,8 +128,9 @@ function ethic_scripts() {
         }
         
         
-        
+        if(is_front_page() || is_post_type_archive('portfolio')) {
         wp_enqueue_script('mixitup', get_template_directory_uri() . '/includes/js/jquery.mixitup.js', array('jquery'));
+        }
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -305,3 +308,19 @@ function ethic_scroll_reveal_js() {
 <?php }
 }
 add_action('wp_footer','ethic_scroll_reveal_js');
+
+function ethic_flex_slider_js() {
+    if(is_front_page()) { ?>
+    <script type="text/javascript">
+       jQuery('#main-slider').flexslider( { 
+        prevText: "<i class='fa fa-angle-left'></i>",
+	nextText: "<i class='fa fa-angle-right'></i>",
+        start: function(slider) {
+                        slider.removeClass('loading');
+                }
+    });
+    </script>
+<?php }
+}
+
+add_action('wp_footer','ethic_flex_slider_js');
