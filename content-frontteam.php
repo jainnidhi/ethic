@@ -160,7 +160,7 @@ if (get_theme_mod('ethic_front_team_members_check')) {
                                     Developer                                 
                                 </p>
                                 <p class="content">
-                                    An application developer by profession and a WordPress enthusiast who has expertise in managing all the customization in application.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dapibus ipsum. Quisque nec ornare diam. Fusce eget ligula eget velit tempor adipiscing non a lorem.
                                 </p>
                                 <div class="team-meta">
                                 <ul>
@@ -188,7 +188,7 @@ if (get_theme_mod('ethic_front_team_members_check')) {
                                         <h4 class="home-team-member-title">Johny</h4>
                                     <p class="team-member-role">Designer  </p>
                                     <p class="content">
-                                    She is the designer head who manages all the theme layout and designing. An easy interface of all themes are just due to her designing effort.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dapibus ipsum. Quisque nec ornare diam. Fusce eget ligula eget velit tempor adipiscing non a lorem.
                                 </p>
                                     <div class="team-meta">
                                 <ul>
@@ -217,7 +217,7 @@ if (get_theme_mod('ethic_front_team_members_check')) {
                                     Developer                                   
                                 </p>
                                 <p class="content">
-                                    He is a Client Support Desk Head. His team manages all the queries, issues of our clients related to products and their efforts makes the valuable support system.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dapibus ipsum. Quisque nec ornare diam. Fusce eget ligula eget velit tempor adipiscing non a lorem.
                                 </p>
                                 
                                 <div class="team-meta">
@@ -248,7 +248,7 @@ if (get_theme_mod('ethic_front_team_members_check')) {
                                    </p>
                                    
                                    <p class="content">
-                                    He is the Product Marketing head and a Content Manager. He enjoys writing. If you are bored with tough reading, get on to his blog, you will enjoy a lot.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dapibus ipsum. Quisque nec ornare diam. Fusce eget ligula eget velit tempor adipiscing non a lorem.
                                 </p>
                                 
                                 <div class="team-meta">
